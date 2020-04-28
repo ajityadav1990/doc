@@ -1,0 +1,224 @@
+l 1 - Introduction and Getting Started=========================
+Jenkins 
+  - java application
+  - used for continuous integration and continuous delivery
+Step 1 : Download Jenkins war file - https://jenkins.io/
+Step 2 : Place the war file into any location on your system
+Step 3 : goto  terminal
+   - goto folder where jenkins.war is
+   - java -jar jenkins.war
+Step 4 : goto browser - http://localhost:8080 (Jenkins window should show up)
+Step 5 : install required plugins
+====================Tutorial 2 - How to setup Jenkins on Tomcat=========================
+Why?
+Running Jenkins standalone (jetty/winstone) vs Running Jenkins on Tomcat
+Pre-requisite
+***Tomcat 5 or above***
+***java(7 or above) should be available***
+(https://www.youtube.com/watch?v=FqpmH...)
+Step 1 : Download Tomcat 
+Step 2 : Unzip and place tomcat folder at any location
+Step 3 : Copy/Place the jenkins.war file inside tomcat/webapps folder
+Step 4 : Goto commandpromt (cmd) - windows  |  terminal - mac
+  - goto tomcat/bin directory
+  - make all files executable : chmod +x *.sh
+Step 5 : Start Tomcat : ./startup.sh
+  (to shutdown tomcat : ./shutdown.sh)
+Step 6 : verify if tomcat started : browser - http://localhost:8080
+Step 7 : verify if jenkins is running on tomcat : http://localhost:8080/jenkins
+*** To start jenkins (standalone) on a diff port***
+java -jar jenkins.war - - httpPort=9090
+==================== Tutorial 3 - How to change Home Directory=================================
+Jenkins Home Directory contains:
+1. All configurations
+2. Plugins
+3. Jobs details
+4. Logs
+Why:
+-To move jenkins home dir to a location that has enough disk space
+-Project requirements
+Step 1 : Check your current home directory
+Step 2 : Create a new folder (which will be new home dir)
+Step 3 : Copy all data from old dir to new dir
+Step 4 : change env variable - JENKINS_HOME and set to new dir
+ goto terminaal
+ export JENKINS_HOME=/Users/raghav/Desktop/Tools/Jenkins/JenkinsHome/
+Step 5 : restart Jenkins
+========================Tutorial 4 - How to use CLI - command line interface============================== 
+Step 1 : start Jenkins
+Step 2 : goto Manage Jenkins - Configure Global Security - enable security
+Step 3 : goto - http://localhost:8080/cli/
+Step 4 : download jerkins-cli jar. Place at any location.
+Step 5 : test the jenkins command line is working
+=========================Tutorial 5 - How to create Users + Manage + Assign Roles==========================
+Jenkins authentication and authorization
+———————————
+How to create New Users
+How to configure users
+How to create new roles
+How to assign users to roles
+How to Control user access on projects
+Step 1 : Create new users
+Step 2 : Configure users
+Step 3 : Create and manage user roles Roles Strategy Plugin - download - restart jenkins
+Step 4 : Manage Jenkins - Configure Global Security - Authorisation - Role Based Strategy
+Step 5 : Create Roles and Assign roles to users
+Step 6 : Validate authorization and authentication are working properly
+================================Tutorial 6 - Basic Configurations=========================================
+Step 1 : Goto Manage Jenkins - Configure System
+Step 2 : Get a basic understanding of common/basic configurations
+========================Tutorial 7 - Getting started with JOBS============================================
+1. How to create a basic JOB in Jenkins
+2. Basic job configurations
+2. How to run the Job remotely
+4. How to chain Job Execution
+Step 1 : Jenkins - New Item - add details 
+Step 2 : How to trigger the job remotely
+Step 3 : How to chain job executions
+============================ Tutorial 8  Jenkins integration with GIT (SCM)===================================
+
+1. Create a java program and run it through command line
+2. Create a Jenkins job to run the java program
+3. Add this program/project to Git
+4. Jenkins - add git plugin
+5. Configure Jenkins job to trigger the execution when a change is pushed to GitHub
+_________________________________________________________
+
+Step 1 : Create a java program
+Step 2 : Compile from command line
+   javac “name of .java class”
+      java “name of class without extension .java”
+Step 3 : Create a Jenkins job to run this program
+Step 4 : Add the project to Git and GitHub
+Step 5 : Configure Jenkins job to trigger build on Git commit
+Note : If you get :
+'javac' is not recognized as an internal or external command,
+operable program or batch file.
+Try this:
+When creating a new item in Jenkins, you can choose the jdk in the General tab (execute multiple builds if necessary option), either you click on System or the jdk that you have installed on that moment (e.g. jdk1.8.0_181).
+=========================Tutorial 9 ======================================================================
+How to use CATLIGHT
+(status notifier for jenkins)
+What is CATLIGHT
+https://catlight.io/
+How to use CATLIGHT
+REFERENCES:
+Catlight website:
+https://catlight.io/
+Downloads link:
+https://catlight.io/downloads
+Support link:
+http://catlight.helprace.com/
+Blog link:
+http://blog.catlight.io/
+============Tutorial 10================================================================================
+What is Automated Deployment ?
+Main stages in
+Continuous delivery and deployment pipeline
+1. BUILD
+2. DEPLOY
+3. TEST
+4. RELEASE
+Lets see ...
+A real world Project SetUp
+Automated Deployment is the process of Automating the deployment process in a Continuous Delivery system
+Build - Deploy - Test - Release
+
+===================tutorial 11 How to do Automated Deployments with Jenkins ?==============================
+Step 1
+Start Jenkins
+Step 2
+Install Plugin
+(Deploy Plugin)
+https://wiki.jenkins-ci.org/display/J...
+You can also goto your Jenkins on browser and
+- Manage Jenkins - Plugins Manager - Click on Available tab and search for deploy to container
+Add to Jenkins
+Step 3
+Create a Build JOB in Jenkins
+Step 4
+Add Post-build Action Deploy war/ear to container
+(add values to the fields) 
+sample war file - https://tomcat.apache.org/tomcat-6.0-...
+Step 5
+In tomcat-users.xml add user for DEPLOYMENT
+user username="deployer" password="deployer" roles="manager-script" /
+Step 6
+Run and Validate
+What is Automated Deployment
+https://www.youtube.com/watch?v=HkLXb...
+How to install and setup TOMCAT
+https://www.youtube.com/playlist?list...
+===================Tutorial 12================================================================================
+-----Manage Jenkins - Configure System - Email Notifications
+==================Tutorial 13=================================================================================
+What is Pipeline in Jenkins ?
+Pipeline - is a workflow with group of events or jobs that are chained and integrated with each other in sequence.
+Every job in a pipeline has some dependency on one or more other jobs
+Let us understand...
+in an easy way !
+(Watch the representations in the video)
+References - 
+https://tex.stackexchange.com/questio...
+https://readtiger.com/wkp/en/Pump
+==================Tutorial 14 =================================================================================
+How to setup Delivery Pipeline in Jenkins ?
+Follow along step by step
+Step 1
+Chain required jobs in sequence
+Add upstream/downstream jobs
+Step 2
+Install
+Delivery Pipeline Plugin
+Step 3
+Add 
+Delivery Pipeline View
+configure the view
+Step 4
+Run and Validate
+================tutorial 15======================================================================================
+How to setup BUILD PIPELINE in Jenkins ?
+Follow along step by step
+Step 1
+Chain required jobs in sequence
+Add upstream/downstream jobs
+How to chain jobs? Watch
+https://www.youtube.com/watch?v=ndLbn...
+Step 2
+Install
+Build Pipeline Plugin
+Step 3
+Add 
+Build Pipeline View
+configure the view
+Step 4
+Run and Validate
+Difference between Build and Delivery Pipeline:
+
+At a high level you can say Build pipeline has a smaller scope in terms of the entire process of software dev and delivery whereas delivery pipeline has a much broader scope. Also when we say delivery, build pipeline will be one of its components.
+Build Pipeline provides a view of the upstream and downstream jobs setup for the build process (typically)
+Whereas Delivery Pipeline gives the visualization of the complete Delivery Process that may include Build, Deploy, Test. In the delivery pipeline view, you can see each of these sections in a separate box.
+Just have a look here:
+Build Pipeline - https://wiki.jenkins.io/display/JENKI...
+Delivery Pipeline - https://wiki.jenkins.io/display/JENKI...
+===================Tutorial 16 ========================================================================================
+What is Jenkins Blue Ocean?
+How to get started with Blue Ocean ?
+
+Blue Ocean is a new User Interface (UI) and User Experience (UX) for Jenkins
+
+It is designed to make Jenkins UI more efficient (reduces clutter and increases the clarity)
+
+In simple words:
+Blue Ocean is a new User Interface for Jenkins and provides an interactive view for Jenkins Pipeline (and jobs)
+
+How to get Blue Ocean
+Ensure you have Jenkins 2.7 or above
+and follow the steps:
+
+Step 1
+Install Blue Ocean Plugin
+
+Step 2
+Switch to Blue Ocean View
+

@@ -1,0 +1,108 @@
+openshift = kubernetes
+ Type of Pod Deployments ..
+1)....Flat pod Deployment ( no high avaialbility / scalabelity )  
+have not any monitring if we delete any pod with we flat depolyment none of new pod will depoly automaticaly.
+kubectl run --generator=run-pod/v1 test --image=nginx 
+File mathrod
+vi pod.yml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test
+  namespace: default
+spec:
+  containers:
+  - name: memory-demo-ctr
+    image: nginx
+kubectl create -f pod.yml
+2).. RC: Replication controller ( state maintain / Replica set /scale up /scale down )
+  ( it depoly number of copy you want to run also mentan pod if one down it automaticaly depoly new pod )
+vim rc.yml
+
+ apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: test
+spec:
+  replicas: 3
+  selector:
+    app: nginx
+  template:
+    metadata:
+      name: nginx
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+kubectl create -f rc.yml
+kubectl get rc
+kubectl scale --replicas=3 rc text
+kubectl delete rc rc.yml  ( for delete rc )
+3 ) .. Deployment Resource ( Updating / Rolling Back )
+DC :  replicas/maintain state pod / rollout /rollingupdate/run time changes
+
+kubectl run test --image=nginx
+kubect get pod
+kubectl scale --replicas=2 depolyment test
+kubectl get pod
+
+vim de.yml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.7.9
+        ports:
+        - containerPort: 80
+
+kubectl create -f de.yml
+kubectl get depolyment
+kubectl describe depolyment NAME  | grep -i image
+
+kubectl set image deployment nginx-deployment nginx= docker.io/ramprakashupadhyay123/kubernetes  --record   ( Rolling update )   ( work on 25% policy )
+kubectl describe depolyment NAME  | grep -i image
+kubectl get deployment nginx-deployment -o yaml  ( for check policay )
+kubectl get pod -o record
+kubectl rollout history deployment nginx-deployment   ( check record )
+kubectl rollout undo deployment  nginx-deployment --to-revision=1
+Service Discovery  : ----
+
+Kube-proxy:  it is software load balancer which disturbute lode over the backend pod ip but it work on pod lebel .
+service IP (if you did not define service ip rang kubadm define 10. serige ip automaticly )
+Service ip : it take single ip against your deployment pod ip. it will necer changes even pod will create or destroy.
+
+kubectl run test --image=nginx --replicas=2
+kubectl exec -it test-db5495c67-5mgg8  /bin/bash
+kubectl expose deployment test --port=80
+kubectl get service 
+External IP ...
+
+kubectl delete service test
+kubectl expose deployment test --type=NodePort --port=80
+kubectl get service 
+
+
+
+
+
+

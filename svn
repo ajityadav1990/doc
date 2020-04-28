@@ -1,0 +1,34 @@
+yum update  
+yum install httpd 
+yum install subversion
+svnserve -d
+cd /home/
+mkdir repo 
+cd repo/                      
+mkdir myfirstproject
+svn admin create /home/repo/myfirstproject
+   or
+svnadmin create --fs-type fsfs myproject
+cd /home/repo/myfirstproject/conf/
+vim svnserve.conf
+do these changes in conf file
+anon-access = none
+auth-access = write
+password-db = passwd
+vim passwd
+user & password
+on client system
+svn co svn://18.209.231.209/home/repo/myproject/
+
+You can explicitly choose the filesystem type using the --fs-type argument, which accepts as a parameter either fsfs or bdb.
+###########SVN Command #################
+svn -up
+svn info
+svn up  -r revision.No     [ For SVN Reverd file ]
+svn relocate svn://103.251.61.85/home/Repos/turbantree
+svn --force delete config
+svn commit -m ""
+svn resolved upload
+svn statu
+.
+.

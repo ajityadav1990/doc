@@ -1,0 +1,50 @@
+https://www.youtube.com/watch?v=JDP-v4X3TiM
+
+[root@ip-172-31-14-28 ~]#yum install sendmail sendmail-cf  m4
+[root@ip-172-31-14-28 ~]#vim /etc/mail/local-host-names
+
+localhost.localdomain   RELAY
+localhost               RELAY
+127.0.0.1               RELAY
+[root@ip-172-31-14-28 ~]#cat /etc/mail/access
+[root@ip-172-31-14-28 ~]#makemap hash /etc/mail/access.db < /etc/mail/access
+
+[root@ip-172-31-14-28 ~]#mkdir /etc/mail/backups
+[root@ip-172-31-14-28 ~]#cp /etc/mail/sendmail.* /etc/mail/backups/
+
+[root@ip-172-31-14-28 ~]#vim /etc/mail/sendmail.mc
+dnl DAEMON_OPTIONS(`Port=submission, Name=MSA, M=Ea')dnl
+  to 
+DAEMON_OPTIONS(`Port=submission, Name=MSA, M=Ea')
+[root@ip-172-31-14-28 ~]# m4 /etc/mail/sendmail.mc > /etc/mail/sendmail.cf
+[root@ip-172-31-14-28 ~]# service sendmail restart
+  or 
+[root@ip-172-31-14-28 ~]# systemctl restart sendmail.service
+[root@ip-172-31-14-28 ~]# dig -t mx smartlearn.xyz
+[root@ip-172-31-14-28 ~]# vim /etc/sysconfig/network
+NETWORKING=yes
+HOSTNAME=ns-499.awsdns-62.com.
+NOZEROCONF=yes
+[root@ip-172-31-14-28 ~]# service network restart
+
+[root@ip-172-31-14-28 ~]# vim /etc/mail/sendmail.mc
+dnl MASQUERADE_AS(`mydomain.com')dnl                                   162
+MASQUERADE_AS(smartlearn.xyz)
+
+dnl MASQUERADE_DOMAIN(mydomainalias.com)dnl                              174 
+MASQUERADE_DOMAIN(smartlearn.xyz)
+
+[root@ip-172-31-14-28 ~]# m4 /etc/mail/sendmail.mc > /etc/mail/sendmail.cf
+[root@ip-172-31-14-28 ~]# systemctl restart sendmail.service
+[root@ip-172-31-14-28 ~]# systemctl stop postfix
+[root@ip-172-31-14-28 ~]# systemctl stop iptables
+[root@ip-172-31-14-28 ~]# iptables -F
+
+[root@ip-172-31-14-28 ~]# touch email.txt
+[root@ip-172-31-14-28 ~]# vim email.txt
+To:ajityadav1990@yahoo.in
+From:mail@smartlearn.xyz
+Subject: Text msg
+hello , this is test mail
+[root@ip-172-31-14-28 ~]# /usr/sbin/sendmail -t < email.txt
+[root@ip-172-31-14-28 ~]# yum install telnet

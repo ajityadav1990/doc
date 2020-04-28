@@ -1,0 +1,66 @@
+Jenkins :_
+ 1) code compile  ---->   maven/ant/gradel (is built management tool)
+ 2) code review   ---->  sonar quib / PMD
+ 3) Test case
+ 4) coverage     
+ 5) Packging
+ 6) Deployment
+ We can work with jenkins two type
+ 1) graphical
+ 2) jenking File
+ when ever we create new project in jenkins it automaticaly create new folde in backend
+ /var/lib/jenkins/work space/project_name
+ -------------------------------------------------------
+https://pkg.jenkins.io/redhat-stable/
+yum update
+yum install java* -y
+yum install wget -y
+wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+yum install jenkins -y
+systemctl start jenkins
+systemctl enable jenkins
+netstat -tnlp | grep -w 8080
+systemctl status -i jenkins
+http://18.209.214.8:8080    [ on URL ]
+http://18.209.214.8:8080/restart 
+-----------------------#####################--------------------------------------
+Work with cli on jenkins
+
+Manage Jenkins
+
+configure Global security
+
+
+Enable security [check]
+Anyone can do anything [check]
+apply & save
+http://100.24.125.89:8080/cli/
+
+jenkins-cli.jar copy link and download in folder where you want run
+iptables -F
+service iptables save
+click on command 
+java -jar jenkins-cli.jar -s http://****your_system_live IP:8080/ safe-restart ( copy link & run on terminal )
+---------------------------------------------------------------------------------------------------
+create user
+Manage Jenkins
+Manage User
+click on username near to search tab
+Configure
+you can change Name,API Token,E-mail address,Password,SSH Public Keys etc
+create & manage user Role
+Roles strategy Plugig (plugig for role ) [ Role-based Authorization Strategy ]
+Manage Jenkins -> Configure Global Security ->  Role-Based Strategy (select) apply & save
+Manage Jenkins -> Manage and Assign Roles -> Manage Roles [ click ] -> add new role and give permision [ Global roles ]
+[ Project roles ] Role to add Develeper , tester 
+Pattern Dev.* , tes.*
+apply & save 
+Assign Roles -> Global roles -> User/group to add [ user1 ] empoly
+User/group to add [ user2 ] empoly
+
+Prject roles -> User/group to add -> user1 & user2 -> Develeper ( user1 ) & Tester (user2)
+New Item add dev1 project , test1 project save 
+--------------
+-- 
+ 

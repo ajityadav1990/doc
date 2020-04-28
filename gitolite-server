@@ -1,0 +1,43 @@
+git server _____------------
+yum update -y
+yum install perl* -y
+adduser git
+passwd git
+ yum install git-core
+su git
+cd /home/git/
+mkdir -p ~/bin
+git clone https://github.com/sitaramc/gitolite
+gitolite/install -ln ~/bin
+PATH=$PATH:~/bin
+gitolite setup -pk git-admin.pub
+git-admin----------------------------
+adduse git-admin
+su git-admin
+cd   /home/git-admin/ 
+ssh-keygen -t rsa
+cd /home/git-admin/.ssh/
+scp id_rsa.pub git@100.24.99.155:/home/git/
+git clone git@192-168-1-52:gitolite-admin
+git-client_------------------------------
+ssh-keygen -t rsa
+cd /home/ec2-user/.ssh/
+scp id_rsa.pub git-admin@18.206.149.40:/home/git-admin/
+git-admin-----------------------------------
+ mv id_rsa.pub ec2-user.pub
+mv ec2-user.pub gitolite-admin/keydir/
+
+cd gitolite-admin/
+git config --global user.name 'abc'
+git config --global user.email 'abc@gmail.com'
+git add keydir/ec2-user.pub
+git commit -a -m "git ec2"
+git push
+vim conf/gitolite.conf
+repo abc
+    RW+     =   @all
+git commit -a -m "add repo"
+git push
+git-client---------------------
+git clone git@100.24.99.155:testing.git
+git clone git@100.24.99.155:abc.git

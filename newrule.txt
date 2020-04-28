@@ -1,0 +1,95 @@
+*filter                                                                                                                                              
+:INPUT ACCEPT [0:0]                                                                                                                                  
+:FORWARD ACCEPT [0:0]                                                                                                                                
+:OUTPUT ACCEPT [1790:179960]                                                                                                                         
+:acctboth - [0:0]                                                                                                                                    
+-A INPUT -j acctboth                                                                                                                                 
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT                                                                                              
+
+-A INPUT -s 209.126.107.146 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 209.126.107.79 -p tcp -m tcp --dport 22 -j ACCEPT 
+-A INPUT -s 209.126.105.56 -p tcp -m tcp --dport 22 -j ACCEPT 
+
+-A INPUT -s 103.251.61.82 -p tcp -m tcp --dport 3306 -j ACCEPT 
+-A INPUT -s 173.224.124.249 -p tcp -m tcp --dport 3306 -j ACCEPT 
+-A INPUT -s 168.143.160.139 -p tcp -m tcp --dport 3306 -j ACCEPT 
+-A INPUT -s 209.126.107.146 -p tcp -m tcp --dport 3306 -j ACCEPT 
+-A INPUT -s 209.126.107.79 -p tcp -m tcp --dport 3306 -j ACCEPT  
+-A INPUT -s 209.126.105.56 -p tcp -m tcp --dport 3306 -j ACCEPT  
+#-A INPUT -s yandex.ru -j DROP                                   
+#-A INPUT -s yandex.com -j DROP                                  
+-A INPUT -s 198.104.144.28 -p tcp -m tcp --dport 3306 -j ACCEPT  
+-A INPUT -s 198.104.139.157 -p tcp -m tcp --dport 3306 -j ACCEPT 
+-A INPUT -s 198.65.102.41 -p tcp -m tcp --dport 3306 -j ACCEPT   
+-A INPUT -s 168.143.160.138 -p tcp -m tcp --dport 10050 -j ACCEPT
+-A INPUT -s 168.143.160.138 -p tcp -m tcp --dport 20 -j ACCEPT   
+-A INPUT -s 168.143.160.138 -p tcp -m tcp --dport 21 -j ACCEPT   
+-A INPUT -s 173.224.124.249 -p tcp -m tcp --dport 21 -j ACCEPT   
+-A INPUT -s 173.224.119.136 -p tcp -m tcp --dport 21 -j ACCEPT   
+-A INPUT -s 207.150.195.49 -p tcp -m tcp --dport 22 -j ACCEPT    
+-A INPUT -s 103.15.82.170 -p tcp -m tcp --dport 21 -j ACCEPT     
+-A INPUT -s 103.15.82.170 -p tcp -m tcp --dport 22 -j ACCEPT     
+-A INPUT -s 209.126.119.14 -p tcp -m tcp --dport 22 -j ACCEPT    
+-A INPUT -s 209.126.119.14 -p tcp -m tcp --dport 3306 -j ACCEPT  
+
+-A INPUT -s 208.74.121.100 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 208.74.121.101 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 208.74.121.102 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 208.74.121.103 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 208.74.121.106 -p tcp -m tcp --dport 22 -j ACCEPT
+
+
+
+-A INPUT -s 208.74.123.98 -p tcp -m tcp --dport 22 -j ACCEPT
+
+
+
+-A INPUT -s 209.126.96.29 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 209.126.96.29 -p tcp -m tcp --dport 3306 -j ACCEPT
+-A INPUT -s 173.224.124.249 -p tcp -m tcp --dport 22 -j ACCEPT
+#-A INPUT -s 122.160.56.231 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 69.64.35.130 -p tcp -m tcp --dport 22 -j ACCEPT   
+-A INPUT -s 69.64.35.130 -p tcp -m tcp --dport 3306 -j ACCEPT 
+-A INPUT -s 209.126.127.21 -p tcp -m tcp --dport 22 -j ACCEPT 
+-A INPUT -s 209.126.127.21 -p tcp -m tcp --dport 3306 -j ACCEPT
+-A INPUT -s 173.224.119.136 -p tcp -m tcp --dport 22 -j ACCEPT 
+-A INPUT -s 173.224.119.136 -p tcp -m tcp --dport 3306 -j ACCEPT 
+-A INPUT -s 103.251.61.82 -p tcp -m tcp --dport 22 -j ACCEPT     
+-A INPUT -s 103.251.61.88 -p tcp -m tcp --dport 22 -j ACCEPT     
+-A INPUT -s 103.251.61.89 -p tcp -m tcp --dport 22 -j ACCEPT     
+
+-A INPUT -s 198.65.102.41 -p tcp -m tcp --dport 22 -j ACCEPT 
+-A INPUT -s 198.65.102.89 -p tcp -m tcp --dport 22 -j ACCEPT 
+-A INPUT -s 168.143.160.139 -p tcp -m tcp --dport 22 -j ACCEPT 
+-A INPUT -s 50.30.35.17 -p tcp -m tcp --dport 3306 -j ACCEPT
+-A INPUT -s 50.30.35.17 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 207.150.195.49 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 122.176.47.47 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 122.176.47.47 -p tcp -m tcp --dport 2086 -j ACCEPT
+-A INPUT -s 122.176.47.47 -p tcp -m tcp --dport 2087 -j ACCEPT
+-A INPUT -s 122.176.47.47 -p tcp -m tcp --dport 2083 -j ACCEPT
+-A INPUT -s 168.143.160.138 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 198.104.144.28 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 198.104.144.45 -p tcp -m tcp --dport 3306 -j ACCEPT
+-A INPUT -s 198.104.144.45 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 198.65.102.41 -p tcp -m tcp --dport 3306 -j ACCEPT
+-A INPUT -s 198.65.102.41 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 198.65.102.89 -p tcp -m tcp --dport 3306 -j ACCEPT
+-A INPUT -s 198.65.102.89 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 168.143.160.136 -p tcp -m tcp --dport 22 -j ACCEPT
+-A INPUT -s 168.143.160.136 -p tcp -m tcp --dport 3306 -j ACCEPT
+-A INPUT -p tcp --sport 20 -m state --state ESTABLISHED,RELATED -j ACCEPT
+-A OUTPUT -p tcp --dport 20 -m state --state ESTABLISHED -j ACCEPT
+-A INPUT -p tcp --sport 30000:65000 --dport 30000:65000  -m state --state NEW,ESTABLISHED -j ACCEPT
+-A OUTPUT -p tcp --sport 30000:65000 --dport 30000:65000  -m state --state ESTABLISHED,RELATED -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 2082 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 2095 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 2086 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 25 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 110 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 143 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
+
+#-A INPUT -j DROP
+COMMIT

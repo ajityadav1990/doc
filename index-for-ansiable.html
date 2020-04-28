@@ -1,0 +1,189 @@
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<title>Reverted by Ajeet Yadav</title>
+</head>
+
+<body>
+    <div id="page">
+		
+        <div id="header">
+        	<h1>AJEET YADAV</h1>
+            <h2>This is writen By by Ajeet Yadav.</h2>
+            
+      </div>
+        <div id="bar">
+            <ul>
+                <li><a href="index-for-docker.html">Home</a></li>
+                <li><a href="#">Pictures</a></li>
+                <li><a href="#">My Bio</a></li>
+                <li><a href="#">My Company</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+      </div>
+        <div class="contentTitle"><h1>Ansiable</h1></div>
+        <div class="contentText">
+          <pre> 
+          Required :
+Ansible - 2.9
+Linux -  6
+Python - 2.6
+by default ansible faq value =5
+Ansible work on checksome value
+Inventory conten list of client ip
+ansible default module path  :
+/usr/share/My_modules or My_modules_utils
+bolt  in ansible used for encryption.
+-i  = inventory
+-u  = remort user
+-k  = ssh password
+-b  =  ----------------for sudo privilage-----
+-b  = become
+--become-user = swich user
+-m = modules
+-a = argument
+ansible --version
+yum install epel-release -y
+yum install ansible -y
+vim inventory/hosts
+[web]
+172.31.38.109
+172.31.40.94
+[dev]
+192.168.10.[1:20]
+[demo]
+server[1:10].example.com
+[prod:children]
+web
+dev
+ansible web --list-hosts
+ansible web --list-hosts -i inventory/
+ansible dev --list-hosts -i inventory/
+ansible app --list-hosts -i inventory/
+ansible demo --list-hosts -i inventory/
+How to becaume default inventory
+ansible always give pracidence fist your inverment
+1) PWD
+2) export
+3) ~/.ansible.cfg
+4) /etc/ansible.cfg
+Type for becaume default inventory
+1]  copy in home account
+2]  copy in current folder
+3] export { export ANSIBLE_CONFIG=/home/centos/data/ansible.cfg ] can work from any where 
+ cat /etc/ansible/ansible.cfg 
+cp /etc/ansible/ansible.cfg /home/centos/.ansible.cfg
+Add inventory file path in /home/centos/.ansible.cfg
+Make conation in server to node
+setup assword on all node
+ansible all -m ping
+ansible all -m ping -k
+vim inventory/hosts
+[web]
+172.31.38.109	ansible_ssh_user=centos	ansible_ssh_pass=123456
+172.31.40.94	ansible_ssh_user=centos	ansible_ssh_pass=123456
+172.24.11.144 ansible_user=ec2-user ansible_ssh_private_key_file=/home/ec2-user/demo-keys.pem
+ssh-keygen 
+ssh-copy-id -i centos@172.31.38.109 
+ssh-copy-id -i centos@172.31.40.94 
+ansible all -m ping
+ansible all --list-hosts  ( for check all node in inventory file )
+how to enable sudo power in ansible
+-b use for sudo power in ansible 
+ansible all -m command -a 'uptime'
+ansible all -m command -a 'useradd manish'
+ansible all -m command -a 'useradd manish' -b
+ansible all -m command -a 'id manish'
+ansible -m web-server shell -a "ls /home"
+ansible web-server -m shell -a "df -Th"
+ansible web-server -m shell -a "free -m"
+#Check service which you have installed
+ansible web-server -m shell -a "sudo service httpd status" -u ec2-user --private-key /home/ec2-user/demo-keys.pem
+
+ansible web-server -m shell -a "sudo service httpd status; php -v" -u ec2-user --private-key /home/ec2-user/demo-keys.pem
+if we want make default parametar  we have to changn in .ansible.cfg 
+HOw to push configuration
+1] playbook     : file method
+2] command line :  ad-hoc 
+An ad-hoc command is something that you can run command quickly & directaly on ansible .
+ansible target -m module -a 'key=value'
+ ansible-doc -l ( list all default module )
+Module define always meening full name 
+example : 
+ansible-doc -l | grep copy      ( for find copy file module )
+ansible-doc copy                ( for find argument in copy command)
+ansible all -m copy -a 'src=run.sh dest=/home/centos/ owner=manish group=wheel mode=0755' -b
+ansible all -m copy -a 'src=run.sh dest=/home/centos/ backup=yes'
+ansible all -m fetch -a 'src=/home/centos/run.sh dest=/home/centos/abs'   ( copy node to server )
+ansible all -m file -a 'path=/home/centos/run.sh state=absent'      (delete file from node )
+ansible all -m yum -a 'name=ftp state=installed' -b                 (install package with yum)
+ansible all -m yum -a 'name=ftp state=removed' -b
+1) ansible all -m ping -u ec2-user -k    ( loging with user & password )
+2) ansible all -m command -a 'free -m'   ( use module)
+3) ansible-doc -l | grep copy  ( Know about module )
+4) ansible-doc copy   (on botom check sentex )
+5) ansible all -m copy -a ;src=test.txt dest=/root/ owner=manish group=while mode=0775'
+6) ansible all -m command -a 'cat /root/test.txt'  (run cooand in ansible )
+7) ansible all -m stat -a 'path=/root/abc.txt'    ( Know complite details of any file)
+8) ansible all -m command -a 'ls -l /root/abc.text '
+9) ansible all -m fetch -a 'src=/etcfstab dest=/tem/backup'   ( copy remort foram master )i
+
+_______Write Play Book _________________________
+ vim p1.yml
+- hosts: all
+  gather_facts: false
+  tasks: 
+   - copy:
+      src: /home/cilredhat/query
+      dest: /home/cilredhat/Desktop
+
+Playbook sentax check 
+ansible-playbook p1.yml --syntax-check
+Dry Run Play book:
+ansible-playbook p1.yml --check
+ansible-playbook p1.yml -C
+Run Playbook : 
+ansible-playbook p1.yml
+Passing argument in playbook 
+- name: Run copy play book
+  hosts: all
+  gather_facts: false
+  tasks:
+   - name: copyingggggggggg 
+     copy:
+      src: /home/cilredhat/query
+      dest: /home/cilredhat/Desktop
+OR 
+- name: Run copy play book
+  hosts: all
+  gather_facts: false
+  tasks:
+   - name: copyingggggggggg
+     copy:
+      src: /home/cilredhat/query
+      dest: /home/cilredhat/Desktop
+   - name: run command module for example
+     command: cat /home/cilredhat/Desktop/query
+     register: mymotd
+----------------------------------How to write multiplay ------------------
+- name: Run copy play book
+  hosts: web
+  gather_facts: false
+  tasks:
+   - name: copyingggggggggg
+     copy:
+      src: /home/cilredhat/query
+      dest: /home/cilredhat/Desktop
+- name: Ruu second play
+  hosts: app
+  tasks:
+   - name: service restart
+     service:
+      name: httpd
+      state: restarted
+</pre>       
+</body><div id="footer"><a>web page designer </a> <a>Ajeet Yadav</a></div>
+</html>

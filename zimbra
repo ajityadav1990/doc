@@ -1,0 +1,24 @@
+yum update -y
+ vim /etc/hosts
+
+18.204.245.224  ec2-18-204-245-224.compute-1.amazonaws.com      amazonaws
+mkdir /temp
+cd /temp/
+wget wget https://files.zimbra.com/downloads/8.6.0_GA/zcs-8.6.0_GA_1153.RHEL7_64.20141215151110.tgz
+service postfix stop
+yum install sendmail -y
+service sendmail stop
+systemctl disable postfix
+yum install perl perl-core ntpl sudo nmap libidn gmp libaio libstdc++ unzip sysstat sqlite -y
+tar xzf zcs-8.6.0_GA_1153.RHEL7_64.20141215151110.tgz
+cd zcs-8.6.0_GA_1153.RHEL7_64.20141215151110
+sh install.sh
+
+ERROR: Installation can not proceeed.  Please fix your /etc/hosts file
+  to contain:                                                           
+
+  <ip> <FQHN> <HN>
+
+  Where <IP> is the ip address of the host, 
+  <FQHN> is the FULLY QUALIFIED host name, and
+  <HN> is the (optional) hostname-only portion

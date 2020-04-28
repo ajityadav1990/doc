@@ -1,0 +1,31 @@
+How to setup DNA foe mail server and mail
+Enable email server on VPS(virtual Private server )
+Setting  CName,MX,TXT Record  on Godaddy account 
+CNAME 
+DNS Manage/add/Type [CNAME]/Host [mail]/Point to [@]/TTL[Custom]/second[600] or TTL 1Hors
+MX Record
+a)  DNS Manage/add/Type [MX]/Host [@]/Point to [mail.smartlearn.xyz] /Priority[10]
+b)  DNS Manage/add/Type [MX]/Host [@]/Point to [mail.smartlearn.xyz] /Priority[0]
+TXT Record
+DNS Manage/add/Type [TXT]/Host [@]/Point to [  ]  server SPF record
+
+Rout53 (AWS)
+Rout53/HostedZone/Created Host Zone/Domain name  [smartlearn.xyz]/comment[anything]/created
+copy all NS Record and Pest on godaddy account  [ DNS manage/Name Server/Custom/add all 4 /save ]
+Now on Rout53
+WWW
+Create Recordset/Name[www]/Type[A.ipv4address]/Value[13.126.17.92]
+Create Recordset/Name[ ]/Type[A.ipv4address]/Alias. yes now/Value[www.smartlearn.xyz]
+SUBDOMAIN
+Create Recordset/Name[mail]/Type[A.ipv4address]/Value[13.126.17.92]
+MX Record  
+Create Recordset/Name[ ]/Type[MX-Mail exchange]/Value[10.mail.smartlearn.xyz]
+SPF Record
+Create Recordset/Name[mail]/Type[SPF-***]/Value ["v=spf1 a mx ip4:209.126.107.79 ~all"]
+POP Record
+Create Recordset/Name[Pop]/Type[A.ipv4address]/Value[13.126.17.92]
+SMTP
+Create Recordset/Name[smtp]/Type[A.ipv4address]/Value[13.126.17.92]
+
+
+yum install bind-utils   for (dig command )

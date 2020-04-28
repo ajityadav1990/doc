@@ -1,0 +1,23 @@
+yum install mod_ssl
+
+openssl genrsa -des3 -passout pass:x -out mapsofindia.pass.key 2048 
+openssl rsa -passin pass:x -in mapsofindia.pass.key -out mapsofindia.key 
+openssl req -new -key mapsofindia.key -out mapsofindia.csr 
+openssl x509 -req -days 365 -in mapsofindia.csr -signkey mapsofindia.key -out mapsofindia.crt
+
+
+<VirtualHost *:443>
+DocumentRoot /var/www/html/
+ServerName smartlearn.xyz
+ServerAlias smartlearn.xyz
+<Directory /var/www/html>
+Options FollowSymLinks Includes ExecCGI
+AllowOverride All
+Order deny,allow
+Allow from all
+</Directory>
+
+SSLEngine on
+SSLCertificateFile /abc/smartlearn.crt 
+SSLCertificateKeyFile /abc/smartlearn.key
+</VirtualHost>

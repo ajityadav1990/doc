@@ -1,0 +1,818 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What is Iftar? </title>
+<meta name="description"content="Find out when is Iftar. Get an idea of Iftar prayer or dua, and check out some recipes that can be included in your Iftar menu.">
+<meta name="keywords" content="when is iftar, ramadan iftar 2020, iftar menu">
+
+
+<!-- new code start -->
+   <link href="bootstrap.min-content.css" rel="stylesheet">
+
+    <!-- new code end -->
+    
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+<meta name="atdlayout" content="ros">
+  </head>
+ <body>
+  <!-- top logo section start here  -->
+  <!-- ========================== -->
+  <div class="container-fluid logobox">
+    <div class="container">
+       
+      <div class="navbar-header" style="display:none;">
+                <p>Premium Greetings & Messages Website Since 1999</p>
+      </div>
+      <div class="adslot_730_1">
+    <!-- DG-728-Top -->
+<div id='div-gpt-ad-1416915223284-6' style='width:728px; height:90px;'>
+</div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End here logo section -->
+  <!-- ======================== -->
+
+    <!-- start naviagtion section here -->
+    <!-- =============================== -->
+    <header>
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row" style="position: relative;"><a href="#menu"><img src="https://www.dgreetings.com/dg-msg-new/img/icon-menu.png" alt="menu" class="toggle" id="sidenav-toggle"></a>
+		 
+		  </div>
+          <div class="row ">	
+			</div>
+
+			<div class="col-sm-4 col-md-4 col-xs-12">
+
+
+              <div id="wrap" class="share-wrap">
+
+                <form action="https://www.google.com" id="cse-search-box" itemprop="potentialAction" itemscope itemtype="">
+                  <meta itemprop="target" content="https://www.google.com"/>
+                      <input type="text" itemprop="query-input" name="q"  placeholder="Search..." id="search"/>
+                      <input id="search_submit" value="Rechercher" type="submit">
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div id="DG-responsive-top"></div>
+          </div>
+          <div class="row menuline">
+              <nav class="sidenav" data-sidenav data-sidenav-toggle="#sidenav-toggle">
+              <ul class="sidenav-menu">
+	<li><span class="lp-head">About Linux</span></li>
+<li><a href="#q1"><b>Virtual Machin</b></a></li>
+<li><a href="#q2"><b>Boot process</b></a></li>
+<li><a href="#q3"><b>Root Password</b></a></li>
+<li><a href="#q4"><b>shortcuts</b></a></li>
+<li><a href="#q5"><b>Linux commands</b></a></li> 
+<li><a href="#q6"><b>Log</b></a></li>
+<li><a href="#q7"><b>time</b></a></li>
+<li><a href="#q8"><b>syslog</b></a></li>
+<li><a href="#q9"><b>rsync</b></a></li>
+<li><a href="#a1"><b>tar</b></a></li>
+<li><a href="#a2"><b>YUM and RPM</b></a></li>
+<li><a href="#a3"><b>ACL</b></a></li>
+<li><a href="#a4"><b>add any user without using useradd</b></a></li>
+<li><a href="#a5"><b>service</b></a></li>
+<li><a href="#a6"><b>runlevel</b></a></li>
+<li><a href="#a7"><b>Set targets</b></a></li>
+<li><a href="#a8"><b>How many types of jobs are used in linux</b></a></li>
+<li><a href="#a9"><b>crontab</b></a></li>
+<li><a href="#b1"><b>script</b></a></li>
+<li><a href="#b2"><b>SELinux</b></a></li>
+<li><a href="#b3"><b>disk partitions</b></a></li>
+<li><a href="#b4"><b>IP address</b></a></li>
+<li><a href="#b5"><b>Managing Networking</b></a></li>
+<li><a href="#b6"><b>Firewall</b></a></li>
+__________________________________________________________________________________________________
+</ul>
+            </nav>
+
+          </div>
+        </div>
+       </div> 
+    </header>
+    <!-- End here  -->
+
+    <!-- start Birthday section -->
+    <div class="">
+      <div class="container commonGap">
+        <div class="row content">
+		<div class="col-sm-6 col-md-6 col-xs-12 takeup bread-crumbs">
+          </div>
+
+		       <div class="col-sm-6 col-md-6 col-xs-12 takeup"><div class="update">Develop By Ajeet & Vivak Sharma</div></div>
+			   
+
+		  <div class="col-sm-12 col-md-12 col-xs-12 takeup">
+     
+---------------------------------------------------------------------------------------------------------------------
+<h2><a name= "q1"></a>Virtual Machin</h2>
+<CENTER><h2 style="text-align:center;">Installing a New Virtual Machin (The steps to install linux OS) </h2></CENTER>
+<pre>A -Name the virtual machin and selet an installation source
+B -Provide the source location and oprating system type
+C -Enter the memory and CPU settings
+D -Configure storage for this virtuall machin
+E -Configure networking options for the installation
+F -Modify localization parameters for date and time, language and keyword
+G -Select the software to be install
+H -Provide system parameters for disk partioning, networking and hostname
+I -Provide user settings for a root password and non-root account
+J -Licence agreement</pre>
+
+<h2><a name= "q2"></a>Boot process</h2>
+<CENTER><h2 style="text-align:center;">Controlling and Troubleshooting the redhat linux Boot process </h2></CENTER>
+<pre>A -The system firmware loads the boot loader
+B -The boot loader loads its configuration from disk
+C -The boot loader presents the user with a manu
+D -A kernal and intramfs are loaded from disk
+E -The kernal initializes and lounches /sbin/init from the initramfs
+F -Basic hardware initalization takes place
+G -The system root files system is mounted read-only on /sysroot
+H -The root file system is switch and control is passed over to a new systemd instance
+I -All units for the default targets are started
+  </pre>
+<h2><a name= "q3"></a>Root Password</h2>
+<CENTER><h2 style="text-align:center;"> How to breack "Root Password</h2></CENTER>
+<pre>A A -The system firmware loads the boot loader
+B -The boot loader loads its configuration from disk
+C -The boot loader presents the user with a manu
+D -A kernal and intramfs are loaded from disk
+E -The kernal initializes and lounches /sbin/init from the initramfs
+F -Basic hardware initalization takes place
+G -The system root files system is mounted read-only on /sysroot
+H -The root file system is switch and control is passed over to a new systemd instance
+I -All units for the default targets are started
+  </pre>
+<h2><a name= "q4"></a>shortcuts</h2>
+<CENTER><h2 style="text-align:center;">Some usefull command line-editing shortcuts </h2></CENTER>
+<pre>Ctrl+a                 -Jump to the beginning of the command line
+Ctrl+e                 -Jump to the end of the command line
+Ctrl+u                 -Clear from the corsorto the beginning of the command line
+Ctrl+k                 -Clear from the corsor to the end of the command line
+Ctrl+Left Arrow        -Jump to the beginning of the previeus word on the command line
+Ctrl+Right Arrow       -Jump to the end of the next word on the command line
+Ctrl+r                 -Search the history list of commands for a pattrn
+!number                -Re-execute a specific command in the history list
+Ctrl+Shift+plus+plus   -to increase the font size
+Ctrl+minus+minus       -to dicrease font size
+Ctrl+Shift+t           -to open new tab
+Ctrl+Alt+delete        -to shutdown the system
+Ctrl+Alt+l             -to logout the system
+Ctrl+l                 -to clear screen
+Ctrl+d                 -to logout terminal console
+Ctrl+Alt+Delete        -to powering off or rebooting the system 
+Ctrl+Alt+L             - to lock screen in linux
+Ctrl+Alt+Up Arrow or Ctrl+Alt+Down Arrow    -to switch between workspaces sequently in linux 
+  </pre>
+<h2><a name= "q5"></a>Linux commands</h2>
+<CENTER><h2 style="text-align:center;">Some basic Linux commands </h2></CENTER>
+<pre>pwd                            -check current location
+ls                             -To get the list of all the files or folders
+lscpu                          -to check system properties
+lspci                          -to show system driver information
+lsusb -tv                      -show USB devices
+cd                             -change directory
+ls -l                          -long list
+ls -a                          -list all files including hiddenn files
+ls -i                          -show all files with inode number 
+ls.                            -list only hidden files or directories
+ls -R                          -recursively to include the contents of all sub-directory
+cd -                           -return to the most priviaus working directory
+cd ../..                       -move up to two dirctory of the current location
+cd ..                          -move up to one directory of the current location
+cp                             -copy file
+mv                             -move or rename file
+rm                             -remove file
+mkdir                          -create directory
+mkdir .directryname            -create hidden directory
+mkdir -p dir/dir2              -used for creating multiple directory under directory
+rmdir -p                       -to remove directory under directoy
+touch                          -create empty file
+touch filename{1..5}           -create mutiple files
+rm -r                          -remove directory
+rm -rf                         -remove directory forcefully
+b*                             -find only filename beginning with 'b'
+*b                             -find only filename ending in 'b'
+w                              -used to check which users are logged in to the system,
+                                and what command they are executing at that particular time
+wc -l                          -prints the number of lines in a file & directory (ls | wc -l)
+wc -w                          -prints the number of words in a file
+ls -d */                       -to show only files
+free -h                        -to show system RAM memory with SWAP memory
+du -sh                         -Calculates the disk usage of a file or a directory.
+df -h                          -to show file system usage
+fdisk -l                       -The fdisk is a tool for getting partition information, and for adding and removing partitions
+blkid                          -to discover the UUID of the newly added partition
+cal                            -Displays the calendar of the current month
+date                           -Displays current time and date
+file                           -determines the file type of a given file. 
+stat                           -To check the status of a file
+ln                             -used to create hard links
+ln -s                          -used to create soft links
+grpck                          -check correct syntax and file format of '/etc/group' and groups existence
+pico                           -Pico is a text editor
+vim                            -This is a standard text editor
+tty                            -Displays current terminal
+echo                           -this command is used to display a text (echo "hello")
+cat                            -to view files
+cat /etc/passwd                -to verify users with uid
+alias                          -used to create a shortcut of any command
+head                           -Used to print the first N lines of a file
+tail                           -Used to print the last N-1 lines of a file
+sort                           -This command is used to sort the contents of files
+locate                         -To find a file in your system
+find                           -finding file with name
+su -                           -allows a user to switch to a diffirent account
+su                             -switch root account 
+sudo                           -allows a user to be permitted to run command as root 
+grep                           -find text in a file
+chage -d                       -will force a password update on next time
+chage -l                       -will list a username's current settings
+chage -E yyyy-mm-dd            -will expire an acount on a specific day
+systemctl                      -used to manage different types of systemd objects, called units
+ssh                            -used to securely run a shell on a remote system
+w -f                           -used to displays a list of users currently logged into the computer
+ssh-keygen                     -used to create a public-private key pair
+journalctl                     -shows the full system journal, starting with the oldest log entry, when run as root user  
+ip route                       -used to show routing information
+ifconfig                       -used to show system IP address
+ping                           -used to test connection connectivity
+traceroute or tarcepath        -to trace the path to a remote host                  
+ip addr                        -display the current IP address and netmask for all interfaces
+ip route                       -display the routing information
+nmcli con show                 -to display a list of all connections. To list only the active connections
+dig                            -This command is used to query the DNS name servers for any task related to DNS lookup
+nslookup                       -To find DNS related query
+ifplugstatus                   -This command tells us whether the network cable is plugged in or not
+mtr                            -This command combines ping and track path into a single command
+nmcli dev status               -list all devices
+reboot                         -reboot the system
+init 6                         -reboot the system
+init 0                         -power off the system
+shutdown -h time               -power off the system with that time
+netstat                        -used to check the network statistics of the system.
+man commandname                -show the all information about command 
+pinfo commandname              -show some information about command
+whoami                         -the user who is currently logged in
+who -u                         -check logged in user details
+who -a                         -show all information abot kernal
+uname -m                       -show architecture of machine
+uname -r                       -show used kernel version
+arch                           -show architecture of machine
+tree                           -show files and directories in a tree starting from root
+clock -w                       -save date changes on BIOS
+id                             -This command prints user and groups (UID and GID) of the current user.
+clear                          -clears the screen.
+--help                         -option shows usage summary for that command (ls --help)
+whatis                         -This command gives a one line description about the command.(whatis date)
+info                           -It will give detailed information for a command (info date)
+history                        -shows the commands you have entered on your terminal so far.
+history -r                     -used to restore all history
+history -c                     -used to clear history
+history -- historyname          -used to save history in root directory
+last                           -to show logged in and reboot history
+gedit                          -used to open notepad
+postconf                       -to query all settings from the /etc/postfix/main.cf configuration file
+postqueue -p                   -displays a list of any outgoing mail messages that have been queued
+ </pre>
+ <h2><a name= "q6"></a>Log</h2>
+<CENTER><h2 style="text-align:center;">System Log Architecture </h2></CENTER>
+<pre>/var/log/messages       -most syslog messages are logged here. The exceptions are messages related to authentication 
+                         and email precessing, that periodically run jobs, and those which are purely debugging related
+/var/log/secure         -The log file for security and  authentication-related messages and errors
+/var/log/maillog        -The log file with mail server-related messages
+/var/log/cron           -The log file related to periodically executed tasks
+/var/log/boot.log       -Messages related to system startup are logged here
+journalctl              -used to search all logs in detailes
+journalctl -b           -used to seach only booting logs
+journalctl --since today -used to search today logs
+journalctl -n 10         -used to search last 10 logs
+journalctl -o verbose    -used to search super details
+  </pre>
+<h2><a name= "q7"></a>time</h2>
+<CENTER><h2 style="text-align:center;">How to maintain accurate time </h2></CENTER>
+<pre>timedatectl                    -shows an overview of the current time-related system settings, include current time,time zone
+timedatectl list-timezones     -used for show time zones
+timedatectl set-timezone       -used for set time zone
+timedatectl set-time           -used to set time 
+tzselect                       -used to identify the current time
+uptime                         -used to show time with system load average
+  </pre>
+<h2><a name= "q8"></a>syslog</h2>
+<CENTER><h2 style="text-align:center;">Overview of syslog properties </h2></CENTER>
+<pre>emerg                   -System is unusable
+alert                   -Action must be tacken immediately
+crit                    -Crtical condition
+warning                 -Warning condition
+notice                  -Normal but significant condition event
+info                    -Information event
+debug                   -Debugging-level message
+  </pre>
+<h2><a name= "q9"></a>rsync</h2>
+<CENTER><h2 style="text-align:center;">Synchronize files and folders with rsync </h2></CENTER>
+<pre>The rsync tool is another way to securely copy files from one system to another system.
+-r                      -synchronize recursively the whole directory tree
+-l                      -synchronize symbolic links
+-p                      -preserve permissions
+-t                      -preserve time stamps
+-g                      -preserve group ownership
+-o                      -preserve group owner of the files
+-D                      -synchronize device files
+  </pre>
+<h2><a name= "a1"></a>tar</h2>
+<CENTER><h2 style="text-align:center;">How to commonly used tar and tar option in linex</h2></CENTER>
+<pre>tar -czvf filename.tar.gz filename   -create an archive tar file
+tar -czvf filename.tar.gz .          -used to convert all abalable directory file in that directory
+tar -xzvf filename.tar.gz            -extarct an archive tar file 
+f                                    -file name of the archive to operate on
+v                                    -verbosity; useful to see which files get added to the archive
+c                                    -create an archive
+x                                    -extract an archive
+t                                    -list the content of an archive
+z                                    -for gzip compression (filename.tar.bz)
+j                                    -for bzip2 compression (filename.tar.bz2)
+J (capital)                          -for xz compression (filename.tar.xz)
+  </pre>
+<h2><a name= "a2"></a>YUM and RPM</h2>
+<CENTER><h2 style="text-align:center;">Summmary of YUM and RPM Querry commands</h2></CENTER>
+<pre>yum list "packagename"              -list installed and avalable packages by name
+yum info packagename                -show details of a package (httpd)
+yum group list                      -list installed and avalable groups
+yum search all "keyword"            -search for a package by keyword (webserver)
+yum install packagename             -install package
+yum group install "groupname"       -install a package group
+yum update                          -update all package
+yum remove packagename              -remove package
+yum historry                        -display transaction history
+rpm -q -i packagename               -display information about a package
+rpm -q -l packagename               -list all files includeed in a package
+rpm -q -c packagename               -list configuration files includeed in a package
+rpm -q -d packagename               -list documentation files includeed in a package
+rpm -q --changelog packagename      -show a short summary of the reason for a new package release
+rpm -q --scripts packagename        -display the shell scripts includeed in a package
+
+  </pre>
+<h2><a name= "a3"></a>ACL</h2>
+<CENTER><h2 style="text-align:center;">How to set ACL (rwx) files & directory permission</h2></CENTER>
+<pre>setfacl -m u:uname:r_x dirname   -used to modify user read, wright & execute (rwx) file ACL permission
+setfacl -Rm u:uname:r_x dname    -used to modify user read, wright & execute (rwx) file ACL permission recursively
+setfacl -m d:u:uname:r_x dname   -used to modify user read & execute (rx) default file ACL permission 
+setfacl -x u:uname:- filename    -used to remove user read, wright & execute (rwx) file ACL permission
+setfacl -m g:gname:rw_ fname     -used to modify group read, wright & execute (rwx) file ACL permission
+setfacl -x g:gname:- dirname     -used to remove group read, wright & execute (rwx) file ACL permission
+setfacl -m o::rwx filename       -used to modify other read, wright & execute (rwx) file ACL permission
+setfacl -x o::- filename         -used to remove other read, wright & execute (rwx) file ACL permission
+setfacl --remove-all dirname                           -used to remove ACL permission on directory
+setfacl -m u:uname:rwx, g:gname:rx, o::- filename      -used to combine user, group & other file permission
+getfacl filename                                       -used to show user, group & other file permissions
+
+  </pre>
+<h2><a name= "a4"></a>add any user without using useradd</h2>
+<CENTER><h2 style="text-align:center;">How to add any user without using useradd command</h2></CENTER>
+<pre>go to home directory
+cd /home
+create directory for that username 
+mkdir username
+give directory permission
+chmod 700 /home/username
+ls -l
+vim /etc/passwd
+edit file and type this then save
+username:x:1002:1002::/home/username:/bin/bash
+vim /etc/group
+edit file and type this then save
+username:x:1002:
+change owner & group of that file
+chown username /home/usernamefile
+chgrp username /home/usernamefile
+cp -af /etc/skel/.[!.]* /home/usernamefile
+passwd username
+then login user
+su - username
+  </pre>
+<h2><a name= "a5"></a>service</h2>
+<CENTER><h2 style="text-align:center;">How to controlling services and service domains</h2></CENTER>
+<pre>systemctl start servicename               -used to start service (httpd)
+systemctl enable servicename              -used to enable service permanently 
+systemctl status servicename              -used to show status of that service (sshd)
+systemctl stop servicename                -used to stop service
+systemctl disable servicename             -used to disable service permanently 
+systemctl reload servicename              -used to reload service
+systemctl mask servicename                -used to mask service
+systemctl unmask servicename              -used to unmask service
+systemctl restart servicename             -used to restart service
+systemctl --type=service                  -used to query the state of only the service units
+systemctl list-units --type=service --all -used to list the active and inactve state of all koaded units
+systemctl list-unit-files --type=service  -used to view the enable and disabled settings for all units
+systemctl --failed --type=service         -used to view only failed services
+  </pre>
+<h2><a name= "a6"></a>runlevel</h2>
+<CENTER><h2 style="text-align:center;">Siveen runlevel targets in redhat linux 7.0</h2></CENTER>
+<pre>runlevel0.target, poweroff.target           -used to Shut down and power off the system (init 0)
+runlevel1.target, rescue.target             -used to Set up a rescue shell (init 1)
+runlevel2.target, multi-user.target         -used to Set up a User-defined non-graphical system (init 2)
+runlevel3.target, multi-user.target         -used to set up a Multi-user, non-graphical mode and text console only
+runlevel5.target, graphical.target          -used to Set up a graphical multi-user system. (init 5)
+runlevel6.target, reboot.target             -used to reboot the system. (init 6)
+emergency.target                            -used to Emergency mode
+  </pre>
+<h2><a name= "a7"></a>Set targets</h2>
+<CENTER><h2 style="text-align:center;">How to set targets</h2></CENTER>
+<pre>systemctl get-default                       -used to display the default target unit
+systemctl isolate name.target               -used to Changes the current target.
+systemctl set-default name.target           -used to Changing the Default Target
+systemctl list-units --type target          -used to Lists currently loaded target units.
+cat /etc/systemd/system/default.target      -used to check target
+  </pre>
+
+<h2><a name= "a8"></a>How many types of jobs are used in linux</h2>
+<CENTER><h2 style="text-align:center;">How many types of jobs are used in linux</h2></CENTER>
+<pre>Two types of jobs are used in linux
+A- at                     -used in windows and linux system
+B- cron                   -used only in linux
+systemctl status atd
+at -l                     -used to show lest of jobs
+at -q                     -used to show query of jobs
+at time                   -used to set jobs and ctrl+d for save jobs
+atq                       -used to show jobs time
+at -c jobnumber           -used to show which command run in this job
+atrm jobsnumber(1..5)     -used to remove jobs 
+systemctl status crond
+crontab -l                 -used to list the jobs for the current user
+crontab -e                 -used to edit jobs for current user
+crontab -r                 -used to remove all jobs for current user
+crontab -u username -l     -used to show user jobs list. Must be run as root user
+crontab -r -u username     -used to Delete job for specific user. Must be run as root user
+  </pre>
+
+<h2><a name= "a9"></a>crontab</h2>
+<CENTER><h2 style="text-align:center;">How to set jobs using cron on root user</h2></CENTER>
+<pre>crontab -e
+SHELL=!/bin/bash
+MAILTO=root@example.com
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+Example of cron job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name  command to be executed
+
+0 2 * * * /bin/sh backup.sh             -Schedule a cron to execute at 2AM database backup on a daily basis
+0 5,17 * * * /scripts/script.sh         -Schedule a cron to execute at 5 AM and 5 PM daily.
+* * * * *  /scripts/script.sh           -Schedule a cron to execute on every minutes.
+0 17 * * sun  /scripts/script.sh        -Schedule a cron to execute on every Sunday at 5 PM.
+*/10 * * * * /scripts/monitor.sh        -Schedule a cron to execute on every 10 minutes.
+* * * jan,may *  /script/script.sh      -Schedule a cron to execute on selected months.
+0 17 * * sun,fri  /script/script.sh     -Schedule a cron to execute on selected days
+0 */4 * * * /scripts/script.sh          -Schedule a cron to execute on every four hours
+0 2 * * sun  [ $(date +%d) -le 07 ] && /script/script.sh  -Schedule a cron to execute on first sunday of every month
+
+#System Wide Cron Schedule
+System administrator can use predefine cron directory as shown below.
+/etc/cron.d
+/etc/cron.daily
+/etc/cron.hourly
+/etc/cron.monthly
+/etc/cron.weekly
+  </pre>
+
+<h2><a name= "b1"></a> script</h2>
+<CENTER><h2 style="text-align:center;">How to create  script </h2></CENTER>
+<pre>vim scripname.sh                 -used to create scripts
+!/bin/bash
+echo "Hello World!"
+:wq! save and exit
+sh scritname.sh                   -used to run script in system
+bash scriptname.sh                -used to run script in system
+chmod +x scriptname.sh            -used to Set execute permission on script
+  </pre>
+<h2><a name= "b2"></a>SELinux</h2>
+<pre>
+<CENTER><h2 style="text-align:center;">What is Security Enhanced Linux (SELinux)</h2></CENTER>
+
+SELinux is an additional layer of system security. SELinux is to protect user data with respactive of parent process.
+It is provide MAC basied security.It is devlop by NCSA. It is depend only on two policies-
+A- Costom Policy
+B- Default Policy
+
+<CENTER><h2 style="text-align:center;">How many types of selinux mode(SELinux)</h2></CENTER>
+There are three types of selinux mode
+A- Enforcing Mode (1)
+B- Permissive Mode (0)
+C- Disabled Mode
+<CENTER><h2 style="text-align:center;">How to set selinux mode</h2></CENTER>
+
+rpm -qa selinux*                -used to check updates all selinux packages
+getenforce                      -used to show current selinux mode
+setenforce 0                    -used to change permissive mode
+setenforce Enforcing (1)        -used to change Enforcing mode
+vim /etc/selinux/config         -used to edit {SELINUX = enforsing} default selinux mode settings then reboot system
+setenforce 1                    -used to change enforcing mode
+<CENTER><h2 style="text-align:center;">What is SELinux Booleans</h2></CENTER>
+
+SELinux booleans are switches that changes the behavior of the SELinux policy. SELinux booleans are rules that can be
+enabled or disabled.
+getsebool -a                      -used to display all SELinux boolens
+setsebool                         -used to activates/deactivates SELinux policy rules
+semanage fcontext                 -used to manage SELinux policy rules
+semanage boolean -l               -used to displays the persient value of SELinux booleans
+sealert                           -used to display useful information that helps with SELinux troubleshooting
+
+  </pre>
+<h2><a name= "b3"></a>disk partitions</h2>
+<pre>
+<CENTER><h2 style="text-align:center;">How to create primary(83), extended(05) and logical MBR disk partitions</h2></CENTER>
+
+lsblk or fdisk -l                -used to show disk space
+fdisk /dev/vdb                   -used to specify the disk device to create the partions
+m                                -used for help
+d                                -used for delete partion
+n                                -used to create new partion
+p, e & l                         -used to select primary, extended or logical partition (select p)
+1                                -used to select partion number
++1G                              -used to give size number of partion
+p                                -used to check partion type with size
+w                                -used to save and exit
+partprobe /dev/vdb               -used to update harddisk partitions
+mkfs.ext4 /dev/vdb1              -used to create file system
+blkid /dev/vdb1                  -used to creat partion UUID
+mkdir /storage1                  -used to create dirctory for mounting partion
+mount /dev/vdb1 /storage1        -used to create temparary mounting partion
+vim /etc/fstab                   -used to edit parmanent mounting partion
+/dev/sdb1 or UUID /storage1 ext4 defaults 0 0 
+then (:wq! save and exit)
+mount -a                         -used to update mounting partions
+df -Th                           -used to show partions
+umaunt /storage1                 -used to unmount partition
+gdisk /dev/vdb                   -used to create GPT-disk partion (same as MBR)
+<CENTER><h2 style="text-align:center;">How to create SWAP Space</h2></CENTER>
+free -h                          -used to show RAM or swap memory
+fdisk /dev/vdb                   -used to specify the disk device to create the partions
+m                                -used for help
+d                                -used for delete partion
+n                                -used to create new partion
+p, e & l                         -used to select primary, extended or logical partition (select p)
+2                                -used to select partion number
++1G                              -used to give size number of partion
+p                                -used to check partion type with size
+t                                -used to assign partion type 
+82                               -select swap hex code
+p                                -used to check partion type with size
+w                                -used to save and exit
+partprobe /dev/vdb               -used to update harddisk partitions
+mkswap /dev/vdb2                 -used to show swap UUID 
+swapon /dev/vdb2                 -used to activate a swap space
+swapon -s                        -used to show swap space status
+vim /etc/fstab                   -used to edit parmanent mounting partion
+/dev/vdb2 or UUID swap swap defaults 0 0
+then (:wq! save and exit)
+mount -a                         -used to update mounting partions
+swapon -s                        -used to show swap space status
+swapoff /dev/vdb2                -used to disable the swap space
+<CENTER><h2 style="text-align:center;">What is Logical volume management (LVM)</h2></CENTER>
+
+LVM basically provide the flixibelity to extend or reduse the volume size on run time.
+lsblk or fdisk -l                -used to show disk space
+fdisk /dev/vdb                   -used to specify the disk device to create the partions
+m                                -used for help
+d                                -used for delete partion
+n                                -used to create new partion
+p, e & l                         -used to select primary, extended or logical partition (select p)
+3                                -used to select partion number
++1G                              -used to give size number of partion
+p                                -used to check partion type with size
+t                                -used to assign partion type 
+8e                               -select LVM hex code
+p                                -used to check partion type with size
+w                                -used to save and exit
+partprobe /dev/vdb               -used to update harddisk partitions
+pvcreate /dev/vdb3               -used to create physical volume
+pvdisplay or pvscan              -used to display physical volume information
+vgcreate vgname /dev/vdb3        -used to create volume group
+vgdisplay or vgs                 -used to show volume group information
+lvcreate -L +1G -n lvname vgname -used to create logical volume
+lvdisplay or lvs                 -used to display logical volume information
+mkfs.xfs /dev/vgname/lvname      -used to create file system
+mkdir /dir2                      -used to create dirctory for mounting lvm partion
+mount /dev/vgname/lvname /dir2   -used to create temparary mounting partion
+df -Th                           -used to show partions
+blkid /dev/vdb3                  -sed to creat partion UUID
+vim /etc/fstab                   -used to edit parmanent mounting partion
+/dev/vgname/lvname or UUID /dir2 xfs defaults 0 o
+then (:wq! save and exit)
+mount -a                            -used to update mounting partions
+df -Th                              -used to show partions
+umount /dev/vgname/lvname /dir2     -used to unmount partion
+lvextend -L +1G /dev/vgname/lvname  -used to extend size to the current size logical volume
+lvextend -L 2G /dev/vgname/lvname   -used to resize the logical volume
+lvreduse -L 500M /dev/vgname/lvname -used to reduse size to the current size logical volume
+lvremove /dev/vgname/lvname /dir2   -used to remove logical volume
+vgremove vgname                     -used to remove volume group
+pvremove /dev/vdb3                  -used to remove physical volume
+
+  </pre>
+<h2><a name= "b4"></a>IP address</h2>
+<CENTER><h2 style="text-align:center;">What is the size of IPv4 and IPv6?</h2></CENTER>
+<pre>
+A -IPv4 -32 bits
+B -IPv6 -128 bits
+
+#What is IPv4 Classes?
+Class A             0 – 127     (To use Enterprise Network)
+Class B             128 – 191   (To use Business Network)
+Class C             192 – 223   (To use Small Network)
+Class D             224 – 239   (To use Multicasting Network)
+Class E             240 – 255   (To use Resurch)
+
+#Mention the ranges of ipv4 private IPs?
+Class A            10.0.0.0 - 10.255.255.255
+Class B            172.16.0.0 - 172.31.255.255
+Class C            192.168.0.0 - 192.168.255.255
+
+#State the difference between dynamic IP and static IP addressing?
+Dynamically IP addresses are provided by DHCP server, and static IP addresses are given manually.
+
+#Howmany bits long is a MAC address?
+48 bit
+  </pre>
+<h2><a name= "b5"></a>Managing Networking</h2>
+<pre>
+<CENTER><h2 style="text-align:center;">How to Managing Networking</h2></CENTER>
+
+ip link                                         -used to display all of the network interfaces
+nmcli dev status                                -show the status of all network devices
+nmcli con show                                  -show a list of all connections
+nmcli con show  conname                         -list the current settings of cunnection
+ip addr show eth0                               -displays the current configuration of network interface
+mcli con up conname                             -used to connection update 
+nmcli con del conname                           -used to delete connection
+nmcli con mod conname                           -used to modify connection
+<CENTER><h2 style="text-align:center;">How to add static and dynamic a network connection</h2></CENTER>
+ 
+nmcli con add type ethernet con-name conname ifname eth0 autocunnect yes ip4 ipaddress/24 gw4 ipaddress
+nmcli con up conname                           
+nmcli con show  conname
+ip addr
+<CENTER><h2 style="text-align:center;">How to modify static and dynamic network connection example</h2></CENTER>
+
+nmcli con modify conname ipv4.addresses "192.0.2.2/24 192.0.2.254"
+nmcli con up conname 
+nmcli con show  conname
+ip addr
+<CENTER><h2 style="text-align:center;">How to modify ipv6 address on system</h2></CENTER>
+
+nmcli con modify conname ipv6.addresses 2006:ca18::628/64 ipv6.method manual
+nmcli con up conname 
+nmcli con show  conname
+ping6 ipv6address
+ip addr
+<CENTER><h2 style="text-align:center;">How to add DNS Server ip in a network connetion</h2></CENTER>
+
+nmcli con modify conname +ipv4.dns ipaddress
+nmcli con up conname 
+nmcli con show  conname
+ifconfig
+<CENTER><h2 style="text-align:center;">What is teamming or bonding</h2></CENTER>
+
+Network teaming is a method for linking network-interface-card (NIC) together logically. Ethernet Channel Bonding enables 
+two or more Network Interfaces Card(NIC) to a single virtual NIC card which may increase the bandwidth and provides 
+redundancy of NIC Cards. There are five types of teamming
+Roundrobin          -This is the default that we are using, it simply sends packets to all interfaces in the team in a 
+                     round robin manner, that is one at a time followed by the next interface.
+Broadcast	          -All traffic is sent over all ports.
+Activebackup	      -One interface is in use while the other is set aside as a backup
+Loadbalance	        -Traffic is balanced over all interfaces based on Tx traffic, equal load should be shared over available
+                     interfaces.
+lacp	              -Implements 802.3ad LACP protocol
+<CENTER><h2 style="text-align:center;">How to create activebackup teamming network on NIC </h2></CENTER>
+
+nmcli dev status 
+nmcli con add type team con-name team1 ifname team1 config '{"runner": {"name": "activebackup"}}'
+nmcli con add type team-slave con-name team-slave1 ifname eth1 master  team1
+nmcli con add type team-slave con-name team-slave2 ifname eth2 master  team1
+nmcli con show
+nmcli con mod team1 ipv4.addresses ipaddress ipv4.method manual
+systemctl restart network
+teamdctl team1 state 
+ping -I team1 ipaddress
+<CENTER><h2 style="text-align:center;">How to create bridge network on NIC</h2></CENTER>
+
+nmcli dev status 
+nmcli con add type bridge con-name bridge1 ifname bridge1
+nmcli con add type bridge-slave con-name bridge-slave1 ifname eth1 master bridge1
+nmcli con add type bridge-slave con-name bridge-slave2 ifname eth2 master bridge1
+nmcli con show
+nmcli con mod bridge1 ipv4.addresses ipaddress ipv4.method manual
+systemctl restart network
+brctl show
+ping -I bridge1 ipaddress
+  </pre>
+
+<h2><a name= "b6"></a>Firewall</h2>
+<pre>
+<CENTER><h2 style="text-align:center;">What is Firewall?</h2></CENTER>
+
+Firewalls are one of the core components of a network security implementation. Several vendors market firewall solutions
+catering to all levels of the marketplace: from home users protecting one PC to data center solutions safeguarding 
+vital enterprise information. Firewalls can be standalone hardware solutions, such as firewall appliances by Cisco, Nokia,
+and Sonicwall. There are also proprietary software firewall solutions developed for home and business markets by vendors 
+such as Checkpoint, McAfee, and Symantec. Apart from the differences between hardware and software firewalls, 
+there are also differences in the way firewalls function that separate one solution from another.
+<CENTER><h2 style="text-align:center;">How to use firewall </h2></CENTER>
+
+firewall-cmd --get-default-zone                          -query the current default zone
+firewall-cmd --set-default-zone=zonename                 -set the defualt zone
+firewall-cmd --get-zones                                 -list all avalable zones
+firewall-cmd --get-services                              -list all predefined services
+firewall-cmd --get-active-zones                          -list all zones currently in use an interface
+firewall-cmd --add-source=CIDR --zone=zonename           -route all trafic coming from ip addr or network to specified zone
+firewall-cmd --remove-source=CIDR --zone=zonename        -remove the rule rauting all trafic coming from the network/netmask 
+                                                          or ip address to specified zone
+firewall-cmd --add-interface=intfname --zone=zonename     -route all trafic comming from interface to specified zone
+firewall-cmd --change-intface=infname --zone=zonename     -associate the interface with zonename insted of its corrent zone
+firewall-cmd --list-all --zone=zonename                   -list all configured interfaces, sources, services and ports 
+firewall-cmd --list-all-zones                             -retrieve all information for all zones
+firewall-cmd --list-all-ports                             -retrieve all information for all ports
+firewall-cmd --add-service=servicename                    -allow trafic to service
+firewall-cmd --add-port=portnu/protocol                   -allow trafic to the port number or protocol
+firewall-cmd --remove-service=servicename                 -remove service frome the allowed list for zone
+firewall-cmd --remove-port=portnu/protocol                -remove the ports frome the allowed list for zone
+firewall-cmd --reload                                     -drop the runtime configuration and apply the configuration
+firewall-cmd --add-rich-rule='rule'                       -add rule to specified zone
+firewall-cmd --remove-rich-rule='rule'                    -remove rule to specified zone
+firewall-cmd --query-rich-rule='rule'                     -query rule has been added to the specified zone
+firewall-cmd --list-rich-rule='rule'                      -outputs all rich rules for the specified zone
+
+<CENTER><h2 style="text-align:center;">How to add services in firewall  </h2></CENTER>
+
+firewall-cmd --permanent --add-service={http,dns}
+firewall-cmd --reload 
+firewall-cmd --list-all
+<CENTER><h2 style="text-align:center;">How to remove service in firewall</h2></CENTER>
+
+firewall-cmd --permanent --remove-service=dns
+firewall-cmd --reload 
+firewall-cmd --list-all
+<CENTER><h2 style="text-align:center;">How to add and remove ports in firewall</h2></CENTER>
+ 
+firewall-cmd --permanent --add-port=22/tcp
+firewall-cmd --reload 
+firewall-cmd --list-all
+firewall-cmd --permanent --remove-port=22/tcp
+<CENTER><h2 style="text-align:center;">How to create rich rule in firewall</h2></CENTER>
+
+firewall-cmd --permanent --add-rich-rule='rule family=ipv4 source address=192.168.1.16/24 accept'
+irewall-cmd --reload 
+firewall-cmd --list-all
+
+  </pre>
+____________________________________________________________________________________________
+ <script src="https://www.dgreetings.com/dg-msg-new/js/bootstrap.min.js"></script>     
+<script>
+(function() {
+  $('.toggle-bar').on('click', function() {
+    $(this).toggleClass('active');
+    $('aside').animate({width: 'toggle'}, 100);
+  });
+})(); 
+
+
+$(document).ready(function(){
+
+$('.six-sec').append('<b class="tab-ico">+</b>');
+$('.six-sec').click(function(){
+$('.mobi-accordi').slideUp();
+if($(this).parent().find('.mobi-accordi').is(':visible')){
+ $(this).parent().find('.lmobi-accordi').slideUp();
+ $(this).children('.tab-ico').text('+');
+}else{
+$(this).parent().find('.mobi-accordi').slideDown();
+$('.tab-ico').text('+');
+$(this).children('.tab-ico').text('-');
+}
+});
+});
+
+
+</script>
+
+ <script>$('[data-sidenav]').sidenav();</script>
+<script src="https://www.dgreetings.com/style/dg-all-left-right-slider-new.js"></script>
+  </body> 
+</html>

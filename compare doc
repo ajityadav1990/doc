@@ -1,0 +1,492 @@
+online attendance system =  URL : www.cinfo.in/attendance/index.php 
+_____________________________________________________________________
+WHM  :-  2087 , zimbraAdmin :- 7071 , CPANEL :- 2083                                        
+######## Dewan Sir system password = waytoheaven$#123  #####################
+*******************Server Detailes ***************************************************************
+Live Server    |            Local Server                |         SVN SERVER
+               |                                        |
+L13            |       AWSstat server (172.16.7.111)    |   SVN12 (172.16.7.112) [ mow svn12 ]
+L19            |                                        |   SVN14 (172.16.7.114) [ others 14  ]
+L19New         |       L18New  (172.16.61.101)          |   SVN16 (172.16.7.116) [ moi-svn 16 ]
+L29            |                                        |
+L30            |       L21New (172.16.61.100)           |
+Mail Server    |                                        |
+---------------------------------------------------------------------------------------------------- 
+###########SVN Command #################
+svn -up
+svn info
+svn up  -r revision.No     [ For SVN Reverd file ]
+######## moi Revered ######################################################
+ sudo su
+/ebs/mapindia/newappdata
+ svn up -r   *****  ( revision number )
+######## Give SVN Access to user ################
+check domain name in Live-FTP.xls  file ( SVN Details )
+loging with that server ( Local Server SVN12 or SVN14 or SVN16 )
+cd /repos / username/conf    (svn12 , svn14 )
+cd /home/Repos/dogood/conf/   (svn16 )
+vim passwd
+enter username & password 
+........for mail repaly...........
+svn:// IP /Repos/username/
+username = shweta     
+password = shweta#22$
+############## give ftp Access ############################## 
+ip  ( local server )    
+username =  ********       (all in local-FTP-file )
+password =  ********
+##################Create New Repos in svn ####################################################
+cd /home/Repos/  [ svn 16 ] [ moi-svn 16 ]
+cd  /Repos/      [ SVN 14 ] [ others 14  ]
+cd /Repos/       [ SVN 12 ] [ mow svn12 ]
+svnadmin create Reponame
+ cd Reponame/
+ cd conf/
+
+vi svnserver.conf
+do these changes in conf file
+anon-access = none
+auth-access = write
+password-db = passwd
+==============================
+svnadmin create username( in mail )
+ cd /home/Repos/****(username)/conf/
+ vim passwd
+edit username & password like 
+username = password
+----------replay maill like ------
+username = jaspreet
+Password = jaspreet@123
+Path = svn://172.16.7.114/Repos/bitwean/[ others 14  ]
+################### SVN Check out #####################################
+svn co svn://172.16.7.112/Repos/ user name /    Desktop/folder name/
+like
+svn co svn://172.16.7.112/Repos/mmmerica/    Desktop/mow/
+   or
+svn checkout
+svn checdkout svn://103.251.61.84/Repos/cinfo/ .
+---------------------------------------------------------------------
+################ Create SVN space on moi ###############################
+cd /compare_infobase/logs/dom_logs/mapsofindia.com/
+     Delete old date file  (rm -rf )
+*****************SVN 12 & 14 & 16  backup file check ****************************
+  1. ssh svn12@ IP
+    cd /backup-storage/ ; ls -lrt
+################# sync =  http://www.harmeen.com/ ############
+ssh root@l21new
+password : cilredhat
+rsync -vra -e ssh /home/harmeen/public_html/images/     harmeen@69.64.35.130:/home/harmeen/public_html/images/
+password : *****  { liveFtp file }
+############ sync #########################
+ssh root@172.16.61.101  ( or root@18new )
+dgreetings.com
+bash -x /usr/local/scripts/dgreetings_rsync.sh
+####################### Sync process for all server  ###################################
+
+we have two local ftp server ( L18New , L21New )  [ ssh root@l21new  ] [ssh root@l19new ]
+search / Domain Name / New-Local-FTP.xml
+ssh root@ IP (Domain)
+rsync -vra -e ssh  /home/Folder_Name/public_html/file_name    username@Doman_name:/home/harmeend/public_html/file_name
+example--
+rsync -vra -e ssh  /home/harmeend/public_html/index.php    harmeend@harmeendesign.com:/home/harmeend/public_html/index.php
+passeord from Live-FTP.xml file
+
+################### file upload on sl22 ###################
+
+copy file for given path in mail
+paste it on Desktop
+terminal -->  Desktop
+scp filename   sl22@173.224.124.249:/home/sl22/www/mapping/
+for password   :  //172.16.6.61/server/serverdocument/passwd/liveftp
+Logs link      :  smb://172.16.6.61/iso/2018/server/upload-access-log.xls
+ctrl+f  in search box sl22   [ ctrl + l for smb ]
+copy & paste password
+URL  www.sl22.in/ file name
+
+############################ upload file on store.mapsofword.com -->  neeraj@infobase.in ##################################
+places/ iso on 172.16.6.61 / neeraj/ filename/ copy folder & paste it on Desktop /
+open terminal
+cd Desktop/file_name
+store.mapsofworld.com
+scp -rv * root@209.126.105.246:/home/storema/www/path to send location in mail
+store.mapsofindia.com
+scp -r * root@209.126.127.21:/home/storemapmoi/www/download
+############MY SQL######################################
+flush query cache;
+show processlist;
+killall -9 mysql
+/etc/init.d/mysql restart
+########## create DB & User-name & password ##################
+create database New_Dbname;
+grant all on dbname .* to 'username'@'localhost' identified by 'password';
+grant all on dbname .* to 'username'@'%' identified by 'password';
+flush privileges;
+----------------------------------------------------------------
+######## Create Mail ID #########################
+https://webmail.infobase.in:7071/zimbraAdmin/
+Usere Name :-   admin
+Password   :-   [ is in New-access-Details  file ]
+Home / Manage / Add account
+Set timezone -->  gmit + 530
+.........................................................................................
+Change Password
+Manage / Distribution List/select id /right click / Change Password 
+............................................................................................
+Forwarding  IP 
+ID / double Click / Forwarding / check [] , [] ok / email ID ( where we are forward ) / save 
+..............................................................................................
+Account lock
+ Manage / Account /
+...............................................................................................
+For Quta
+Adav  / quta /
+##############Create email ID for Domain#################################
+   Logging with CPanel
+www.******.com:2083
+user name & password is in Live-ftp.xml file
+ 1. create email
+ 2. forwarding
+ 3.  quata
+
+email :   please create email id for b2bsolution.in and provide me the mail server configuration.
+
+//Server settings
+$mail->SMTPDebug = 0; // Enable verbose debug output
+$mail->isSMTP(); // Set mailer to use SMTP
+$mail->Host = 'mail.bitwean.com'; // Specify main and backup SMTP servers
+$mail->SMTPAuth = true; // Enable SMTP authentication
+$mail->Username = 'admin@bitwean.com'; // SMTP username
+$mail->Password = 'HEnHqVzMK$vY'; // SMTP password
+$mail->SMTPSecure = 'TLS'; // Enable TLS encryption, `ssl` also accepted
+$mail->SMTPAutoTLS = false;
+$mail->Port = 587; // TCP port to connect to
+#####################  WHM  ##########################################################
+domainname:2087        (allwonders.com:2087) 
+##########apache service refused##########################
+ipcs -s | grep nobody
+for i in `ipcs -s | awk '/nobody/ {print $2}'`; do (ipcrm -s $i); done
+
+################# IPTABLES ######################################
+   Iptables  -l   ( for list iptables )
+   Iptables  -f    ( for flush iptables )
+For reset iptables  rule  after flush ( L13,L19,L19New,L30 ,L29 )
+Cd  /home/root2/
+ls          ( newrule.txt )
+iptables-restore < newrule.txt              ( we have not required iptables in AWS &  Mail server )
+
+ for IP Drop
+netstat -anp | grep 80 | awk '{print $5}' | cut -f1 -d: | sort | uniq -c | sort -n
+/sbin/iptables -I INPUT -s 46.161.9.56  -j DROP
+
+iptables -A INPUT -m iprange --src-range -101.1.1.1-101.240.240.240 -j DROP
+
+####################################################
+Log
+Mail log
+tail -f /var/log / exim.main.log
+ftp log
+tail -f /var/log/massages
+Zimbra log
+/var/log/zimbra.log
+cat maillog
+------------------------------------------------------------
+cd /var/log/                                                                                                            
+ cat zimbra.log | grep 'balwinder@infobase.in'                                                                           
+ cat zimbra.log | grep 'balwinder@infobase.in' | grep 'synd'
+-------------------------------------------------------------
+Apache log
+tail -f /usr/local/apache/logs/errar_log
+ tail -f /usr/local/apache/logs/error_log |grep "dgreetings.com"
+cd /usr/local/apache/logs/
+tail -100 error_log  | grep 'mapxl.in' 
+
+tail -F /etc/httpd/log/error_log
+#######################Give permision to upload folder #######################################
+live server 
+cd /home/username/www/wp-content/
+mkdir uploads
+chown -R nobody.root uploads
+################# Stics ######################
+moi-stat  :-    http://46.51.218.186/awstats/awstats.pl?config=mapsofindia.com
+*****************************************************
+mow-stat :-     http://54.183.142.72/awstats/awstats.pl?config=mapsofworld.com
+for other 
+server on 172.16.6.61/ server document /passwd-file/stats-subdomain/ ********* (we have stats files list )
+or 
+stats file is on your Desktop 
+first check your self and then shere this  (url , username ,password )
+**********************************************************************************************
+/var/log/maillog
+
+
+
+ctrl +  Z
+_____________________________________
+https://condor2037.startdedicated.com/mail?adminPreAuth=1#1
+___________________________________________
+----------------extension number list-------------------------
+Server    |   134
+IT        |   123
+Jaspreet  |   151
+Gaurav    |   151
+munna     |   149
+Nitesh    |   125 
+-----------------jsw--------------------------
+L19 (sl22.in)
+/home/sl22/public_html/jsw       (svn up)
+----New jsw server ------------------------
+/var/www/html/jsw                ( svn up)
+ip        :    172.17.17.18
+password  :    Hello#99
+
+live IP   :    103.251.61.87
+_______________________________________________________________________
+command
+locate mod_libphp5.so
+locate *libphp*
+ updatedb 
+
+ find . -name *.so                                                                                                                             
+ find . -name libphp5.so  
+
+yum info php-fpm
+
+mod_libphp5.so
+
+tar
+tar -czvf christd.tar.gz christd
+untar
+tar xzvf christd.tar.gz
+nmap  localhost  ( check open port)
+------------------------------------------------------------------------------
+svnadmin create --fs-type fsfs thermax
+vi svnserve.conf
+---db Detailes mail replay-----------------------------------------------------
+ip :     *******
+dbname :  *******
+username : *******
+password : ******
+-------------------------------------------------------------------------------
+ps -ef  | grep svnserve
+ sudo kill 11413
+ps -ef  | grep svnserve
+sudo -s
+bash -x moi1.sh 
+svnserve -d
+######################################################
+****Sunday Full-Backup****
+backup of AWS --- MOI(SVN) & ---MOW(svn)
+ssh root@172.16.7.111
+cd /usr/local/scripts1/svnscripts/
+bash -x NewMow.sh
+bash -x mow.sh
+sudo su
+cd /backup/mysql/
+ls -lrt 
+( check all file should be old date) 
+rm -vrf *.sql
+cd ..
+bash -x /ebs/scripts/backup.sh
+cd /backup/
+ls -lrt
+for MOI backup***************
+sudo su
+cd /backup/mysql/
+ls -lrt
+( check all file should be old date) 
+rm -vrf *.sql
+cd ..
+bash -x /ebs/scripts/backup.sh
+*****************************************************
+Live server full backup on every sunday:- 
+step 1> # cd /backup/mysql/
+step 2> # rm -vrf *.sql 
+step 3> # bash -x /home/root2/backup.sh 
+step 4> # bash -x /backup-script 
+step 5> # cd / ( check your backup tar file )
+step 6> # ls -lrt
+------------------------------------------------------
+svn://172.16.6.61/server backup
+*****************************************************
+how to download aws backup (MOW)
+For moi & Mow
+scp -i /home/cilredhat/compare_infobase.pem ec2-user@54.183.142.72:/backup/RDS05-08-2018.tar.gz .
+For live server
+scp root@209.126.127.21:/L19-backup05Aug18.tar.gz .
+####### mail server backup { As per instruction some one }###
+run below mention command (reverse sync) every hours on L13 server -
+rsync -vra -e ssh root@209.126.124.6:/opt/zimbra/backup/mailbox/260718 /zimbramail_backup26072018/
+-- 
+###############################frozen-mail L13##################################################################
+/usr/local/scripts
+frozen-mail.sh
+#################  FTP  ######################################################################
+service proftpd restart
+vim /etc/proftpd.conf ( input ip )
+{for work from home ip allow }
+########## create DB & User-name & password ##################
+
+create database New_Dbname;
+grant all on dbname .* to 'username'@'localhost' identified by 'password';
+grant all on dbname .* to 'username'@'%' identified by 'password';
+flush privileges;
+************************db-backup*******************************************
+
+mysqldump -u wpindiauser -h compare-infobase-db-new.cbztciobxkoh.ap-southeast-1.rds.amazonaws.com -p wpindia > my-india.sql
+####################### grep wp-content################################################################
+ls -R | grep application
+ls -R | grep wp-content
+ls -ltr | grep -v 2018  ( file which not use 2018)
+################ host website ###################################
+server ip:2087
+user name :  root
+password  :  ***********
+Create a New Account
+Domain 
+
+Username 
+Password 
+Re-type Password
+create
+################### Url lists##############################################
+cd  /usr/local/scripts/
+# bash -x url.sh
+domain name
+email id
+password  user name & password ( live ftp )
+##########Add site in svn server#########################################
+1. create Repo is any SVN server 12,14,16 & login SVN server and go to
+#   cd   /Repos/
+#  svnadmin create --fs-type fsfs a2zb
+#  cd /Repos/dir_name/conf
+# vim passwd
+username  = password
+
+vim  svnserver.conf
+remove # comment from
+anon-access = read
+auth-access = write
+password-db = passwod
+___________________________________
+go to live server 
+cd /home/username/www/ ( create backup all www content and move another place { for backup })
+#  svn://103.251.61.83/Repo/dirName/
+password for root
+username =  what ever in svn server
+password =
+store passwdunencrypted (yes/no)   Y
+# svn co svn://103.251.61.83/Repos/dirName/  .
+svn info
+svn add   *
+svn commit -m " "
+svn info
+svn  start 
+################# mails cleared mapsofindia.com #################
+# All mails cleared to inbox of sales, solutions and operations@ 
+https://173.224.124.249:2087
+username root 
+password (new-access-detail)
+Account_Information
+listaccts
+mapsofindia.com
+cp
+Email Accounts
+https://173.224.124.249:2083/cpsess8450702886/frontend/paper_lantern/mail/manage_disk_usage/?account=sales%40mapsofindia.com
+_______________________________________________________
+-- 
+https:/69.64.35.130/:2087
+username root 
+password (new-access-detail)
+Account_Information
+listaccts
+mapsofindia.com
+cp
+Email Account
+############# reset mysql root password(ubuntu)#######################
+chown mysql:mysql /var/run/mysqld
+mysqld_safe --skip-grant-tables &
+mysqld_safe --skip-grant-tables &
+mysql -u root
+use mysql;
+select PASSWORD("password");
+update user set authentication_string=PASSWORD("password") where user='root';
+update user set plugin = "mysql_native_password" where user='root';
+flush privileges;
+quit;
+/etc/init.d/mysql start
+ps -A|grep mysqld
+ps -A|grep mysql
+##### Avast#############################
+/usr/local/src/avast4workstation-1.3.0/bin/avast /home/ >/home/root2/Avast22Sept18.txt & [ L30 ]
+/usr/local/src/avast4workstation-1.3.0/bin/avast /home/ > /home/root2/Avast22Sept18.txt & [ L29 ]
+/usr/local/src/avast4workstation-1.3.0/bin/avast /home/ > /home/root2/Avast22Sept18.txt & [ L19New ]
+/usr/local/avast/bin/avast /home/ > /home/root2/Avast22Sept18.txt & [ L19 ]
+/usr/local/src/avast4/bin/avast /home/ >/home/root2/Avast22Sept18.txt & [ L13 ]
+#######Setup phpMyAdmin on live server##################
+locate phpMyAdmin
+cd /usr/local/src/
+cp phpMyAdmin-4.8.4-all-languages.zip /home/sl27/www/
+cd /home/sl27/www/
+unzip phpMyAdmin-4.8.4-all-languages.zip
+mv phpMyAdmin-4.8.4-all-languages phpMyAdmin
+share :- sl27.in/phpMyAdmin
+##########svn ###########################
+yum update 
+yum install httpd 
+yum install subversion 
+cd /home/
+mkdir repo 
+cd repo/ 
+mkdir myfirstproject
+svn admin create /home/repo/myfirstproject
+or
+svnadmin create --fs-type fsfs myproject
+cd /home/repo/myfirstproject/conf/
+vim svnserve.conf
+do these changes in conf file
+anon-access = none
+auth-access = write
+password-db = passwd
+vim passwd
+user & password
+on client system
+svn co svn://18.209.231.209/home/repo/myproject/
+You can explicitly choose the filesystem type using the --fs-type argument, which accepts as a parameter either fsfs or bdb.
+###############handover backup#################
+remote  windows
+  ctrl + R
+mstc
+ ip   conect
+username : comapere
+password : skyhigh$#999
+windo key + R
+for access storage 
+ctrl + R
+//172.16.6.60
+hand over
+create folder with user name
+copy & past
+#######aws-db###################
+ mysql -u compare_Infobase -h compare-infobase-db-new.cbztciobxkoh.ap-southeast-1.rds.amazonaws.com -p
+KripaSingh1989
+mysql -u mapsofworld -h mapsofworlddb.cpidjkfrcsq7.us-west-1.rds.amazonaws.com -p
+deepak66gupta
+#############zimbra ##############################################
+
+zimbraAdmin :- 7071 
+
+ bash -x /usr/local/scripts/backup_allaccounts.sh &
+ 
+
+zmcontrol stop
+zmcontrol start
+zmcontrol satus
+
+mv /opt/zimbra/log/zmmailboxd.pid /tmp/
+
+/opt/zimbra/postfix/sbin/postqueue -p
+
+/opt/zimbra/postfix/sbin/postsuper -d ALL deferred
+
+cat /var/log/exim_mainlog |grep "vidisha@comparemails.com"
+****************************************************************************

@@ -1,0 +1,157 @@
+ git config --global user.email 'abc@gmail.com'
+git config --global user.name 'abc'
+git init
+
+echo "# doc" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/ajeet1311990/doc.git
+git push -u origin master
+user name ajeet1311990
+--------------------------------------------------------
+git server :-  it is two type 1.  On primation , 2. cloud base (SAAS){github,gitlab,BigBuket,code commit sale software as service }
+git client 
+git repository :- is is directory where git proform after run git init command.
+git staging :- add  data in git repository with git add . command else data is in non staging.
+git branching :- it use for doing partisio in repository .we cann create multiple branch in a single repository like UI,Frontend ,Backend or relage based.
+git commit :- it is basicaly restore point of your changes. like snapshort.
+----------------------------
+git init
+git status
+writer code 
+git status -s
+git add .
+git status
+git log
+git show commit id
+add somthing in your file
+git status -s
+git add .
+git commit -m "add some line"
+git log
+git show  id
+add something in place last commit
+git add .
+git commit --amend -m "this is prefect"   
+git add origin   https://*****************************
+git branch
+git branch dev
+git branch
+git checkout dev
+git branch
+git checkout master
+
+git branch -D dev
+git branch
+git push origin master
+enter username
+enter password
+other
+git pull origia master
+
+merge conflict ?????????(when 2 user add same file with same content)
+---------------------------------------------------------------------
+git branch release-1.2
+git branch
+git checkout release-1.2
+ befour start working on repo allways
+git pull origin master
+git fetch
+git checkout remotes/origin/release-1.2
+git branch -d branch-name
+on local mearg branch 
+git merge master release-1.2
+------GIT STASH^C-----------------------
+store process in tempary storage and start working with some other branch
+-----------------------------------------------------------------------------
+git remote -v
+ git remote rm origin
+git remote add origin git@52.202.31.177:abc.git
+git remote add origin git@52.202.31.177:gitolite-admin
+_______________________________________________________________________________________
+Amend :-  use only for privice commit .only chang last line with same commit ID.
+Example :-  $ echo it is right > test (file name) 
+            $ git add .
+            $ git comment --amend -m "now it is perfact"
+
+GIT use C language & SHA    ( SECURE HASE AlGORITHAM ) file system
+ssh protocal in GIT  :- for use ssh protocal we need to jenret ssh key on local user then id_Rsa.pub copy and set on github account.
+Error occrad  :-
+1) - when two user work on share project like 
+1 uuser ram push all chang o master repo
+2 uuser anu  next day come and start working on same repo without pull last chang and then try to hir code on server she get error so first she pull last chang.  
+
+marg confilect :- if two user work on same file but  write different contant on same number of line and first user push there code in master repo now secand 
+user try to push his code now gatting marg conflict errar.
+for trubleshoot this 
+$ vim filename 
+<<<<<<<<< HEAD
+  this is by harry    -------- first file content
+ = = = = = = =
+this is by natasha    ----------second file content
+>>>>>>>>>>>>>>> b860f27b44f7869acf -------------> commit ID
+
+open file and change conflict problam and save file
+vim test
+git add .
+git commit -m "xyz"
+ now user can pull and push 
+For find how many file gatting merg conflit run
+git status
+all file which have UU_________________________________________________________________
+GIT Reset  :-
+Soft Reset :-  delete all commit id without change data in file
+ Example :-     
+echo "v1" >> v1
+git add .
+git commit -m  "1"
+echo "v1 second " >> v1
+git add .
+git commit -m "2"
+git log v1
+echo "v1 thired" >> v1
+git add .
+git commit -m "3"
+echo "v1 foure" >> v1
+git add .
+git commit -m "4"
+clear
+git log v1
+cat v1
+git reset --soft e9b7e98ded63
+cat v1
+ git log v1
+----- Hard reset--
+Commit id and data all will be deleted
+$ git reset --hard e9b7e98de
+------mixted reset----
+]$ git reset --mixed e9b7e98de
+--------------------------------------------------------------------------
+Recover file in GIT
+ ls
+ rm -rf test2
+ ls
+ git checkout test2
+ ls
+------------GIT Hooks-----------------------------------------------
+it is like cronttab i linux we sedule what ever we want perform befour or aftter any action in GIT
+systemctl is-active postfix
+cd .git/hooks/
+vi post-commit
+
+#!/bin/bash
+mail -s "new commit recived" root@localhost
+
+:wq!
+chmod 755
+-------GIT setup on local system -----------
+create repo on root 
+# mkdir master_repo
+# cd master_repo
+# git init --bare (( --bare is use for distrubet repo nobody can work on this only code pull and push in it))
+clone it on two different user
+git clone root@127.0.0.1:/root/master_repo
+add remote 
+git remote add origin root@127.0.0.1:/root/master_repo gatting conflict errar .
+

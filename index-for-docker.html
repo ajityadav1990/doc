@@ -1,0 +1,260 @@
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<title>Reverted by Ajeet Yadav</title>
+</head>
+
+<body>
+    <div id="page">
+		
+        <div id="header">
+        	<h1>AJEET YADAV</h1>
+            <h2>This is writen By by Ajeet Yadav.</h2>
+            
+      </div>
+        <div id="bar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pictures</a></li>
+                <li><a href="#">My Bio</a></li>
+                <li><a href="#">My Company</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+      </div>
+        <div class="contentTitle"><h1>Docker</h1></div>
+        <div class="contentText">
+          <pre> Provisioning :- setup new server for production.
+what is Docker and why come i market  :-  we can not run multiple application on single os that why 
+we create multiple vm which is more costly for the Organisation then docker come in market which 
+we deploy on the single os without libary confilict it take name space in single os.
+Docker architecture :- 
+Docker Host  :-  users are docker host
+Docker community :- Docker (CE,EE) , RedHat ( atomic host)
+Docker Image :- it is the set of binary or libary file which run application.
+   1) .  Micro Image / base image 
+   2) . 
+Docker image ragistory server is the refercen of docker image.
+       docker.io
+       rigstory.access.redhat.com
+Docker contaner :- it is the running mod of docker image.
+we can depoly multiple contner by using single image.
+Ctrl + pq   use to logout the contner with out kill process /bin/bash
+ Docker Installation & Manage Docker Images & continer Commands .
+ yum update -y
+yum install docker
+systemctl start docker
+systemctl enable docker
+docker images              [ check how many images in OS ]
+docker ps                  [ how many contner running stage ]
+docker ps -a               [ how many contner running and also stop mod  also show contner id] 
+For show manul patch contner id is   /var/lib/docker/containers/
+docker search nginx        [ search all image is i docker community ]
+docker pull nginx          [ Download latest nginx version avalibaly in docker comminte ]
+docker pull mysql:5.6      
+docker pull centos         [ Download centos base image ]
+How to deploy continer : -
+we can depoly continer two type
+1) service mode  o/r Deaman mode o/r Detach mode
+2) instraction mode o/r root mode
+docker run -d webserver nginx:latest   ( -d damen mode/Detach mode contner run in backend (-d is only damen contert)
+docker exec -it webserver /bin/bash       (-it intrection terminal foe enter damen contner and execute /bin/bash )
+docker run -it --name=con1 centos:latest  ( root mode contner  ( when ever you want to entrat as a root account us -it optison ) 
+docker top con1         [check how many process running in the contner ]
+ docker exec -it con2 /bin/bash   [ /bin/bash exectute new shell ]
+
+A contner will always stop if any process not running in it.
+docker start con2    [for start   stop contner]
+docker attach con2       [ enter in docker contener if it is runing ]
+ctrl+ps     [ also can exit without stop /bin/bash ]
+docker stop con2
+docker rm con1
+
+How to depoly contner in damane mode.
+ .
+ docker run -d --name mysql-con -e MYSQL_ROOT_PASSWORD=redhat mysql:latest
+docker ps
+docker top mysql-con  (show running process in contner)
+
+we con not get terminal mod for mysql contner because it have not /bin/bash   but we can use it as DB server for loging ->
+docker  exec -it mysql-con /bin/bash
+mysql -u root -p                 [ for loging mysql]
+docker stop mysql-con
+docker rm mysql-con
+
+ 
+docker rm $(docker ps -q -a)                [ for delete all contner in one time ]
+docker stop $(docker ps -q -a)              [ stop all contener in one time ]
+docker rm -f webserver                      [ delete contner is in running mode ]
+docker rm  web                              [ delete cotener ]
+docker  rmi 7645sdbb41c89(id)               [ delete image ]
+
+Docker commit :- 
+
+docker work like git  so if we want store some data in docker contner we have to commit this and it create new docker image
+whic have your data for this .
+docker run -it --name con1 centos:latest
+vi test
+docker commit -m "file name" con1 centos:v1
+docker images
+docker stop cen1
+docker rm cen1
+docker run -it --name con2 centos:v1
+
+How to  provision new  Docker image  [ httpd based software ] 
+two type
+1)  manually
+2) automatically:docker file
+
+docker run -it --name web centos:latest
+yum install httpd -y
+cd /var/www/html/
+echo helloworld > index.html
+ls
+docker commit -m "apache installed" web centos:httpd
+docker images
+docker history 40a7009fd45a
+
+cat index.html
+rpm -qa httpd
+/usr/bin/httpd        [ for start httpd service in contenar ]
+or
+apachectl
+For check  contner IP
+yum install net-tools -y
+ifconfig
+curl 172.17.o.2
+
+How to access contner from external network
+ For use external network we have to bind contner port to base machin port ( Port fording )
+     or 
+without doing port forwording contner to base machin external traffic never come.
+
+docker run -it -p 85:80 --name con1 centos:httpd
+for check out side exit on base machin and run
+netstat -tnlp | grep docker-proxy
+docker ps
+in URL copy pest base machin public IP : port  like
+[ 13.223.124.94:85 ]     URL
+
+how to loging docker cotner out side  { aagain do port forwordig for SSH }
+docker run -it -p 24:22 --name remote-server centos:latest
+ rpm -qa openssh-server
+     yum install openssh-server -y
+     rpm -qa openssh-server
+     useradd ajeet
+     passwd ajeet
+     yum install passwd
+     passwd ajeet
+     /usr/sbin/sshd
+     ssh-keygen -f /etc/ssh/ssh_host_rsa_key
+     ssh-keygen -f /etc/ssh/ssh_host_ecdsa_key
+     ssh-keygen -f  /etc/ssh/ssh_host_ed25519_key
+     /usr/sbin/sshd
+on putty
+ base machin publice ip   24 [port]
+ ___________________________________________________________
+yum install pam_* -y
+ssh -p 24 root@3.15.27.154 
+------------------------------------------------------------------------------ 
+ Solution:
+
+FROM centos
+RUN yum -y install openssh-server
+RUN useradd remote_user && \
+    echo remote_user:1234 | chpasswd && \
+    mkdir /home/remote_user/.ssh && \
+    chmod 700 /home/remote_user/.ssh
+COPY remote-key.pub /home/remote_user/.ssh/authorized_keys
+RUN chown remote_user:remote_user -R /home/remote_user/.ssh && \
+    chmod 600 /home/remote_user/.ssh/authorized_keys
+RUN /usr/bin/ssh-keygen -A
+EXPOSE 22
+RUN rm -rf /run/nologin
+CMD /usr/sbin/sshd -D
+-----------------------------------------------------------------------------------
+check how many port reserve for docker
+netstat -tnlp | grep docker-proxy
+How to provision new image from docker file
+mkdir apache
+cd apache
+vi dockerfile
+FROM    centos:latest
+MAINTAINER      Ajeet@localhost
+RUN     yum install httpd -y
+ADD     http://www.krnetworkcloud.org/devops.php /root
+COPY    index.html /var/www/html
+ENV     port 80
+EXPOSE  80
+CMD     /usr/sbin/httpd -DFOREGROUND
+
+
+docker build -t centos:apache  .
+docker image
+docker run -dp --name=test centos:apache  ( it will port binding auto matice )
+docker ps
+curl localhost:32772--> difault port
+we always build docker file for do provision i one time
+Docker file parametar
+FROM    
+MAINTAINER      
+RUN     
+ADD     
+COPY    
+ENV     
+EXPOSE  
+CMD    
+OVERLAYfs   is docker image file system.
+By difault contner root file system is /var/lib/docker/volue    (native place )
+Docker Volume :-
+we can creater docker volume tow type
+custom place
+nativ place
+Selinux always not allow volume mount for docker contner
+for solustion
+1)  desable selinux 
+# seteforce 0
+ docker run -d -v /storage:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=redhat mysql:latest
+ docker exec -it 7bed06c76 /bin/bash
+
+
+mysql -u root -p
+password :
+create database abc;
+creare database xyz;
+GO to host
+ls /storage
+ docker ps
+ docker rm -f 7bed06c7670a
+ ls /storage/
+ docker run -d -v /storage:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=redhat mysql:latest
+ docker exec -it c42270b671
+ docker exec -it c42270b671 /bin/bash
+mysql -u root -p
+password :
+show databases;
+2)  how to resolve selinux problem ( selinux is in inforce mode)  
+# seteforce 1
+first create contner without volume 
+ ls -lZd /var/lib/mysql
+ copy  context type & go docker host
+ chcon -t   pest-context-type /volume
+ ocker run -d -v /volume:/var/lib/mysql --name mysql5.6 -e MYSQL_ROOT_PASSWORD=redhat mysql:5.6
+How to use share volum bitween two contner
+ 
+ docker save centos:web > apache.tar
+ docker load apache.tar
+ How to push image in to docker rigstary
+ 1 centerlize   (docker hub)
+ push image in git hub
+ docker loging
+ docker push docker.io/user_ID/website:v1
+ 2 on primise
+ </pre>
+          
+          
+        
+</body><div id="footer"><a>web page designer </a> <a>Ajeet Yadav</a></div>
+</html>
