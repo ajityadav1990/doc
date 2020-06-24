@@ -27,8 +27,13 @@ svn info
 svn up  -r revision.No     [ For SVN Reverd file ]
 svn relocate svn://103.251.61.85/home/Repos/turbantree
 svn --force delete config
-svn commit -m ""
+svn commit -m ""   Push Code
 svn resolved upload
 svn statu
-.
-.
+svn log --verbose -r 42   ( list the file names/paths by revision number )
+svn stat    (  List file changed Locally )
+
+svn switch --relocate <Old-Repo URL> <new-Repo URL>     [ SVN Switch/Relocate Command ]
+svn switch --relocate svn://172.16.7.116/home/Repos/moi-dedicated svn://103.251.61.85/home/Repos/moi-dedicated
+ svn checkout svn://103.251.61.85/home/Repos/mapindia-cil   [ Code checkout ]
+
