@@ -542,6 +542,7 @@ function w3_getStyleValue(elmnt,style) {
 <h2 class="left"><span class="left_h2">AWS</span> Tutorial</h2>
 <a href="#question1"><b>VPC</b></a>
 <a href="#question2"><b>Ec2</b></a>
+<a href="#question2.1"><b>EBS & AMI</b></a>	    
 <a href="#question3"><b>ELB</b></a>
 <a href="#question4"><b>IAM</b></a>
 <a href="#question5"><b>RDS</b></a>
@@ -812,6 +813,36 @@ open putty
                    [52.221.177.53 ]   [22]
 ssh auto   [             ] <- select your ppk file & Open
 **********************************************</pre>
+<h2><a name= "question2.1"></a>EBS & AMI</h2>
+
+<pre> 
+EBS
+
+Volume/Create Volume/volume Type( General Purpose SSD(gp2)/size(10)/select Availability Zone /create
+
+sudo mke2fs -F -j /dev/sdf
+ mkdir /mnt/newdisk
+sudo mount /dev/sdf /mnt/newdisk/
+ df -h /mnt/newdiskr
+touch   /mnt/newdisk/abc
+ls -ltr  /mnt/newdisk/abc
+
+unmount   disk
+
+umount /mnt/newdisk/
+
+umount /dev/sdf
+umount: /mnt/newdisk/: not mounted.
+
+ec2/Volumes/select volume/action/detach Volumes
+ 
+AMI
+create AMI  from  running instance
+right click on instance/create images/name & description /created
+louch new instance  with   my  AMI
+on the time of select images in (My AMI) and other optison is same 
+for delete images ec2 Dasbord/AMIs/select images/Actions/Deregiste  </pre>
+
 <h2><a name= "question3"></a>ELB</h2>
 <pre>****************
 [ELB] .........Load Balancer
