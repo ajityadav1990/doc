@@ -36,4 +36,14 @@ svn stat    (  List file changed Locally )
 svn switch --relocate <Old-Repo URL> <new-Repo URL>     [ SVN Switch/Relocate Command ]
 svn switch --relocate svn://172.16.7.116/home/Repos/moi-dedicated svn://103.251.61.85/home/Repos/moi-dedicated
  svn checkout svn://103.251.61.85/home/Repos/mapindia-cil   [ Code checkout ]
+ 
+ ###########svn for docker in one host ##########################################
+ on server 
+ 
+ docker run -it -p 3792:3690 --name svn2 centos:latest
+ 
+ on client 
+ svn co svn://172.17.0.2:3690/home/myfirstproject/
+ 
+ 
 
