@@ -61,6 +61,10 @@ User/group to add [ user2 ] empoly
 
 Prject roles -> User/group to add -> user1 & user2 -> Develeper ( user1 ) & Tester (user2)
 New Item add dev1 project , test1 project save 
---------------
--- 
+--------------IN DOCKER-----
  
+docker pull jenkins/jenkins
+
+docker run -d -p 8080:8080 -p 50000:50000 -v /home/ec2-user/:/var/jenkins_home jenkins/jenkins
+
+docker exec -it d885ffac1787ccddea /bin/bash
