@@ -34,6 +34,7 @@ git show  id
 add something in place last commit
 git add .
 git commit --amend -m "this is prefect"   
+git pull origia master
 git add origin   https://*****************************
 git branch
 git branch dev
@@ -48,8 +49,16 @@ git push origin master
 enter username
 enter password
 other
-git pull origia master
-
+----For  recorver  delete file in git --------
+touch testpage
+git status -s
+git add  testpage
+git status -s
+rm -f testpage
+git status -s
+git checkout testpage 
+git status -s
+*********************************************************
 merge conflict ?????????(when 2 user add same file with same content)
 ---------------------------------------------------------------------
 git branch release-1.2
