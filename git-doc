@@ -58,7 +58,12 @@ rm -f testpage
 git status -s
 git checkout testpage 
 git status -s
-*********************************************************
+***********************git  log**********************************
+git log
+copy  commit ID
+git  show 8a97a8fabfd7731adb0b7d365d3459d669df474a (commit  ID) show changes do by this commit ID
+****************************************************************************
+
 merge conflict ?????????(when 2 user add same file with same content)
 ---------------------------------------------------------------------
 git branch release-1.2
