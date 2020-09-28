@@ -48,6 +48,8 @@ git branch
 git push origin master
 enter username
 enter password
+git push --set-upstream origin dev(branch name)  for upload new branch  to  git server (git hub )
+
 other
 ----For  recorver  delete file in git --------
 touch testpage
