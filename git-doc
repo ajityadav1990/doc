@@ -42,7 +42,7 @@ git branch
 git checkout dev
 git branch
 git checkout master
-
+git merge dev   [ for merge to brancch ]
 git branch -D dev
 git branch
 git push origin master
