@@ -1,17 +1,6 @@
 online attendance system =  URL : www.cinfo.in/attendance/index.php 
 _____________________________________________________________________
 WHM  :-  2087 , zimbraAdmin :- 7071 , CPANEL :- 2083                                        
-######## Dewan Sir system password = waytoheaven$#123  #####################
-*******************Server Detailes ***************************************************************
-Live Server    |            Local Server                |         SVN SERVER
-               |                                        |
-L13            |       AWSstat server (172.16.7.111)    |   SVN12 (172.16.7.112) [ mow svn12 ]
-L19            |                                        |   SVN14 (172.16.7.114) [ others 14  ]
-L19New         |       L18New  (172.16.61.101)          |   SVN16 (172.16.7.116) [ moi-svn 16 ]
-L29            |                                        |
-L30            |       L21New (172.16.61.100)           |
-Mail Server    |                                        |
----------------------------------------------------------------------------------------------------- 
 ###########SVN Command #################
 svn -up
 svn info
@@ -30,15 +19,8 @@ enter username & password
 ........for mail repaly...........
 svn:// IP /Repos/username/
 username = shweta     
-password = shweta#22$
-############## give ftp Access ############################## 
-ip  ( local server )    
-username =  ********       (all in local-FTP-file )
-password =  ********
+password = shweta#22
 ##################Create New Repos in svn ####################################################
-cd /home/Repos/  [ svn 16 ] [ moi-svn 16 ]
-cd  /Repos/      [ SVN 14 ] [ others 14  ]
-cd /Repos/       [ SVN 12 ] [ mow svn12 ]
 svnadmin create Reponame
  cd Reponame/
  cd conf/
@@ -69,14 +51,8 @@ svn checdkout svn://103.251.61.84/Repos/cinfo/ .
 ################ Create SVN space on moi ###############################
 cd /compare_infobase/logs/dom_logs/mapsofindia.com/
      Delete old date file  (rm -rf )
-*****************SVN 12 & 14 & 16  backup file check ****************************
-  1. ssh svn12@ IP
-    cd /backup-storage/ ; ls -lrt
-################# sync =  http://www.harmeen.com/ ############
-ssh root@l21new
-password : cilredhat
+################# sync  ###########
 rsync -vra -e ssh /home/harmeen/public_html/images/     harmeen@69.64.35.130:/home/harmeen/public_html/images/
-password : *****  { liveFtp file }
 ############ sync #########################
 ssh root@172.16.61.101  ( or root@18new )
 dgreetings.com
@@ -91,27 +67,12 @@ example--
 rsync -vra -e ssh  /home/harmeend/public_html/index.php    harmeend@harmeendesign.com:/home/harmeend/public_html/index.php
 passeord from Live-FTP.xml file
 
-################### file upload on sl22 ###################
 
-copy file for given path in mail
-paste it on Desktop
-terminal -->  Desktop
-scp filename   sl22@173.224.124.249:/home/sl22/www/mapping/
-for password   :  //172.16.6.61/server/serverdocument/passwd/liveftp
-Logs link      :  smb://172.16.6.61/iso/2018/server/upload-access-log.xls
-ctrl+f  in search box sl22   [ ctrl + l for smb ]
-copy & paste password
-URL  www.sl22.in/ file name
-
-############################ upload file on store.mapsofword.com -->  neeraj@infobase.in ##################################
-places/ iso on 172.16.6.61 / neeraj/ filename/ copy folder & paste it on Desktop /
-open terminal
-cd Desktop/file_name
-store.mapsofworld.com
+############################ upload file  ##################################
 scp -rv * root@209.126.105.246:/home/storema/www/path to send location in mail
 store.mapsofindia.com
 scp -r * root@209.126.127.21:/home/storemapmoi/www/download
-############MY SQL######################################
+############ MY SQL######################################
 flush query cache;
 show processlist;
 killall -9 mysql
@@ -223,23 +184,7 @@ first check your self and then shere this  (url , username ,password )
 ctrl +  Z
 _____________________________________
 https://condor2037.startdedicated.com/mail?adminPreAuth=1#1
-___________________________________________
-----------------extension number list-------------------------
-Server    |   134
-IT        |   123
-Jaspreet  |   151
-Gaurav    |   151
-munna     |   149
-Nitesh    |   125 
------------------jsw--------------------------
-L19 (sl22.in)
-/home/sl22/public_html/jsw       (svn up)
-----New jsw server ------------------------
-/var/www/html/jsw                ( svn up)
-ip        :    172.17.17.18
-password  :    Hello#99
 
-live IP   :    103.251.61.87
 _______________________________________________________________________
 command
 locate mod_libphp5.so
@@ -273,46 +218,8 @@ ps -ef  | grep svnserve
 sudo -s
 bash -x moi1.sh 
 svnserve -d
-######################################################
-****Sunday Full-Backup****
-backup of AWS --- MOI(SVN) & ---MOW(svn)
-ssh root@172.16.7.111
-cd /usr/local/scripts1/svnscripts/
-bash -x NewMow.sh
-bash -x mow.sh
-sudo su
-cd /backup/mysql/
-ls -lrt 
-( check all file should be old date) 
-rm -vrf *.sql
-cd ..
-bash -x /ebs/scripts/backup.sh
-cd /backup/
-ls -lrt
-for MOI backup***************
-sudo su
-cd /backup/mysql/
-ls -lrt
-( check all file should be old date) 
-rm -vrf *.sql
-cd ..
-bash -x /ebs/scripts/backup.sh
-*****************************************************
-Live server full backup on every sunday:- 
-step 1> # cd /backup/mysql/
-step 2> # rm -vrf *.sql 
-step 3> # bash -x /home/root2/backup.sh 
-step 4> # bash -x /backup-script 
-step 5> # cd / ( check your backup tar file )
-step 6> # ls -lrt
 ------------------------------------------------------
 svn://172.16.6.61/server backup
-*****************************************************
-how to download aws backup (MOW)
-For moi & Mow
-scp -i /home/cilredhat/compare_infobase.pem ec2-user@54.183.142.72:/backup/RDS05-08-2018.tar.gz .
-For live server
-scp root@209.126.127.21:/L19-backup05Aug18.tar.gz .
 ####### mail server backup { As per instruction some one }###
 run below mention command (reverse sync) every hours on L13 server -
 rsync -vra -e ssh root@209.126.124.6:/opt/zimbra/backup/mailbox/260718 /zimbramail_backup26072018/
@@ -381,27 +288,6 @@ svn add   *
 svn commit -m " "
 svn info
 svn  start 
-################# mails cleared mapsofindia.com #################
-# All mails cleared to inbox of sales, solutions and operations@ 
-https://173.224.124.249:2087
-username root 
-password (new-access-detail)
-Account_Information
-listaccts
-mapsofindia.com
-cp
-Email Accounts
-https://173.224.124.249:2083/cpsess8450702886/frontend/paper_lantern/mail/manage_disk_usage/?account=sales%40mapsofindia.com
-_______________________________________________________
--- 
-https:/69.64.35.130/:2087
-username root 
-password (new-access-detail)
-Account_Information
-listaccts
-mapsofindia.com
-cp
-Email Account
 ############# reset mysql root password(ubuntu)#######################
 chown mysql:mysql /var/run/mysqld
 mysqld_safe --skip-grant-tables &
@@ -416,12 +302,6 @@ quit;
 /etc/init.d/mysql start
 ps -A|grep mysqld
 ps -A|grep mysql
-##### Avast#############################
-/usr/local/src/avast4workstation-1.3.0/bin/avast /home/ >/home/root2/Avast22Sept18.txt & [ L30 ]
-/usr/local/src/avast4workstation-1.3.0/bin/avast /home/ > /home/root2/Avast22Sept18.txt & [ L29 ]
-/usr/local/src/avast4workstation-1.3.0/bin/avast /home/ > /home/root2/Avast22Sept18.txt & [ L19New ]
-/usr/local/avast/bin/avast /home/ > /home/root2/Avast22Sept18.txt & [ L19 ]
-/usr/local/src/avast4/bin/avast /home/ >/home/root2/Avast22Sept18.txt & [ L13 ]
 #######Setup phpMyAdmin on live server##################
 locate phpMyAdmin
 cd /usr/local/src/
@@ -452,41 +332,19 @@ user & password
 on client system
 svn co svn://18.209.231.209/home/repo/myproject/
 You can explicitly choose the filesystem type using the --fs-type argument, which accepts as a parameter either fsfs or bdb.
-###############handover backup#################
-remote  windows
-  ctrl + R
-mstc
- ip   conect
-username : comapere
-password : skyhigh$#999
-windo key + R
-for access storage 
-ctrl + R
-//172.16.6.60
-hand over
-create folder with user name
-copy & past
 #######aws-db###################
  mysql -u compare_Infobase -h compare-infobase-db-new.cbztciobxkoh.ap-southeast-1.rds.amazonaws.com -p
 KripaSingh1989
 mysql -u mapsofworld -h mapsofworlddb.cpidjkfrcsq7.us-west-1.rds.amazonaws.com -p
 deepak66gupta
 #############zimbra ##############################################
-
 zimbraAdmin :- 7071 
-
  bash -x /usr/local/scripts/backup_allaccounts.sh &
- 
-
 zmcontrol stop
 zmcontrol start
 zmcontrol satus
-
 mv /opt/zimbra/log/zmmailboxd.pid /tmp/
-
 /opt/zimbra/postfix/sbin/postqueue -p
-
 /opt/zimbra/postfix/sbin/postsuper -d ALL deferred
-
 cat /var/log/exim_mainlog |grep "vidisha@comparemails.com"
 ****************************************************************************
