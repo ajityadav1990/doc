@@ -21,6 +21,17 @@
 ### 9. How can you see all mounted Drives?
 #### mount   or   df -Th
 ### 10. How to check all open ports in linux?
+nmap -sT -O localhost   [ U for  UDP ]
+netstat -tulpn | grep LISTEN 
+-t : Show only TCP sockets on Linux
+-u : Display only UDP sockets on Linux
+-l : Show listening sockets. For example, TCP port 22 is opened by SSHD server.
+-p : List process name that opened sockets
+-n : Don’t resolve service names i.e. don’t use DNS
+
+
+
+nmap -sT -O localhost
 ### 11. What are RPM?
 #### The full form of RPM is Redhat Package Manager . rpm is powerful package manager, which can be used to build , install, query ,verfy , upload , and erase individul software packages.
 ### 12. What is the name and path of main system log ?
