@@ -21,17 +21,17 @@
 ### 9. How can you see all mounted Drives?
 #### mount   or   df -Th
 ### 10. How to check all open ports in linux?
-nmap -sT -O localhost   [ U for  UDP ]
-netstat -tulpn | grep LISTEN 
--t : Show only TCP sockets on Linux
--u : Display only UDP sockets on Linux
--l : Show listening sockets. For example, TCP port 22 is opened by SSHD server.
--p : List process name that opened sockets
--n : Don’t resolve service names i.e. don’t use DNS
+#### nmap -sT -O localhost   [ U for  UDP ]
+#### netstat -tulpn | grep LISTEN 
+#### -t : Show only TCP sockets on Linux
+#### -u : Display only UDP sockets on Linux
+#### -l : Show listening sockets. For example, TCP port 22 is opened by SSHD server.
+#### -p : List process name that opened sockets
+#### -n : Don’t resolve service names i.e. don’t use DNS
 
 
 
-nmap -sT -O localhost
+#### nmap -sT -O localhost
 ### 11. What are RPM?
 #### The full form of RPM is Redhat Package Manager . rpm is powerful package manager, which can be used to build , install, query ,verfy , upload , and erase individul software packages.
 ### 12. What is the name and path of main system log ?
@@ -80,53 +80,53 @@ nmap -sT -O localhost
 ### 48. How do you find out what is your shell?
 
 ### Q . Apache ....
-  service name
-  config file  path
-  root  folder path 
-  log file 
-  /usr/sbin/httpd -t   [ ( syntex ok ) how to verify httpd.conf  file to ensure no configuration sentex errer? ]
- errar  codes means ---
-   200 -- content foud service OK
-   404 -- page not found
-   403 -- when the user that is running the web service process does not have sufficent permission to read the file .
-   500 -- internal server error or  problem in .htaccess
-   503 --  service is tobusy toserver the service or service  unavailable.
-   504 -- getway time out .
+#### service name
+#### config file  path
+#### root  folder path 
+#### log file 
+#### /usr/sbin/httpd -t   [ ( syntex ok ) how to verify httpd.conf  file to ensure no configuration sentex errer? ]
+#### errar  codes means ---
+####   200 -- content foud service OK
+####  404 -- page not found
+####   403 -- when the user that is running the web service process does not have sufficent permission to read the file .
+####   500 -- internal server error or  problem in .htaccess
+####   503 --  service is tobusy toserver the service or service  unavailable.
+####   504 -- getway time out .
 ### port number --
-#  FTP , SSH , telnet , smtp ,http , https , pop3 , ntp, ldap ,mysql
-#### Q crontab ---
-# minute   hour  day  month  day_of_week
-#      *   *     *    *      *           /root/backup.sh
-# 1.  Run cron job every minute.
-# 2.  Run  crone job every  30 minute.
-# 3.  Run crone job every hour 
-# 4.  Run crone job every day at midnight
-# 5.  Run crone job  at 2 AM
-# 6.  run crone every 15th of the month
-# 7.  run  crone december 1th at mid night
-# 8.  ru crone job on saturday  midnight
-# 9.  run crone job every 15 minute
-# 10.  run crone job monday to friday at 4 am
-# 11. rum croe job 4 am on tuesday and thursday
+####  FTP , SSH , telnet , smtp ,http , https , pop3 , ntp, ldap ,mysql
+### Q crontab ---
+#### minute   hour  day  month  day_of_week
+####      *   *     *    *      *           /root/backup.sh
+#### 1.  Run cron job every minute.
+#### 2.  Run  crone job every  30 minute.
+#### 3.  Run crone job every hour 
+#### 4.  Run crone job every day at midnight
+#### 5.  Run crone job  at 2 AM
+#### 6.  run crone every 15th of the month
+#### 7.  run  crone december 1th at mid night
+#### 8.  ru crone job on saturday  midnight
+#### 9.  run crone job every 15 minute
+#### 10.  run crone job monday to friday at 4 am
+#### 11. rum croe job 4 am on tuesday and thursday
 --------------------------------------------------------------------------------------------
 ###  How to check CPU information?
-#  how to check memory information?
-#  how to check kernal version ?
-#  what is name of Samba configuration file ?
-#  what is the port number of SFTP ?
-#  how to change root password ?
-#  how to find all last 30 day file ?
-#  how can you see all mounted drives ?
-# how to check all open ports on linux machine.
-# how can you find out how long the system has been running ?
-# what is shall ?
-# how to executed a a linux command in the background ?
-# what is NFS ? what it 's job ?
-# how do you find out what's your shell .
-# how do you count words ,line and characters in a file .
-# what is file system ?
-# what are PIDs ?
-# Q. tar,grep ,find , sed,awk,vim,ls ,pwd ,cd ,gzip,shoutdown , ftp,cronttab ,service ,ps ,free
-# top,df ,kill,rm , rmdir cp ,mv , cat ,mount,chmod ,chown ,passwd ,mkdir , ifconfig , uname ,locate ,
-# man ,rpm ,ping data ,wget ,rpm   ( -qa , -ivh ) , tail, head
-# Q.  yum , apache , NFS, ssh ,FTP ,lVM , iptables ,
+####  how to check memory information?
+####  how to check kernal version ?
+####  what is name of Samba configuration file ?
+####  what is the port number of SFTP ?
+####  how to change root password ?
+####  how to find all last 30 day file ?
+####  how can you see all mounted drives ?
+#### how to check all open ports on linux machine.
+#### how can you find out how long the system has been running ?
+#### what is shall ?
+##### how to executed a a linux command in the background ?
+#### what is NFS ? what it 's job ?
+##### how do you find out what's your shell .
+#### how do you count words ,line and characters in a file .
+#### what is file system ?
+#### what are PIDs ?
+#### Q. tar,grep ,find , sed,awk,vim,ls ,pwd ,cd ,gzip,shoutdown , ftp,cronttab ,service ,ps ,free
+### top,df ,kill,rm , rmdir cp ,mv , cat ,mount,chmod ,chown ,passwd ,mkdir , ifconfig , uname ,locate ,
+#### man ,rpm ,ping data ,wget ,rpm   ( -qa , -ivh ) , tail, head
+### Q.  yum , apache , NFS, ssh ,FTP ,lVM , iptables ,
