@@ -93,7 +93,7 @@
 ####   503 --  service is tobusy toserver the service or service  unavailable.
 ####   504 -- getway time out .
 ### port number --
-####  FTP , SSH , telnet , smtp ,http , https , pop3 , ntp, ldap ,mysql
+####  FTP , SSH , telnet , smtp ,http , https , pop3 , ntp, ldap ,mysql , WHM , Cpanel
 ### Q crontab ---
 #### minute   hour  day  month  day_of_week
 ####      *   *     *    *      *           /root/backup.sh
