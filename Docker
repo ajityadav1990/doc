@@ -161,8 +161,6 @@ COPY    index.html /var/www/html
 ENV     port 80
 EXPOSE  80
 CMD     /usr/sbin/httpd -DFOREGROUND
-
-
 docker build -t centos:apache  .
 docker image
 docker run -dp --name=test centos:apache  ( it will port binding auto matice )
@@ -179,11 +177,8 @@ ENV
 EXPOSE  
 CMD    
 OVERLAYfs   is docker image file system.
-By difault contner root file system is /var/lib/docker/volue    (native place )
-Docker Volume :-
-we can creater docker volume tow type
-custom place
-nativ place
+
+
 Selinux always not allow volume mount for docker contner
 for solustion
 1)  desable selinux 
@@ -224,6 +219,37 @@ How to use share volum bitween two contner
  docker loging
  docker push docker.io/user_ID/website:v1
  2 on primise
+ Volume -----------------------------Add other docker volume to new docker container --------------------
+Docker Volume :-
+we can creater docker volume tow type
+custom place
+nativ placeBy difault contner root file system is /var/lib/docker/volue    (native place )
+
+  create      Create a volume
+  inspect     Display detailed information on one or more volumes
+  ls          List volumes
+  prune       Remove all unused local volumes
+  rm          Remove one or more volumes  
+  example :-
+  
+ docker volume create  abc ------------------- Create new volume 
+ docker volume ls ----------------------------- show volume list
+ docker volume rm abc  ---------------------------Delete docker volume
+ docker volume prune -----------------------------Delete all un used volume Commands:
+ 
+ docker container run -itd volume ID/var/lib/mysql i:1
+ docker container run -itd name c1  v abc/var/lib/mysql i:1  i.1
+                                    |__|_____________________________________________________________will create new volume with volume name
+Docker Bind mount ( mount host folder as volume to contener )
+
+docker container run -it -v /home/ajeet:/tmp/ajeet  i:1 /bin/bash
+or                               |___________________________________________________________________________Always use full patch on mounting time
+docker container run -it --mount -type=bind ,source=/home/ajeet,target=/tmp/ajeet  i:1  /bin/bash
+
+
+
+
+
  
 
 
