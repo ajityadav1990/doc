@@ -67,7 +67,7 @@
      ### KRITICAL SOFTWARE###
 ### 36. What is PORt Number of SFTP?
 ### 37. What is AWK?
-### 38. How to find all last 30 day file?
+### 38. How to find all last 30 day file?   ( find -mtime -30 & +30 befour 30 day )
 ### 39. What is inode?
 ### 40. how many run lable in linux ? How to change run level?
 ### 41. How can you find out how long the system has been running?
