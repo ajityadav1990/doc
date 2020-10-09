@@ -130,3 +130,22 @@
 ### top,df ,kill,rm , rmdir cp ,mv , cat ,mount,chmod ,chown ,passwd ,mkdir , ifconfig , uname ,locate ,
 #### man ,rpm ,ping data ,wget ,rpm   ( -qa , -ivh ) , tail, head
 ### Q.  yum , apache , NFS, ssh ,FTP ,lVM , iptables ,
+###  APACHE
+service  name httpd
+port number http  80 , https 443
+config file  /etc/httpd/httpd.conf
+Log File
+/var/log/httpd/access.log
+/var/log/httpd/error.log
+apache webroot or document root patch : 
+ /var/www/html
+ To check apache config file syntex error?
+ /usr/sbin/httpd -t
+ syntax ok
+ what does error codees mean ?
+ 200 -- content fount server ok
+ 403 -- when the users that is running the web server process does not have sufficent permmissionns to read the file .
+ 404 -- page not fount
+ 500 -- iternal server error or  .htaccess
+ 503 -- server is too busy to serve the request / service unavelable.
+ 504  -- gateway time out
