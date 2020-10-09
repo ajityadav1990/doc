@@ -1,0 +1,332 @@
+Docker File --- {layered architedure }
+
+always  use file name dockerfile 
+if we want use some other name dockerfile on the run time use -f filename time of executed file.
+
+FROM ------------
+
+vim dockerfile
+
+FROM  ubuntu:latest
+
+wq!
+
+# docker image build -t ajeetubuntu:1 .
+# docker container run -it ajeetubuntu:1
+
+RUN-----------------------
+
+vim dockerfile
+
+FROM  ubuntu:latest
+RUN   apt-get update && apt-get install -y tree
+
+wq!
+
+# docker image build -t ajeetubuntu:1 .
+# docker container run -it ajeetubuntu:2
+
+example for under standing Layerd architedure & RUN 
+
+vim dockerfile
+
+FROM  ubuntu:latest
+RUN   apt-get update && apt-get install -y tree
+RUN   touch /tmp/1.txt
+RUN   touch /tmp/2.txt
+RUN   touch /tmp/3.txt
+RUN   touch /tmp/4.txt
+
+wq!
+
+delete all old image
+# docker image build -t ajeetubuntu:1 .
+# docker container run -it ajeetubuntu:1
+
+docker image ls
+docker image ls -a
+
+write run command multiple time is not best pratices 
+alwaye edited docker file at the end because 
+if we chang fileon uper or midel so it automaticaly create every think new after the line 
+if we write at end it use cache .
+LABEL----------------------------
+
+vim dockerfile
+
+FROM  ubuntu:latest
+LABEL name="aeet yadav"
+LABEL email="ajeet1311990@gmail.com"
+
+wq!
+
+# docker image build -t ajeetubuntu:1 .
+# docker inspect ajeetubuntu:1    [ For check LABLE ]
+
+
+ENV  [ pass enverement ]--------------------
+
+vim dockerfile
+
+FROM  ubuntu:latest
+LABEL name="aeet yadav"
+LABEL email="ajeet1311990@gmail.com"
+ENV   name ajeet
+ENV   pass password
+
+wq!
+
+# docker image build -t i:2 .
+# docker container run -it i:2
+ # env
+
+RUN --------------------------------------------
+
+vim dockerfile
+
+FROM ubuntu:latest
+LABEL name="Ajeet Yadav"
+LABEL email="ajeet1311990@gmail.com"
+ENV name ajeet
+ENV pass password
+RUN pwd > /tmp/a.txt
+RUN cd /tmp/
+RUN pwd > /tmp/b.txt
+
+wq!
+
+# docker image build -t i:4 
+# docker container run -it i:4
+
+root@12949cc3f2b2:/# cd /tmp/
+root@12949cc3f2b2:/tmp# ls
+a.txt  b.txt
+root@12949cc3f2b2:/tmp# cat a.txt
+/
+root@12949cc3f2b2:/tmp# cat b.txt
+/
+
+WORKDIR-------------------------------------
+
+vim dockerfile
+
+FROM ubuntu:latest
+LABEL name="Ajeet Yadav"
+LABEL email="ajeet1311990@gmail.com"
+ENV name ajeet
+ENV pass password
+RUN pwd > /tmp/a.txt
+RUN cd /tmp/
+RUN pwd > /tmp/b.txt
+WORKDIR /tmp
+RUN pwd > /tmp/c.txt
+
+
+# docker image build -t i:5 .
+# docker container run -it i:5
+root@097683c15a48:/tmp# ls
+a.txt  b.txt  c.txt
+root@097683c15a48:/tmp# cat a.txt
+/
+root@097683c15a48:/tmp# cat b.txt
+/
+root@097683c15a48:/tmp# cat c.txt
+/tmp
+
+USER --------------------------------
+
+vim dockerfile
+
+FROM ubuntu:latest
+LABEL name="Ajeet Yadav"
+LABEL email="ajeet1311990@gmail.com"
+ENV NAME ajeet
+ENV PASS password123
+RUN pwd>/tmp/a.txt
+RUN cd /tmp/
+RUN pwd>/tmp/b.txt
+WORKDIR /tmp
+RUN pwd>/tmp/c.txt
+RUN apt-get update && apt-get install -y openssh-server && apt-get install -y python
+RUN useradd -d /home/ajeet -g root -G sudo -m -p $(echo "$PASS" | openssl passwd -1 -stdin) $NAME
+RUN whoami > /tmp/whoami1.txt
+USER $NAME
+RUN whoami > /tmp/whoami2.txt
+
+:wq!
+
+# docker container run -it i:9
+ajeet@bd1f4aae070b:/tmp$ ls
+a.txt  b.txt  c.txt  whoami1.txt  whoami2.txt
+ajeet@bd1f4aae070b:/tmp$ cat whoami1.txt
+root
+ajeet@bd1f4aae070b:/tmp$ cat whoami2.txt
+ajeet
+
+COPY & ADD ----------------------------------------------------------
+
+vim dockerfile
+
+FROM ubuntu:latest
+FROM ubuntu:latest
+RUN mkdir -p /tmp/project
+COPY doc /tmp/project
+
+
+
+# docker container run -it i:10
+root@4bc26313a6ce:/tmp# ls
+a.txt  b.txt  c.txt  project
+root@4bc26313a6ce:/tmp# ls project/
+
+ADD --------------------------------------------------------------
+
+# vim dockerfile
+FROM ubuntu:latest
+RUN mkdir -p /tmp/project2
+ADD https://www.indiatoday.in/news.html /tmp/project2
+
+
+# docker container run -it i:11
+root@4bc26313a6ce:# cd /tmp/prject2/
+ news.html
+root@4bc26313a6ce:/tmp# ls project/
+
+CMD --------------------------------------------------------------
+
+FROM ubuntu:latest
+RUN apt-get update && apt-get install -y openssh-server && apt-get install -y python
+CMD ["python"]
+
+
+:wq!
+
+# docker image build -t 2:cmd .
+# docker container run -P -it 2:cmd
+
+
+get python shell  directaly
+
+
+Always write CMD one time in one docker file .
+If we write CMD multiple time in docker file it always  run last line .
+EXample :-
+
+FROM ubuntu:latest
+RUN apt-get update && apt-get install -y openssh-server && apt-get install -y python
+CMD ["python"]
+CMD ["sh"]
+
+:wq!
+
+
+# docker image build -t 2:cmd .
+# docker container run -P -it 2:cmd     
+
+Get  shell output not python
+
+--------create a SSH container using dockerfile ---------
+
+vim dockerfile
+
+FROM ubuntu:latest
+ENV NAME ajeet
+ENV PASS password123
+RUN mkdir -p /var/run/sshd
+RUN apt-get update
+RUN apt-get install -y openssh-server
+RUN useradd -d /home/ajeet -g root -G sudo -m -p $(echo "$PASS" | openssl passwd -1 -stdin) $NAME
+CMD ["/usr/sbin/sshd", "-D"]
+                         |__________________________________________________________________________ run command inback ground
+
+# docker image build -t i:3 .
+# docker container run -P -itd -it i:3
+                        |___________________________________________________________________________  assine rendamly  port
+# docker ps
+# docker container inspect 491029c0f51b 
+# ssh ajeet@172.17.0.3    loging container from out side
+ 
+Exose   [ port mapping form docker file ]--------------------------------
+
+vim dockerfile
+
+ENV NAME ajeet
+ENV PASS password123
+RUN mkdir -p /var/run/sshd
+RUN apt-get update
+RUN apt-get install -y openssh-server
+RUN useradd -d /home/ajeet -g root -G sudo -m -p $(echo "$PASS" | openssl passwd -1 -stdin) $NAME
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
+
+# docker image build -t i:4 .
+# docker container run -P -itd -it i:4
+# docker inspect faf24cb2b09e
+# docker ps
+# ssh ajeet@172.17.0.4 -P 32769
+
+if we need expose multiple pot then --
+
+EXPOSE 22 80  8080
+
+Entrypoint --------------------
+
+vim dockerfile
+
+FROM ubuntu:latest
+ENV NAME ajeet
+ENV PASS password123
+RUN mkdir -p /var/run/sshd
+RUN apt-get update
+RUN apt-get install -y python tree
+ENTRYPOINT [ "tree" ]
+
+wq!
+
+2 vim dockerfile 
+
+FROM ubuntu:latest
+ENV NAME ajeet
+ENV PASS password123
+RUN mkdir -p /var/run/sshd
+RUN apt-get update
+RUN apt-get install -y python tree
+ENTRYPOINT [ "tree" ]
+CMD ["--version"]
+
+####################
+# vim dockerfile
+
+FROM ubuntu:latest
+ENV NAME ajeet
+ENV PASS password123
+RUN mkdir -p /var/run/sshd
+RUN apt-get update
+RUN apt-get install -y python tree
+COPY test.sh /tmp
+ENTRYPOINT [ "/bin/bash", "/tmp/test.sh" ]
+
+vim dockerfile
+
+FROM ubuntu:latest
+ENV NAME ajeet
+ENV PASS password123
+RUN mkdir -p /var/run/sshd
+RUN apt-get update
+RUN apt-get install -y python tree
+COPY test.py /tmp
+ENTRYPOINT [ "python", "/tmp/test.py" ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
