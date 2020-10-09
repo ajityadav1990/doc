@@ -92,10 +92,10 @@
 ####   500 -- internal server error or  problem in .htaccess
 ####   503 --  service is tobusy toserver the service or service  unavailable.
 ####   504 -- getway time out .
-### port number --
+###  port number --
 ####  FTP , SSH , telnet , smtp ,http , https , pop3 , ntp, ldap ,mysql , WHM , Cpanel
-### Q crontab ---
-#### minute   hour  day  month  day_of_week
+###  Q crontab ---
+####  minute   hour  day  month  day_of_week
 ####      *   *     *    *      *           /root/backup.sh
 #### 1.  Run cron job every minute.
 #### 2.  Run  crone job every  30 minute.
@@ -120,7 +120,7 @@
 #### how to check all open ports on linux machine.
 #### how can you find out how long the system has been running ?
 #### what is shall ?
-##### how to executed a a linux command in the background ?
+#####  how to executed a a linux command in the background ?
 #### what is NFS ? what it 's job ?
 ##### how do you find out what's your shell .
 #### how do you count words ,line and characters in a file .
@@ -131,16 +131,16 @@
 #### man ,rpm ,ping data ,wget ,rpm   ( -qa , -ivh ) , tail, head
 ### Q.  yum , apache , NFS, ssh ,FTP ,lVM , iptables ,
 ###  APACHE
-####service  name httpd
-####port number http  80 , https 443
-####config file  /etc/httpd/httpd.conf
-####Log File
-####/var/log/httpd/access.log
-####/var/log/httpd/error.log
-####apache webroot or document root patch : 
-####/var/www/html
-####To check apache config file syntex error?
-###/usr/sbin/httpd -t
+#### service  name httpd
+#### port number http  80 , https 443
+#### config file  /etc/httpd/httpd.conf
+#### Log File
+#### /var/log/httpd/access.log
+#### /var/log/httpd/error.log
+#### apache webroot or document root patch : 
+#### /var/www/html
+#### To check apache config file syntex error?
+### /usr/sbin/httpd -t
 #### syntax ok
 #### what does error codees mean ?
 #### 200 -- content fount server ok
