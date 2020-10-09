@@ -149,3 +149,24 @@ apache webroot or document root patch :
  500 -- iternal server error or  .htaccess
  503 -- server is too busy to serve the request / service unavelable.
  504  -- gateway time out
+ Tomcat ----------------------------
+ tomcat  server :-
+it have two container
+1 . catalina (sarelet)
+2.  jasper (jsp) 
+
+Tomcat : 
+type   : java based web server s/w
+vender : apache foundation
+open source / Freeware
+default port : 8080
+
+tomcate is very sutable for java applicatison or web site 
+it is not use for larg website like ecomers site or bancking project
+After installing tomcat we get some folder 
+/bin
+/conf
+/lib
+/log
+/tmp
+/webapps  -- webroot of tomcat { you have to place data in this folder ) 
