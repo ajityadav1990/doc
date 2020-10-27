@@ -38,4 +38,11 @@
 ### 38. ping command example ?
 ### 39. date command example ?
 ### 40. wget command example ?
+### inode  :-   The inode is a data structure in linux file system that describes a 
+file-system object such as a file or a directory. Each inode stores the attributes and disk block
+ locations of the object.
+
+
+### Umask   :-   When user create a file or directory under Linux or UNIX, files. It can be  control the default file permission.
+
 
