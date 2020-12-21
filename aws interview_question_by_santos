@@ -1,0 +1,189 @@
+
+Interview question for Aws and Linux
+ 
+ 
+AWS-------
+ 
+
+1.	can we copy AMI in different AZ. Can encrypted AMI copy?
+2.	What is placement group
+3.	What is Capacity reservation
+
+. When you create a Capacity Reservation, we reserve the specified capacity for your use. The reserved capacity is charged at the selected instance type’s On-Demand rate whether an instance is running in it or not. You can also use your regional reserved instances with your Capacity Reservations to benefit from billing discounts.
+
+4.	What is connection draining.
+
+You’d like to avoid breaking open network connections while taking an instance out of service, updating its software, or replacing it with a fresh instance that contains updated software. Imagine each broken connection as a half-drawn web page, an aborted file download, or a failed web service call, each of which results in an unhappy user or customer.
+
+
+5.	What is Cross-Zone Load Balancing
+6.	What is sticky session
+7.	Difference between classic, application and network load balancing.
+8.	What is autoscaling and its benefit
+AWS Auto Scaling will automatically scale resources as needed 
+
+	•Better fault tolerance: Auto-scaling helps in determining and detecting which of the instances present on the server is unhealthy. Once established, the unhealthy instance is quickly terminated, and another healthy instance is sent as a replacement for the unhealthy one.
+•Better availability: Auto-scaling helps in ensuring that the application has the right amount of capacity for handling the current traffic demand
+•Better cost management: Auto-scaling can dynamically increase and decrease the capacity as required. With auto-scaling, one can launch instances when needed and also terminate these when they are not required.
+9.	how to mount s3 bucket as drive in Linux and windows server.
+10.	Versioning 
+11.	how to make bucket as public
+12.	what is permission for make bucket as static website hosting
+13.	difference between AMI backup and snapshot backup
+14.	difference between security group and ACL
+15.	encryption in S3 bucket.
+16.	how to create hostage zone in route 53
+17.	What is Transfer acceleration
+18.	What is cross-region replication
+19.	Is it required the enable versioning for cross-region replication?
+20.	What is corsconfigation
+21.	How to access the glacier object
+22.	If we created subnet /24 can we use all IP.
+23.	Migration form on-prem to aws.
+24.	If EC2  2/2 check fails then how to fix it.
+25.	Difference between cloud watch , cloud trail and cloud config.
+26.	Difference between  ELB , ALB and NLB.(Very imp)
+27.	Difference between  NACL and security group.
+28.	Difference between  net gateway and internet gateway(Very imp)
+29.	What is Bastion host
+30.	VPC peering and direct connect.
+31.	What is RDS
+32.	What is deference between Read replica and multi AZ deployment
+33.	What is Cloud front and what is use for it
+
+
+
+
+ACL: are used to grant basic read and write to permission to other aws account and its also used to grant public access to s3 bucket
+
+
+
+
+
+
+
+
+Encryption:
+
+1-In transit:
+
+SSL/TLS
+
+2-At rest:
+
+Server side encryption:
+
+S3 managed key-SSE-S3
+AWS Key management service, managed key, SSE-KMS
+Server side encryption with customer provide key- SSE-C
+
+3-Client side encryption
+
+
+IN TRANSIT	AT REST
+SSL/TLS	Server Side Managed Keys	Client Side Managed Keys
+	
+
+•	S3 (SSE-S3)
+•	Each object is encrypted with a key. Amazon encrypts the key with a master key, which rotates regularly.
+•	AWS Key Management Service (SSE-KMS)
+•	Allows you to audit trail (who and when used the key), extra cost and you manage the master key.
+•	Customer provided (SSE-C)
+•	User manages the keys but encryption done by Amazon	User encrypts the data on client-side and uploads to S3
+
+
+SSE-S3: AWS manages both data key and master key
+SSE-KMS: AWS manages data key and you manage master key
+SSE-C: You manage both data key and master key
+
+
+
+
+
+ 
+ 
+
+
+
+
+Linux----------
+ 
+1-      Different between scp and rsync
+2-      Define all filed in crontab
+3-      What you troubleshoot in OS
+4-      If Linux server is not accessible then how to trouble shoot.
+5-      If I increase in file system size and its not reflecting in OS then how to fix it (xfs_growfs and resize2fs)
+6-      If we created partition then how you can extend volume group
+7-      Default file system in rhel 7
+8-      Difference between rhel 6 and 7
+9-      Runlevel
+10-   What  is swap memory and how to create it.
+11-   Difference between ext3 and ext4
+12-   How to resize OS file system
+ 
+
+
+34.	can we copy AMI in different AZ. Can encrypted AMI copy?
+
+You can copy an Amazon Machine Image (AMI) within or across AWS Regions using the AWS Management Console, the AWS Command Line Interface or SDKs, or the Amazon EC2 API, all of which support the CopyImage action. You can copy both Amazon EBS-backed AMIs and instance-store-backed AMIs. You can copy AMIs with encrypted snapshots and also change encryption status during the copy process.
+ 
+Note: encrypted snapshot can copy to other account but only created with custom key not default key.
+
+•	Better fault tolerance. Amazon EC2 Auto Scaling can detect when an instance is unhealthy, terminate it, and launch an instance to replace it. You can also configure Amazon EC2 Auto Scaling to use multiple Availability Zones. If one Availability Zone becomes unavailable, Amazon EC2 Auto Scaling can launch instances in another one to compensate. 
+•	Better availability. Amazon EC2 Auto Scaling helps ensure that your application always has the right amount of capacity to handle the current traffic demand. 
+•	Better cost management. Amazon EC2 Auto Scaling can dynamically increase and decrease capacity as needed. Because you pay for the EC2 instances you use, you save money by launching instances when they are needed and terminating them when they aren't. 
+
+ 
+Difference between Block storage and object storage.
+Block storage:
+Block storage dives data to be stored in evenly sized blocks (data chunk). A file can split into evenly sized blocks before it is stored.
+Data  blocks stored in the block storage would no be contain metadata (data created, data modified, content type)
+Block storage only keeps the address. Where the data blocks are store
+Suitable for the server OS and HD
+
+Object storage:
+It is suitable for WORA(write once and read any time)
+Object storage store the file as a whole and does not divide them 
+In object storage an object is
+	In file/data itself
+	Its metadata
+	Object global unique id.
+Not suitable for the server OS or HD
+
+Question: What is a Read Replica?
+Answer: It allows you to create a “read-only” copy of your database in production.
+Points about the Read Replicas on aws RDS instance:
+•	They are used for “Scaling” and not for “Data Recovery“
+•	Automatic Backups should be enabled in order to deploy a “Read Replica“
+•	At most 5 copies can be made using “Read Replica“
+•	 If needed, you can have “Read Replicas of the Read Replicas“
+•	Every “Read Replica” will have its own unique “End Point“
+•	They can be “Multi-AZ“
+•	Can be deployed in different regions
+
+Question: What is “Multi-AZ or Multi-Availability Zones“?
+Answer: When we wan to replicate the data within a Region on aws, this is what known as replicating the data to “Multi-Availability Zones“.
+
+Multi-AZ: 2 instances are deployed in 2 different AZs but there is only one endpoint. One acts as primary and another one as secondary. You can do read and write both types of operations. Synchronous replication between 2 instances.
+Read Replica: this is another instance, which serves only READ traffic, no WRITE operations. It would have a separate endpoint. Replication from Master DB to Read Replica would be Asynchronous (with delay of milliseconds)
+
+
+
+VPC endpoint:A VPC endpoint enables you to private connection in  your VPC to supported AWS services. You don’t need to internet connection, internet gateway/Nat gateway 
+Without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.
+Instances in your VPC do not require public IP addresses to communicate with resources in the service
+
+AWS Direct Connect:
+
+makes it easy to establish a dedicated network connection from your premises to AWS. Using AWS Direct Connect, you can establish private connectivity between AWS and your datacenter, office, or colocation environment, which in many cases can reduce your network costs, increase bandwidth throughput, and provide a more consistent network experience than Internet-based connections.
+Benefits
+REDUCES YOUR BANDWIDTH COSTS
+
+
+
+
+
+
+ 
+ 
+
