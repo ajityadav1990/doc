@@ -69,6 +69,9 @@
 ### 37. What is AWK?
 ### 38. How to find all last 30 day file?   ( find -mtime -30 & +30 befour 30 day )
 ### 39. What is inode?
+####  An inode is a data structure that stores various information about a file in Linux, such as the access mode (read, write, execute permissions), ownership, file type, file size, group, number of links, etc. Each inode is identified by an integer number.
+###   . What is Umask?
+####  Umask is a Linux command that is used to assign the default file permission sets for newly created folders and files. 
 ### 40. how many run lable in linux ? How to change run level?
 ### 41. How can you find out how long the system has been running?
 ### 42. How do you check siz of all user home Directory?
