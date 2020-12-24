@@ -4,7 +4,7 @@
 ### In simple words AWS allows you to do the following things-
 ### 1. Running web and application servers in the cloud to host dynamic websites.
 ### 2. Securely store all your files on the cloud so you can access them from
-anywhere.
+### anywhere.
 ### 3. Using managed databases like MySQL, PostgreSQL, Oracle or SQL Server to
 ### store information.
 ### 4. Deliver static and dynamic files quickly around the world using a Content
