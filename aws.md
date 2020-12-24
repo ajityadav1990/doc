@@ -1,18 +1,18 @@
 ### Amozon Web Services (AWS) is a secure cloud services platform, offering compute power,
-database storage, content delivery and other functionality to help businesses scale and
-grow.
-In simple words AWS allows you to do the following things-
-1. Running web and application servers in the cloud to host dynamic websites.
-2. Securely store all your files on the cloud so you can access them from
+### database storage, content delivery and other functionality to help businesses scale and
+### grow.
+### In simple words AWS allows you to do the following things-
+### 1. Running web and application servers in the cloud to host dynamic websites.
+### 2. Securely store all your files on the cloud so you can access them from
 anywhere.
-3. Using managed databases like MySQL, PostgreSQL, Oracle or SQL Server to
-store information.
-4. Deliver static and dynamic files quickly around the world using a Content
-Delivery Network (CDN).
-5. Send bulk email to your customers.
-Now that you know what you can do with AWS, lets have an overview of various AWS
-services.
-Basic Terminologies
+### 3. Using managed databases like MySQL, PostgreSQL, Oracle or SQL Server to
+### store information.
+### 4. Deliver static and dynamic files quickly around the world using a Content
+### Delivery Network (CDN).
+### 5. Send bulk email to your customers.
+###Now that you know what you can do with AWS, lets have an overview of various AWS
+###services.
+###Basic Terminologies
 1. Region — A region is a geographical area. Each region consists of 2 (or more)
 availability zones.
 2. Availability Zone — It is simply a data center.
