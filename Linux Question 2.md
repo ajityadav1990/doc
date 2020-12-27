@@ -5,9 +5,17 @@
 ### 3. How to trace any process background processing?
 #### ps -aux
 ### 4. What is the difference bitween Telnet and SSH?
-### 5. What is Different bitween unix and linux?
+### Why we use LVM in Linux?
+### Q : How to create partition from the raw disk ?
+Ans: Using fdisk utility we can create partitions from the raw disk :
+– fdisk  /dev/hd* (IDE) or /dev/sd* (SCSI)
+– Type n to create a new partition
+–  After creating partition , type w command to write the changes to the partition table.
 ### 6. What is mean by raid and what are all raids available even in software and hardware?
 #### Raid Sstands for Redundant Array of independent Disks it improve Performence and FaultTolerance.
+### 5. Boot process ?
+    BIOS -> MBR -> GRUB -> Kernal -> INIT -> Ru lable
+
 #### Totally there are are 6 levels in Raid
 ####  0 - stripping
 ####  1 - Mirroring
