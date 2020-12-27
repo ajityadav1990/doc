@@ -44,6 +44,18 @@
 ### 15. What are the packages for Apache server configuration?
 ### 16. About DNS server configuration file ,packages etc.?
 ### 17. How many types of zone in DNS?
+### Q . explain all record in dns ?
+#### MX record :- mail exchang records use to deterinig  the priorty of email server for domain.
+#### SOS record :- start of authority ( first record in DNS )
+#### NS Record :- Name server record
+#### A or AAAA record  :- link ip to host .
+           |_____use IP 6
+#### CNAME record :- use for sub domain .
+#### PTR Record  : also called reverseDNS record / reverse of a records.
+#### SRV Record :- service record toutilize some service SRV record canbe request in your domain/ Host and port uber ofservice for specified service .
+#### SPA record  :- sender policy framework .
+#### DKIM record :-DKIM provides an encryption key and digital signature that verifies that an email message . The properly implemented DKIM record will improve the security of your email deliverability significantly.
+#### TXT record  :- TXT records are a type of DNS record that contains text information for sources outside of your domain. Google uses them to verify domain ownership and to ensure email security.
 ### 18. How to call script through cron job?
 ### 19. about DHCP?
 ### 20. What is out put of top command?
