@@ -1,4 +1,5 @@
 ### netstat command in linux
+### tcpdump  command in linux.
 ### 1. In which file is Static IP address given so that it becomes Permanent?
 #### /etc/sysconfig/network-scripts/ifcfg-eth0
 ### 2. To check which Service is running at presentin system what is the command?
@@ -117,7 +118,7 @@ Ans: Using fdisk utility we can create partitions from the raw disk :
 ####   503 --  service is tobusy toserver the service or service  unavailable.
 ####   504 -- getway time out .
 ###  port number --
-####  FTP , SSH , telnet , smtp ,http , https , pop3 , ntp, ldap ,mysql , WHM , Cpanel
+####  FTP , SSH , telnet , smtp ,http , https ,tomcat ,  pop3 , ntp, ldap ,mysql , WHM , Cpanel
 ###  Q crontab ---
 ####  minute   hour  day  month  day_of_week
 ####      *   *     *    *      *           /root/backup.sh
