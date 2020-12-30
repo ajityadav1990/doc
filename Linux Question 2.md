@@ -1,3 +1,4 @@
+### netstat command in linux
 ### 1. In which file is Static IP address given so that it becomes Permanent?
 #### /etc/sysconfig/network-scripts/ifcfg-eth0
 ### 2. To check which Service is running at presentin system what is the command?
