@@ -1,0 +1,165 @@
+Tomcat Server 
+
+It have two continer
+
+1 :- Sarelet continer nike name is catalina
+2 :- JSP continer  nike name is jasper
+
+Tomcat :- 
+      type        :- java based web server s/w
+	  Vender      :-  apache foundation
+	  Open Source :-  Free ware
+	  default port:-  8080(http) 
+	  
+	  To download S/w   www.apache.org   [ run file or setup file  always setup with  setup file ]
+	  
+Tomcat :- Is very suitable  for java application or website ,  it not use for large website like e-comers site or banking web site, it is very easy to start & stop also very lite application.
+
+While installing tomcat :- 
+
+  jar folder location
+  tomcat installation folder < Tomcat _hame >
+  admin username : admin ( not fix )
+        Password : admin (not fix )
+
+To see home page ( first page ) of tomcat
+
+http://localhost:8080(tomcat port number ) in url
+
+
+in the time of installing tomcat always go 
+
+Service /apache tomcat 9.0 tomcat   --> property/change  ( automatily to manual )
+
+if you do not this it will always start time of booting process	.
+	
+After installing tomcat we get some folder.	
+
+
+/bin   :- it content many file but most important file is Tomcat 9 which we use for start tomcat.
+
+/conf  :- it also content many file but mostly we use Server.xml to Chang the port number & we use tomcat-user to add new user & password get into 
+          the admin consol and to know  username & password.
+		  
+/lib   :- along with tomcat installing we will get some contener the important file like 	
+          serlet.api   represent  serlet API
+          JSP-api      represent  jsp API
+          Serlet container name is catalina		  
+		  JSP      Container name  Jasper
+		  
+/Webapps  :- it is very important ,it contant default webapplication if you deploy web application you will place in /Wabapps folder.
+              we use always /Webapps folder for deployment java web server in tomcat. 	
+
+Changing tomcat port number after installing :-
+
+Go to tomcat home/conf/server.xml ->  First (connector) tag  -> change "port" attribuet value -> restart server.
+
+Chaging/ viewing admin username, password after installation :-
+
+go to tomcat_home/conf/tomcat-user.xml file -> abserve(user) tag ... -> restarrt
+
+
+ JVM --->
+
+JVM is a engine that provides runtime envirement to drivr that java code or applications. it converts java byte code into machins language. JVM is a part of JRE ( Java run Envirronment )
+
+JDK ---->
+
+Java Development kit (JDK) allows you to code and run java program. it is possible that you install multiple JDK on the same PC.
+
+JSP --->
+
+ ( Java Server Page ) is a technology that helps software developer create dynamically generated web pagse
+  JSP is similar to PHP & ASP but use for java programming language.
+  
+ Java Servlet :-
+  
+  A java servlet is a java Program that extends the capabilities of any types of requests , they most commaly implement application hosted on web Server.
+  or 
+  Servlet technology is used to  create web application. Servlet is server side 
+  
+  
+ Jasper :-
+  
+  Jasper is tomcat JSP( Java server page)  engine, Jasper process JSP file to compile them into java code as servlets, the compiled java code can be handled by cattalina.
+  
+  Install tomcat on EC2
+  
+  yum install tomcat8-webapps
+  yum install  tomcat8-admin-webapps
+  yum install  tomcat8-docs-webapp
+  
+  cd /usr/share/tomcat8/
+  ls
+  fuser -v -n tcp 8080
+  netstat -na | grep 8080
+  
+  Service tomcat8 statrt
+  service tomcat8  status
+  chkconfig tomcat8 on
+  in ec2 URL
+           ---------------------------------------------------------
+		   public IP is 192.168.0.1:8080
+		   ---------------------------------------------------------
+		   
+		   Application / web server( tomcat)
+|--------------------------------------------------------------------------|
+|               Web Container                                              |
+|--------------------------------------------------------------------------|
+|	                           |                                           |
+|  Servlet Container           |          JSP                              | 
+|    also know as              |      Container                            |
+|  Servlet Engine              |    also know as                           | 
+|  also know as                |    ( JSP Engine )                         |
+|  CATALINA                    |    also know as                           |
+|______________________________|__________JASPER___________________________|
+
+
+web server :  web server is responsible to run web application.
+
+Tomcat( web server ) : for run web application we need some spacial software which is tomcat ( web server ) for responsible to manage and executed servelet a JSP.
+
+Web container :-  web contaner is responsible to manage and executed servelet a JSP 
+
+Servlet Container( Catalina) is use for manage and execute servlet component.
+
+JSP Container ( JASPER ) is use for manage and execute JSP Component.
+
+Java  
+
+Core Java ->  we can only use for create stand alone application
+
+Advance Java ->  we can create web  application i adavance java we have 3 technology
+
+
+ |
+ |
+ ------------JDBC
+ |
+ |
+ |__________Servlet
+ |
+ |
+ |---------JSPS
+ 
+ in java we have 3 edition 
+ 
+ 1} java standard Edition ( J2SE | JSE ) - core Java  (JDBC)
+ 
+ 2}  Java Enterprise = Servlet & JSPS
+ 
+ 3} Java micro edition ( like mobile application )
+ 
+ 
+ example      { Servlet do all this internal action ]
+ 
+  _______                               |__________________________-__________ by using JDBC servlet can comunited with the database
+ |       |              |-----------| JDBC       ________|______
+ | Menu  |------------->| Kitechan  |---------->|  Stor        |
+ |_______|              |_______ ___|           | (date bases) |
+menu.jsp                        |               |______________|
+                                |
+JSP                             |----------------------------------------------
+                                                                    | food     |
+																	|  Places  | food.jsp
+																	|__________|---------------JSP
