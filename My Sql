@@ -9,6 +9,7 @@ flush privileges;
 #########################data import in db #####################
  First Enter in db
 source /home/ajeet/abc.sql
+LOAD DATA LOCAL INFILE '/softwares/data/data.csv' INTO TABLE tableName;
 ##################################################################
 --------check password police------
 SHOW VARIABLES LIKE 'validate_password%';
