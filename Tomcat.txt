@@ -13,7 +13,8 @@ Tomcat :-
 	  
 	  To download S/w   www.apache.org   [ run file or setup file  always setup with  setup file ]
 	  
-Tomcat :- Is very suitable  for java application or website ,  it not use for large website like e-comers site or banking web site, it is very easy to start & stop also very lite application.
+Tomcat :- Is very suitable  for java application or website ,  it not use for large website like e-comers site or banking web site,
+it is very easy to start & stop also very lite application.
 
 While installing tomcat :- 
 
@@ -117,7 +118,8 @@ JSP --->
 
 web server :  web server is responsible to run web application.
 
-Tomcat( web server ) : for run web application we need some spacial software which is tomcat ( web server ) for responsible to manage and executed servelet a JSP.
+Tomcat( web server ) : for run web application we need some spacial software which is tomcat ( web server ) for responsible to manage
+and executed servelet a JSP.
 
 Web container :-  web contaner is responsible to manage and executed servelet a JSP 
 
