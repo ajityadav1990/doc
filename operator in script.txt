@@ -1,0 +1,51 @@
+Operator  in Scripting 
+________________________________________________________________________________________________________________________
+operator |   Description                      |  example
+  +      |   Addition                         | `expr $a + $b`
+  _      |  Subtration                        | `expr $a - $b`
+   *     |  multiplication                    | `expr $a * $b`
+   /     |  Division                          | `expr $a / $b`
+   %     |   modular                          | `expr $a % $b`
+   =     |  assigment                         |  a $b ( assign value b in a )
+   ==    |  Equality                          | [ $a == $b ]
+   !=    |  Not equality                      | [  $a != $b ] 
+_________________________________________________________________________________________________________________________
+Relational Operator
+_________________________________________________________________________________________________________________________
+ -eq     |  equal to                         |  [ $a -eq $b ]
+ -ne     |  not equal to                     |  [ $a -ne $b ]
+ -gt     | greater then   [ left operator ]  |  [ $a -gt $b ]
+ -lt     | less then      [ left operator ]  |  [ $a -lt $b ]
+ -ge     | greater then   [ right operator ] |    [ $a -ge $b ]
+ -le     | less then      [ right operator ] |  [ $a -le $b ]
+ ________________________________________________________________________________________________________________________
+ Boolean operator                  a =10  b= 20
+ ________________________________________________________________________________________________________________________
+ !       |  this is logical negation         |  ! false in true
+ -o      |  or if one is true then condition |  [ $a -lt 20 -o $b -gt 100 ]
+         |  would be true                    | 
+ -a      |  And if both optison are true     | [ $a -lt 20 -a $b -gt 100 ]
+         |   then condition is true		     |
+__________________________________________________________________________________________________________________________
+String  Operator
+Assume variable a hold "abc" and variable b hold "efg" then
+___________________________________________________________________________________________________________________________
+=     | check if the value of two operator are equal or not , if yes then  condition  become true   | [ $a = $b ] 
+!=    | check the value of two operator are equal are not equal then condition become true          | [ $a != $b ]
+-Z    |  if string lenght 0 then it returns true                                                    |  [ -Z $a ]
+-n    | if string lenght  non 0 then it returns true  	                                            | [ -n $a ]
+___________________________________________________________________________________________________________________________
+ File test operators                       
+___________________________________________________________________________________________________________________________
+-b file  | if file Blocks special file if yes then condition become true   | [ -b  $file ]
+-c file  | if file character special file if yes then condition become true| [ -c  $file ]
+-d file  | if file  is a directory if yes then condition become true       | [ -d  $file ]
+-d file  | if file  is a directory if yes then condition become true       | [ -d  $file ]
+-f file  | if file  is a ordinary file then condition become true          | [ -f  $file ]
+-r file  | if file  readable                                               | [ -r  $file ]
+-d file  | if file  is a writeable                                         | [ -w  $file ]
+-d file  | if file  is a executable                                        | [ -x  $file ]
+-s file  | file has size greater then 0                                    | [ -s  $file ]
+-nt      | first file is newer then second file                            | [ $file1  -nt $file2 ]
+-ot      |  first is older then second file                                | [ $file1  -ot $file2 ]
+_____________________________________________________________________________________________________________________________
