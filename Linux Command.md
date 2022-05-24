@@ -15,16 +15,17 @@
 ### 15. crontab command example ?
 ### 16. service command example ?
 ### 17. ps command example ?
-# ps    user+ PID+  process starting Time + process
-
+ ps =   user+ PID+  process starting Time + process
+ ps -ef | grep -i tom
+ 
  Ex :     UID        PID    PPID  C   STIME  TTY          TIME       CMD
           root     14473     1    5   May22  ?        03:03:51       /usr/java/jdk1.8.0_45/
 ### 18. netstat command example ?
 Listing of the LISTENING Ports (open or free)	  
-Ex :  # netstat -nlp  | grep 8383
+Ex :  netstat -nlp  | grep 8383
       tcp        0      0 :::8383                     :::*                        LISTEN      4646/java
 
-# Find out how many listening programs running on a port.
+ Find out how many listening programs running on a port.
  Ex :   netstat -ap | grep http
 
 ### 18. free command example ?
