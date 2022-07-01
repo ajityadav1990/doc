@@ -2,3 +2,6 @@ zgrep -ic "api" RENEWAL*{00..04}* | grep -v ":0"
 
 open file :-
 lsof | grep -i delete  | grep java
+
+vim filename               |_____________                       
+:%s/^/234/g                |               add country code in first line with vim 
