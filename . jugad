@@ -4,4 +4,7 @@ open file :-
 lsof | grep -i delete  | grep java
 
 vim filename               |_____________                       
-:%s/^/234/g                |               add country code in first line with vim 
+:%s/^/234/g                |               add country code in first line with vim
+
+ cat status.txt | awk -F ' ' '{print $2,$3}'  | sort | uniq -c
+
