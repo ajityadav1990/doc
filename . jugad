@@ -7,4 +7,13 @@ vim filename               |_____________
 :%s/^/234/g                |               add country code in first line with vim
 
  cat status.txt | awk -F ' ' '{print $2,$3}'  | sort | uniq -c
+ -------------------------
+check tomcat path by port number 
+
+# netstat -nap | grep 8282 | tail
+tcp        0      0 :::8282                     :::*                        LISTEN      28007/java
+unix  2      [ ]         DGRAM                    1717182828 1029/sudo
+
+[root@MTN-Nigeria-VPC logs]# ps -ef | grep 28007
+
 
