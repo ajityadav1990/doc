@@ -16,4 +16,7 @@ unix  2      [ ]         DGRAM                    1717182828 1029/sudo
 
 [root@MTN-Nigeria-VPC logs]# ps -ef | grep 28007
 
+----------for online shell practice ---------
+https://www.tutorialspoint.com/execute_bash_online.php
+-----------------------------------------------
 
