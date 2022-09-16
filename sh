@@ -123,5 +123,54 @@ echo " it over my hade"
 else 
 echo " now you out of rang"
 fi
--------------31-------------------------------- 
+-------------------------------------
+#/bin/bash
+echo "Enter a name "
+read fname
+if [ -f $fname ]
+then  |---------------------------( -d  for directory )
+echo "You indeed entered a file name"
+else
+echo "This is not file name"
+fi
+---------------------------
+#/bin/bash
+echo "Enter a number bitween 50 to 100"
+read num
+if [ $num -le 100 -a $num -ge 50 ]
+then
+echo "You are withing limits"
+else
+echo "you are out of limit."
+fi
+-----------------------------------
+#/bin/bash
+echo "Enter a character"
+read var
+if [ $var = a -o $var = e -o $var = i -o $var = o -o $var = u ]
+then
+echo "You entered a vowel."
+else
+echo "you did not enter a vowel."
+fi
+------------------------------
+#/bin/bash
+echo "Enter a character"
+read var
+case $var in
+[a-z])
+echo "you enter a lower case alphabet"
+;;
+[0-9])
+echo "You enterd a digit"
+;;
+?)
+echo "You entered a spacial symble."
+;;
+*)
+echo "you entered more then one charater."
+;;
+esac
+--------------------------------
+-------------38-------------------------------- 
   
