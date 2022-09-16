@@ -1,23 +1,76 @@
+------------------------------------------------------
+# mkdir -p /home/centos/aaaa/85598777071/ajeet ( create new folder on some other path )
+-----------------------------------------------
 zgrep -ic "api" RENEWAL*{00..04}* | grep -v ":0"
-
-open file :-
+-----------open file :-----------lsof-------------------------------
 lsof | grep -i delete  | grep java
 
+# lsof | head
+COMMAND     PID        USER   FD      TYPE             DEVICE    SIZE/OFF       NODE NAME
+init          1        root  cwd       DIR              202,1        4096          2 /
+init          1        root  txt       REG              202,1      150352     265249 /sbin/init
+
+# lsof /sbin/init ( list of open file by path ) 
+# lsof -u root ( username )
+# lsof -u ^root ( do not want see root user open file )
+# lsof -c vim (check process open by process (vim))
+# lsof -p 3845 ( list open file by process id )
+# lsof +D /home ( list of open file by home directory )
+------------for removing other tomcat file kill process ID ----------also check ps -ef | grep tom --before & after --(tomcat stop we have start again---------
+# lsof | grep -i delete  | grep java
+for other file------------
+# lsof | grep -i delete  | grep /u2opia/fonetwish/logs/Mobitel_BillingStub.2022-04-16.0.log
+java      19179           root  120w      REG             202,81 23369793403   10003496 /u2opia/fonetwish/logs/Mobitel_BillingStub.2022-04-16.0.log (deleted)
+# lsof | grep -i delete  | grep /u2opia/fonetwish/logs/Mobitel_BillingStub.2022-04-16.0.log
+-----------------------------------------
 vim filename               |_____________                       
 :%s/^/234/g                |               add country code in first line with vim
-
+---------------------------------
  cat status.txt | awk -F ' ' '{print $2,$3}'  | sort | uniq -c
- -------------------------
+ ---------------------------------------------
 check tomcat path by port number 
 
 # netstat -nap | grep 8282 | tail
 tcp        0      0 :::8282                     :::*                        LISTEN      28007/java
 unix  2      [ ]         DGRAM                    1717182828 1029/sudo
 
-[root@MTN-Nigeria-VPC logs]# ps -ef | grep 28007
+[root@MTN-Nigeria-VPC logs]# ps -ef | grep 2800
+---------------------Date -----------------------------
+# date +%F-%T
+2022-03-06-22:59:56
+# date
+Sun Mar  6 22:59:59 ICT 2022
+# date +%F
+2022-03-06
+# date --date="1 days ago" +%Y-%m-%d
+2022-03-05
+# date --date="0 days ago" +%Y-%m-%d
+2022-03-06
+
+#!/bin/sh
+DATE1=`date --date="1 days ago" +%Y-%m-%d`
+DATE2=`date --date="0 days ago" +%Y-%m-%d`
+
+HR1=`date --date=" days ago" +%H`
 
 ----------for online shell practice ---------
 https://www.tutorialspoint.com/execute_bash_online.php
 https://crontab.guru/
 -----------------------------------------------
+6.1.sh-------------print last digit of nunber--------------------------------
+
+#!/bin/bash
+echo "Enter Number"
+read path
+c=`expr $path % 10`
+echo $c
+--------------------Netcat (nc) Command with Examples  -----------------------
+
+if /usr/bin/nc -z -w2 dpnew.maxis.com.my 9705 2>/dev/null; then 
+   echo "" >> /u2opia/fonetwish/scripts/TELNET_SCRIPT/Maxis_IP_$date.txt
+else
+   echo "MAXIS BILLING IP dpnew.maxis.com.my not connected"
+df     
+ df -kh | grep "/dev/xvda1" | awk '{print $5}' | awk -F"%" '{print $1}'
+ 
 
