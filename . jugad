@@ -28,7 +28,15 @@ vim filename               |_____________
 ---------------------------------
  cat status.txt | awk -F ' ' '{print $2,$3}'  | sort | uniq -c
  ---------------------------------------------
-check tomcat path by port number 
+--------checking available ports-----------------------------------------
+netstat -nap| grep -w 8101
+tcp        0      0 :::8101                     :::*                        LISTEN      13338/java
+(on above command and its output we came to know that ports are not available as it was using by one process)
+[root@Mascom-BW conf]# netstat -nap| grep -w 8105
+[root@Mascom-BW conf]# netstat -nap| grep -w 8106
+(on above command we did not get any output which means these ports are available and can use this)
+
+-------------check tomcat path by port number----------------- 
 
 # netstat -nap | grep 8282 | tail
 tcp        0      0 :::8282                     :::*                        LISTEN      28007/java
