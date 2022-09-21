@@ -1,5 +1,4 @@
-online attendance system =  URL : www.cinfo.in/attendance/index.php 
-_____________________________________________________________________
+
 WHM  :-  2087 , zimbraAdmin :- 7071 , CPANEL :- 2083                                        
 ###########SVN Command #################
 svn -up
@@ -53,10 +52,7 @@ cd /compare_infobase/logs/dom_logs/mapsofindia.com/
      Delete old date file  (rm -rf )
 ################# sync  ###########
 rsync -vra -e ssh /home/harmeen/public_html/images/     harmeen@69.64.35.130:/home/harmeen/public_html/images/
-############ sync #########################
-ssh root@172.16.61.101  ( or root@18new )
-dgreetings.com
-bash -x /usr/local/scripts/dgreetings_rsync.sh
+
 ####################### Sync process for all server  ###################################
 
 we have two local ftp server ( L18New , L21New )  [ ssh root@l21new  ] [ssh root@l19new ]
@@ -141,15 +137,7 @@ netstat -anp | grep 80 | awk '{print $5}' | cut -f1 -d: | sort | uniq -c | sort 
 
 iptables -A INPUT -m iprange --src-range -101.1.1.1-101.240.240.240 -j DROP
 
-####################################################
-Log
-Mail log
-tail -f /var/log / exim.main.log
-ftp log
-tail -f /var/log/massages
-Zimbra log
-/var/log/zimbra.log
-cat maillog
+
 ------------------------------------------------------------
 cd /var/log/                                                                                                            
  cat zimbra.log | grep 'balwinder@infobase.in'                                                                           
@@ -167,25 +155,8 @@ live server
 cd /home/username/www/wp-content/
 mkdir uploads
 chown -R nobody.root uploads
-################# Stics ######################
-moi-stat  :-    http://46.51.218.186/awstats/awstats.pl?config=mapsofindia.com
-*****************************************************
-mow-stat :-     http://54.183.142.72/awstats/awstats.pl?config=mapsofworld.com
-for other 
-server on 172.16.6.61/ server document /passwd-file/stats-subdomain/ ********* (we have stats files list )
-or 
-stats file is on your Desktop 
-first check your self and then shere this  (url , username ,password )
-**********************************************************************************************
 /var/log/maillog
-
-
-
-ctrl +  Z
-_____________________________________
-https://condor2037.startdedicated.com/mail?adminPreAuth=1#1
-
-_______________________________________________________________________
+______________________________________________________________________
 command
 locate mod_libphp5.so
 locate *libphp*
@@ -224,9 +195,6 @@ svn://172.16.6.61/server backup
 run below mention command (reverse sync) every hours on L13 server -
 rsync -vra -e ssh root@209.126.124.6:/opt/zimbra/backup/mailbox/260718 /zimbramail_backup26072018/
 -- 
-###############################frozen-mail L13##################################################################
-/usr/local/scripts
-frozen-mail.sh
 #################  FTP  ######################################################################
 service proftpd restart
 vim /etc/proftpd.conf ( input ip )
@@ -255,12 +223,7 @@ Username
 Password 
 Re-type Password
 create
-################### Url lists##############################################
-cd  /usr/local/scripts/
-# bash -x url.sh
-domain name
-email id
-password  user name & password ( live ftp )
+
 ##########Add site in svn server#########################################
 1. create Repo is any SVN server 12,14,16 & login SVN server and go to
 #   cd   /Repos/
