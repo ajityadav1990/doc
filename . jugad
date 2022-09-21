@@ -1,3 +1,7 @@
+--------tar---------------
+tar -czvf christd.tar.gz christd
+untar
+tar xzvf christd.tar.gz
 ------------------------------------------------------
 # mkdir -p /home/centos/aaaa/85598777071/ajeet ( create new folder on some other path )
 -----------------------------------------------
