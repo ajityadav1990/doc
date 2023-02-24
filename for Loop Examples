@@ -1,0 +1,192 @@
+
+for Loop Examples :--
+
+#!/bin/bash
+# For loop with individual numbers
+for i in 0 1 2 3 4 5
+do
+   echo "Element $i"
+done
+
+2---
+
+#!/bin/bash
+# For loop with individual strings
+for i in "zero" "one" "two" "three" "four" "five"
+do
+   echo "Element $i"
+done
+
+3--
+
+#!/bin/bash
+# For loop with number range
+for i in {0..5}
+do
+        echo "Element $i"
+done
+
+4--
+#!/bin/bash
+# For loop with letter range
+for i in {a..f}
+do
+        echo "Element $i"
+done
+
+5---
+
+
+#!/bin/bash
+# For loop with reverse number range
+for i in {5..0}
+do
+        echo "Element $i"
+done
+
+6--
+
+#!/bin/bash
+# For loop with range increment numbers
+for i in {0..10..2}
+do
+        echo "Element $i"
+done
+
+7---
+
+#!/bin/bash
+# For loop with reverse range increment numbers
+for i in {10..0..2}
+do
+        echo "Element $i"
+done
+
+8--
+
+#!/bin/bash
+# For loop with seq command
+for i in $(seq 0 2 10)
+do
+   echo "Element $i"
+done
+
+9--
+
+#!/bin/bash
+# For loop C-style
+for (( i=0; i&lt;=5; i++ ))
+do
+   echo "Element $i"
+done
+
+10--
+
+#!/bin/bash
+# Infinite for loop
+for (( ; ; ))
+do
+      echo "CTRL+C to exit"
+done
+
+11 --
+
+#!/bin/bash
+# Infinite for loop with break
+i=0
+for (( ; ; ))
+do
+        echo "Iteration: ${i}"
+        (( i++ ))
+        if [[ i -gt 10 ]]
+        then
+                break;
+        fi
+done
+echo "Done!"
+
+12--
+
+#!/bin/bash
+# For loop with continue statement
+for i in {1..100}
+do
+        if [[ $i%11 -ne 0 ]]
+        then
+                continue
+        fi
+        echo $i
+done
+
+13 --
+
+#!/bin/bash
+# For loop with array
+array=(1 2 3 4 5)
+for i in ${array[@]}
+do
+        echo "Element $i"
+done
+
+14 --
+
+#!/bin/bash
+# For loop with array indices
+array=(1 2 3 4 5)
+for i in ${!array[@]}
+do
+        echo "Array indices $i"
+done
+
+15--
+
+#!/bin/bash
+# Nested for loop
+for (( i = 0; i &lt;= 2; i++ ))
+do
+    for (( j = 0 ; j &lt;= 9; j++ ))
+    do
+            echo -n " $i.$j "
+    done
+  echo ""
+done
+
+16--
+
+#!/bin/bash
+# For loop with string
+strings="I am a string"
+for i in ${strings}
+do
+        echo "String $i"
+done
+
+17 --
+
+#!/bin/bash
+# For loop with files
+for f in *.sh
+do
+        echo $f
+done
+
+18--
+
+#!/bin/bash
+# For loop with command substitution
+list=`cat list.txt`
+# Alternatively, use list=$(cat list.txt)
+for i in $list
+do
+        echo $i
+done
+
+19 --
+
+#!/bin/bash
+# For loop expecting command line arguments
+for i in $@
+do
+    echo "$i"
+done
+
