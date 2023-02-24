@@ -81,14 +81,14 @@ e = 'echo $a \* $b | bc '
 f = 'echo $a / $b | bc '
 echo $c $d  $e $f                    [ output  14   0.7 0.36 .73 ]
 7.sh ----------------------------------------------
-echo " hi world , \n what's up"                 [ \n print new line ]
+echo  -e " hi world , \n what's up"                 [ \n print new line ]
 output  hi world 
         what's up
-echo " hi world , \r what's up"                 [ \r hide befour it ]
+echo -e " hi world , \r what's up"                 [ \r hide befour it ]
  output  what's up
-echo " hi world \t what's up"                   [ give space and for more space edit \t more]
+echo -e " hi world \t what's up"                   [ give space and for more space edit \t more]
 output        hi world    what's up
-echo  " hi world \b\b\b what's up"              [ delete word 1 by 1 ]
+echo -e  " hi world \b\b\b what's up"              [ delete word 1 by 1 ]
 8.sh ---------------------------------------------------
 # if then statement in action
 echo " enter source and target file name"
