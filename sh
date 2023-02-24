@@ -60,16 +60,17 @@ ls text will rename text.mudur
 5.sh ------------------------------------
 
 # Arithmatical   operations     output
-a = 30   b= 15
-echo    'expo $a + $b'           45
-echo    'expo $a -$b'            15
-echo    'expo $a \* $b'          450
-echo    'expo $a / $b'            2
-echo    'expo $a % $b'            0
-6.sh
+a=30
+b= 15
+echo    'expr $a + $b'           45
+echo    'expr $a -$b'            15
+echo    'expr $a \* $b'          450
+echo    'expr $a / $b'            2
+echo    'expr $a % $b'            0
+6.sh----------------------------
 a = 37 , b =15 , c =2, d = 5
 
-echo 'expo $a \* \ ($b + $c\) / $d '
+echo 'expr $a \* \ ($b + $c\) / $d '
 6.sh -----------------------------------------
 # floating point arithmetic
 a = 10.5
