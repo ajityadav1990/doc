@@ -1,0 +1,38 @@
+All about profile file in  linux | bash_profile , bashrc , bash_logout , bash_History
+
+ 
+ we have two type of profile file
+ 1. System Profile file
+ 2. User Profile file
+ 
+ 1- System profile file = is use to set permanently set Alisis , Variable , function  globallyin the system for all the user.
+ # grep PATH /etc/Profile
+ 
+ 2- User profile file is use to set permanently alisis, variable , function separately for each user.
+ 
+ When ever we create new user automatically  copy [.bash_logout , .bash_profile, .bashrc ] from [ #ls -al /etc/skel ] to new user home directory .
+ 
+ :- bash_history ->  it content history of command run by user also it create automatically when we logout first time from the user .
+  #cat .bash_history
+  
+:- .bashrc  source from the /etc/bshrc files, it also have room castor aliases & function also it executed every time when new shell login.
+
+:- .bash_profile :-  this file is also executed when the user login first time shell . it source from .bashrc file.
+
+with the help of both .bashrc and .bash_profile file we can permanently set alises, function, variable run always  when user login.
+
+# Different between .Bashrc & .Bash_profile 
+ .bash_profile need re login after doing any Chang.
+
+ .bashrc no need re login after doing any Chang.
+
+
+:- .bash_logout :- when ever we logout from this system this file  executed which tell the system user logout now you can executed bash_history file to copy the command history of current session.
+
+ 
+ 
+
+
+
+ 
+ 
