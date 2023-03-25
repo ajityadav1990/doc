@@ -1,6 +1,17 @@
 
 for Loop Examples :--
 
+
+#/bin/bash
+echo "Enteir file name"
+read a
+b=`(cat $a)`
+for i in $b
+do
+touch $b
+done
+-----------------------
+
 #!/bin/bash
 # For loop with individual numbers
 for i in 0 1 2 3 4 5
