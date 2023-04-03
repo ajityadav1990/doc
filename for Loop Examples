@@ -10,6 +10,13 @@ for i in $b
 do
 touch $b
 done
+--------------------------
+#/bin/bash
+a=`(ls -d */)`
+for i in $a
+do
+        gzip -f `ls -lthr $i/* | grep -v ".gz"|awk '{print $9}'` &
+done
 -----------------------
 
 #!/bin/bash
