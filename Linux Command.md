@@ -63,7 +63,9 @@ file-system object such as a file or a directory. Each inode stores the attribut
 ### 41. Linux’s files have 3 timestamps ?
 
 (atime) Access timestamp : which indicates the last time a file was accessed.
+
 (mtime) Modified timestamp : which is the last time a file’s contents were modified.
+
 (ctime) Change timestamp : which refers to the last time some metadata related to the file was changed
 
 ### 42. stat command example ?
