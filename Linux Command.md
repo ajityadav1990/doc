@@ -60,4 +60,22 @@ file-system object such as a file or a directory. Each inode stores the attribut
 
 ### Umask   :-   When user create a file or directory under Linux or UNIX, files. It can be  control the default file permission.
 
+### 41. Linux’s files have 3 timestamps ?
+
+(atime) Access timestamp : which indicates the last time a file was accessed.
+(mtime) Modified timestamp : which is the last time a file’s contents were modified.
+(ctime) Change timestamp : which refers to the last time some metadata related to the file was changed
+
+### 42. stat command example ?
+# stat test.txt                          check  file detailes information
+  File: ‘test.txt’
+  Size: 0               Blocks: 0          IO Block: 4096   regular empty file
+Device: ca01h/51713d    Inode: 4573325     Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Context: unconfined_u:object_r:user_home_t:s0
+Access: 2023-04-14 09:46:54.543624305 +0000
+Modify: 2023-04-14 09:46:54.543624305 +0000
+Change: 2023-04-14 09:46:54.543624305 +0000
+ Birth: -
+
 
