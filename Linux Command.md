@@ -403,6 +403,48 @@ yum repolist all
 
 yum install httpd
 
+### Find Command --------------------------
+ 
+ Use to search file and directory in linux
+ 
+ Find command used in variety of condition like you can find file by Permission , User , Groups , file, types , data , size .
+ 
+ #find . -name tecmint.txt
+ 
+ #find /home -name tecmint.txt
+ 
+ #find / -type d -name Tecmint
+ 
+ #find . -type f -name tecmint.php
+ 
+ #find . -type f -perm 0777 -print
+ 
+ #find / -type f ! -perm 777
+ 
+ #find / -type f -perm 0777 -print -exec chmod 644 {} \;
+ 
+ #find / -type d -perm 777 -print -exec chmod 755 {} \;
+ 
+ #find . -type f -name "tecmint.txt" -exec rm -f {} \;
+ 
+ #find / -mtime 50
+ 
+ #find / -atime 50
+ 
+ #find / -mtime +50 –mtime -100
+ 
+ #find / -cmin -60
+ 
+ #find / -mmin -60
+ 
+ #find / -size 50M
+ 
+ #find / -size +50M -size -100M
+ 
+ #find / -type f -size +100M -exec rm -f {} \;
+ 
+ #find / -type f -name *.mp3 -size +10M -exec rm {} \;
+
 
 
 
