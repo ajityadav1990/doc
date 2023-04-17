@@ -51,12 +51,42 @@ Ex :  netstat -nlp  | grep 8383
 ### 38. ping command example ?
 ### 39. date command example ?
 ### 40. wget command example ?
-### inode  :-   The inode is a data structure in linux file system that describes a 
+###  Boot process ---------------------------------
+
+    BIOS -> MBR -> GRUB -> Kernal -> INIT -> Runlable
+	
+BIOS :-  Load & executed MBR Boot Loader
+
+Search load and executed boot loader Program from Disk Drive, SD_card, Hard drive.
+
+We can Chang the Disk Drive when BIOS start like CD or Hard Drive typically is F-12.
+
+BIOS give control the boot loader program ones it boot loaded in the memory.
+
+MBR  :-  stands for mostly boot record it is located in first sector of bootable disk , it is less then 512 bytes in size.
+
+GRUB :- stand for grand unified boot-loader , if you have kernal image you can select which can boot.
+
+it display the splase screen wait for few second , if nothing enter load 2 kernal IMAGE.
+
+KERNAL :-  mount root file system as spasifide inthe GRUB configuration file.
+
+Kernal executed init program.
+
+INIT  :- Decided the run label
+
+RUN LABELE :-  0 shut-down , 1 S U M , 2 M U M , 3 M U M with N , 4 Not in use , 5 Grafic , 6 Reboot 
+
+### inode  :-
+
+The inode is a data structure in linux file system that describes a 
 file-system object such as a file or a directory. Each inode stores the attributes and disk block
  locations of the object.
 
 
-### Umask   :-   When user create a file or directory under Linux or UNIX, files. It can be  control the default file permission.
+### Umask   :-  
+
+When user create a file or directory under Linux or UNIX, files. It can be  control the default file permission.
 
 ### 41. Linux’s files have 3 timestamps ?
 
