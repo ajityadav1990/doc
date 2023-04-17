@@ -109,14 +109,8 @@ Ans: Using fdisk utility we can create partitions from the raw disk :
 #### config file  path
 #### root  folder path 
 #### log file 
-#### /usr/sbin/httpd -t   [ ( syntex ok ) how to verify httpd.conf  file to ensure no configuration sentex errer? ]
-#### errar  codes means ---
-####   200 -- content foud service OK
-####  404 -- page not found
-####   403 -- when the user that is running the web service process does not have sufficent permission to read the file .
-####   500 -- internal server error or  problem in .htaccess
-####   503 --  service is tobusy toserver the service or service  unavailable.
-####   504 -- getway time out .
+### how to verify httpd.conf  file to ensure no configuration sentex errer? ]
+#### errar  codes 
 ###  port number --
 ####  FTP , SSH , telnet , smtp ,http , https ,tomcat ,  pop3 , ntp, ldap ,mysql , WHM , Cpanel
 ###  Q crontab ---
@@ -155,25 +149,6 @@ Ans: Using fdisk utility we can create partitions from the raw disk :
 ### top,df ,kill,rm , rmdir cp ,mv , cat ,mount,chmod ,chown ,passwd ,mkdir , ifconfig , uname ,locate ,
 #### man ,rpm ,ping data ,wget ,rpm   ( -qa , -ivh ) , tail, head
 ### Q.  yum , apache , NFS, ssh ,FTP ,lVM , iptables ,
-###  APACHE
-#### service  name httpd
-#### port number http  80 , https 443
-#### config file  /etc/httpd/httpd.conf
-#### Log File
-#### /var/log/httpd/access.log
-#### /var/log/httpd/error.log
-#### apache webroot or document root patch : 
-#### /var/www/html
-#### To check apache config file syntex error?
-### /usr/sbin/httpd -t
-#### syntax ok
-#### what does error codees mean ?
-#### 200 -- content fount server ok
-#### 403 -- when the users that is running the web server process does not have sufficent permmissionns to read the file .
-#### 404 -- page not fount
-#### 500 -- iternal server error or  .htaccess
-#### 503 -- server is too busy to serve the request / service unavelable.
-#### 504  -- gateway time out
 #### Tomcat ----------------------------
 #### tomcat  server :-
 #### it have two container
