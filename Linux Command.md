@@ -128,36 +128,62 @@ what does error codees mean ?
 
 504 -- gateway time out
 
-###FTP  ( File Transfer Protocol )   
-#Default port :-   21 and 20
-#Use          :-   VSFTP
-#Clint        :-   FTP
-#rpm  -qa | grep vsftpd
-#Yum install  vsftpd
+### FTP  ( File Transfer Protocol ) ----------------------  
 
-#config path :- 
-#        /etc/vsftpd/vsftpd.config		
-#		anonymous_enable=NO
-#		Uncomment
-#		   .asciii_upload_enable=YES
-#		   .ascii_download_enable=YES
-#		.May add
-#		   .Use_localtime_YES
-#systemctl  start   vsftpd
-#systemctl  enable  vsftpd 		   
-#Stop firwall or allow ftp to firewall 
-#Systemctl stop   firewall
-#systemctl status firewall
-#Clints :- 
-#install FTP
-#ftp 192.168.29.41
-#enter username :
-#enter password :
-#ftp>
-#ftp > put testfile.txt
-#ftp > mput file1 file2    ( multiple file transfer by FTP )
-#ftp > pwd 
-#ftp > bye
+Default port :-   21 and 20
+
+Use          :-   VSFTP
+
+Clint        :-   FTP
+
+rpm  -qa | grep vsftpd
+
+Yum install  vsftpd
+
+config path :- 
+
+/etc/vsftpd/vsftpd.config		
+
+anonymous_enable=NO
+
+Uncomment
+
+asciii_upload_enable=YES
+
+ascii_download_enable=YES
+
+May add
+
+Use_localtime_YES
+
+systemctl  start   vsftpd
+
+systemctl  enable  vsftpd 		   
+
+Stop firwall or allow ftp to firewall 
+
+Systemctl stop   firewall
+
+systemctl status firewall
+
+Clints :- 
+
+install FTP
+
+ftp 192.168.29.41
+
+enter username :
+
+enter password :
+
+ftp>
+
+ftp > put testfile.txt
+
+ftp > mput file1 file2    ( multiple file transfer by FTP )
+ftp > pwd 
+
+ftp > bye
 
 
 
