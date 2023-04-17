@@ -185,6 +185,51 @@ ftp > pwd
 
 ftp > bye
 
+### NFS  ( File Sharing Server ) [ Linux to Linux ]-----------------------
+
+Default port :- 2049
+
+#yum install nfs-utils             ( Both Server & client )
+
+#mkdir abc ( 1.txt, 2.txt, 3.txt, 4.txt ,5.txt )
+
+#vim /etc/exports
+
+/home/abc       192.168.122.0/24(rw,sync)
+
+:wq!
+
+#exportfs
+
+#exportfs    -r
+
+#exports
+/mnt/abc   192.168.122.0/24
+
+------entry in firewall -----
+
+#firewall-cmd   --permanent --add-service=nfs
+#firewall-cmd   --reload
+
+or
+
+#systemctl stop firewall
+
+#systemctl start nfs
+
+#systemctl enable nfs
+
+-------client--------------
+mount
+
+vim /etc/fstab
+
+192.168.122.186:/home/abc             /home/abc      nfs   default  0  0
+
+:wq
+
+# mount -a
+
 
 
 
