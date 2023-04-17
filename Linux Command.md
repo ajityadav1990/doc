@@ -1,6 +1,5 @@
 ### 1. tar command example ?
 ### 2. grep command example ?
-### 3. find command example ?
 ### 4. ssh command example ?
 ### 5. sed command example ?
 ### 6. awk command example ?
