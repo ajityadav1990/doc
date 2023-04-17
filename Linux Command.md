@@ -11,7 +11,6 @@
 ### 11. gzip command example ?
 ### 12. unzip command example ?
 ### 13. shutdown command example ?
-### 14. ftp command example ?
 ### 15. crontab command example ?
 ### 16. service command example ?
 ### 17. ps command example ?
@@ -49,7 +48,6 @@ Ex :  netstat -nlp  | grep 8383
 ### 34. less command example ?
 ### 35. su command example ?
 ### 36. mysql command example ?
-### 37. yum command example ?
 ### 38. ping command example ?
 ### 39. date command example ?
 ### 40. wget command example ?
@@ -233,7 +231,7 @@ vim /etc/fstab
 
 mount -a
 
-#####---RPM-------------------------
+### RPM-------------------------
 
 The full form of RPM is Redhat Package Manager . rpm is powerful package manager, which can be used to build , install, query ,verify , upload , and erase individual software packages.
 
@@ -251,7 +249,7 @@ Should have rpm package in system.
 
 RPM never install dependencies package.
 
-###----------YUM--------------------------
+### YUM--------------------------
 
 yum is also package  installer but   yum  install dependencies  package also.
 
