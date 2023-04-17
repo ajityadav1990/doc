@@ -77,6 +77,30 @@ INIT  :- Decided the run label
 
 RUN LABELE :-  0 shut-down , 1 S U M , 2 M U M , 3 M U M with N , 4 Not in use , 5 Grafic , 6 Reboot 
 
+### File System  : EXT4 [6.0], XFS [ Linux 7.0 ] ------------
+
+/bin   :-  Local user command execution
+/boot  :-  It holds boot loader (GRUB) Kernel & booting file
+/dev   :-  It holds all the device file ( LAN,CARD,ETC)
+/home  :-  Local user Home directory 
+/mnt   :-  Temporary mount point for removed storage
+/otp   :-  all third party application
+/sbin  :-  Root's (super_user) command
+/tmp   :-  Temporary hold file
+/usr   :-  Application program
+/var   :-  all service database 
+/root  :-  root's home directory
+/Proc  :-  Process file
+/etc   :-  All the configure file and it's Subdirectory
+
+Linux [ Type of file ]
+  |
+  |___________Directory  ............. d 
+  |___________Regular File ............. Created by User
+  |___________Link file  ............... LAN
+  |___________Block file ............... B
+  |___________Charector file ........... C
+
 ### inode  :-
 
 The inode is a data structure in linux file system that describes a 
