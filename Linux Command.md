@@ -116,6 +116,26 @@ Linux [ Type of file ]
   |___________Block file ............... B
   
   |___________Charector file ........... C
+  
+### Link ------------------------
+
+## Soft link ------
+
+We can create soft link  for both file & directory, Soft link have different inode Number to main file.
+
+If the original file is removed, the link will still work as it accesses the data
+
+#ln -s filename newsoftlink file	 
+
+## Hard link :-
+
+Create only for file,
+
+hard linked take the same inode number.
+
+If the original file is removed, the link will still work as it accesses the data
+
+#ln filename new_hardlink_file
 
 ### inode  :-
 
