@@ -43,7 +43,6 @@ Ans: Using fdisk utility we can create partitions from the raw disk :
 
 #### nmap -sT -O localhost
 ### 11. What are RPM?
-#### The full form of RPM is Redhat Package Manager . rpm is powerful package manager, which can be used to build , install, query ,verfy , upload , and erase individul software packages.
 ### 12. What is the name and path of main system log ?
 #### var/log/messages - system log massages can be seen here
 #### var/log/dmesg  - Kernel boot log massages can view?
