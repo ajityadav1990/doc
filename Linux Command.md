@@ -181,6 +181,7 @@ ftp>
 ftp > put testfile.txt
 
 ftp > mput file1 file2    ( multiple file transfer by FTP )
+
 ftp > pwd 
 
 ftp > bye
@@ -204,11 +205,13 @@ Default port :- 2049
 #exportfs    -r
 
 #exports
+
 /mnt/abc   192.168.122.0/24
 
 ------entry in firewall -----
 
 #firewall-cmd   --permanent --add-service=nfs
+
 #firewall-cmd   --reload
 
 or
@@ -229,6 +232,88 @@ vim /etc/fstab
 :wq
 
 mount -a
+
+#####---RPM-------------------------
+
+The full form of RPM is Redhat Package Manager . rpm is powerful package manager, which can be used to build , install, query ,verify , upload , and erase individual software packages.
+
+#rpm -qa | grep -i name  ---------------------- ( find package install or not )
+
+#rpm -ivh  peazip-1.11.1.el6.rf.rpm-------------(  install package )
+
+#rpm -ev postfix-2.10.1.6e17x86_64 ------------( Remove packages )
+
+#rpm -ql httpd  --------------------------------( Can see all the file and directory installed and created by about package )
+
+#rpm  -ql httpd
+
+Should have rpm package in system.
+
+RPM never install dependencies package.
+
+###----------YUM--------------------------
+
+yum is also package  installer but   yum  install dependencies  package also.
+
+#yum clean all------------------------( Clean All Cached Files)
+
+#yum repolist all---------------------( show list of package )
+
+#yum info vsftpd----------------------( list info about Vsftpd )
+
+#yum install docker-------------------( install package )
+
+#yum update---------------------------[ Update all packages with available updates ]
+
+#yum update httpd ---------------------[ Update the httpd package (if available) ]
+
+configure yum server local or FTP-------------
+
+#mount rhel-server-7.1-x86_64-dvd-iso   /mnt
+
+#cd /mnt/rhel-server-7.1/package/
+
+#cp -rvf cd /mnt/rhel-server-7.1/package/*  /data/pack
+
+#unmount /dev/loop0
+
+#cd /data/pack
+
+#ls /grep -i createrepo
+
+#rpm ivh creterepo.o.g.rpm
+
+first install depandicy package related creterepo package
+
+#rpm -ivh deltarpm-3-6-3.el7.rpm
+
+#rpm ivh creterepo.o.g.rpm
+
+#createrepo  -v . -------------------------------------------( create repo for all package )
+
+#yum-config-manager  --add="rhel"
+
+#vim /etc/yum.repos.d/rhel.repo
+
+[rhel 7]
+ 
+name=rhel7
+
+baseurl=ftp://www.redhad.com/pub/package  ----------------[ for FTP Server ]
+
+bashurl= path --------------------------------------------[ for local yem ]
+
+enabled = 1
+
+gpgcheck = 0
+ 
+ :wq!
+ 
+yum clean all
+
+yum repolist all
+
+yum install httpd
 
 
 
