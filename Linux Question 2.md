@@ -16,7 +16,7 @@ Ans: Using fdisk utility we can create partitions from the raw disk :
 ### 6. What is mean by raid and what are all raids available even in software and hardware?
 #### Raid Sstands for Redundant Array of independent Disks it improve Performence and FaultTolerance.
 ### 5. Boot process ?
-    BIOS -> MBR -> GRUB -> Kernal -> INIT -> Ru lable
+    BIOS -> MBR -> GRUB -> Kernal -> INIT -> Runlable
 
 #### Totally there are are 6 levels in Raid
 ####  0 - stripping
