@@ -228,7 +228,7 @@ vim /etc/fstab
 
 :wq
 
-# mount -a
+mount -a
 
 
 
