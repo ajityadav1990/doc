@@ -16,8 +16,6 @@ Ans: Using fdisk utility we can create partitions from the raw disk :
 ### 6. What is mean by raid and what are all raids available even in software and hardware?
 #### Raid Sstands for Redundant Array of independent Disks it improve Performence and FaultTolerance.
 ### 5. Boot process ?
-    BIOS -> MBR -> GRUB -> Kernal -> INIT -> Runlable
-
 #### Totally there are are 6 levels in Raid
 ####  0 - stripping
 ####  1 - Mirroring
@@ -38,9 +36,6 @@ Ans: Using fdisk utility we can create partitions from the raw disk :
 #### -l : Show listening sockets. For example, TCP port 22 is opened by SSHD server.
 #### -p : List process name that opened sockets
 #### -n : Don’t resolve service names i.e. don’t use DNS
-
-
-
 #### nmap -sT -O localhost
 ### 11. What are RPM?
 ### 12. What is the name and path of main system log ?
@@ -90,9 +85,7 @@ Ans: Using fdisk utility we can create partitions from the raw disk :
 ### 37. What is AWK?
 ### 38. How to find all last 30 day file?   ( find -mtime -30 & +30 befour 30 day )
 ### 39. What is inode?
-####  An inode is a data structure that stores various information about a file in Linux, such as the access mode (read, write, execute permissions), ownership, file type, file size, group, number of links, etc. Each inode is identified by an integer number.
-###   . What is Umask?
-####  Umask is a Linux command that is used to assign the default file permission sets for newly created folders and files. 
+###   . What is Umask? 
 ### 40. how many run lable in linux ? How to change run level?
 ### 41. How can you find out how long the system has been running?
 ### 42. How do you check siz of all user home Directory?
