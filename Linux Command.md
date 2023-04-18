@@ -475,5 +475,42 @@ instead of “egrep” or “fgrep”, “grep -E” or “grep -F” are recomm
 
 
 
+### system-clock &  Hardware-clock
+ 
+Two clocks are important in Linux:  
+
+First clock ‘hardware clock’, also known as RTC, CMOS or BIOS clock. This is the battery-backed clock that keeps time even when the system is shut down.
+
+The second clock is called the ‘system clock/tick’ or 'kernel clock' and is maintained by the operating system. 
+
+hwclock for accessing one of the hardware clocks directly. You can display the current time, set a hardware clock to a specified time, set a hardware clock to 
+
+the system time, and set the system time from the hardware clock. Traditionally, on power off, the system clock will get stored into the hardware clock by a 
+
+shutdown script.
+
+------------set system-clock &  Hardware-clock ------------------
+#date
+
+Wed Jun  1 14:57:19 CAT 2022
+
+#hwclock
+
+Wed 01 Jun 2022 12:56:49 PM CAT  -1.053059 seconds
+
+
+#hwclock --set --date "06/01/2022 14:03:45"
+
+#hwclock
+
+Wed 01 Jun 2022 02:03:51 PM CAT  -0.641803 seconds
+
+#hwclock -s
+
+#date
+
+Wed Jun  1 14:03:58 CAT 2022
+
+
 
 
