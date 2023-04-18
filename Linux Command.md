@@ -490,6 +490,7 @@ the system time, and set the system time from the hardware clock. Traditionally,
 shutdown script.
 
 ------------set system-clock &  Hardware-clock ------------------
+
 #date
 
 Wed Jun  1 14:57:19 CAT 2022
