@@ -433,26 +433,26 @@ yum install httpd
 
 #ifconfig | grep -w "RUNNING"
 
- UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
 
-–A = after
+" –A " = after
 
 #ifconfig | grep -A 4 inet
 
-–B = before
+" –B " = before
 
 #ifconfig | grep -B 2 UP
 
-–n when debugging files during compile errors. It displays the line number in the file of the given search string:
+" –n " when debugging files during compile errors. It displays the line number in the file of the given search string:
 
 #grep -n "main" setup.py
 
-–r option to search recursively:
+" –r " option to search recursively:
 
 #grep -r “function” *
 
- Search a string in Gzipped File
-
+Search a string in Gzipped File
+ 
 #zgrep -ic error /var/log/syslog.2.gz
 
 Differences Between grep, egrep and fgrep
