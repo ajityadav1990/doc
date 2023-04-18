@@ -1,3 +1,25 @@
+###  free command example ?
+###  top command example ?
+###  df command example ?
+###  Kill command example ?
+###  rm command example ?
+###  cp command example ?
+###  cat command example ?
+###  mount command example ?
+###  chmod command example ?
+###  chown command example ?
+###  passwd command example ?
+###  ifconfig command example ?
+###  uname command example ?
+###  locket command example ?
+###  man command example ?
+###  tall command example ?
+###  less command example ?
+###  su command example ?
+###  mysql command example ?
+###  ping command example ?
+###  date command example ?
+###  wget command example ?
 ### netstat command in linux
 ### tcpdump  command in linux.
 ### 1. In which file is Static IP address given so that it becomes Permanent?
