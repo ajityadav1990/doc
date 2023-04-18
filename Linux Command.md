@@ -1,17 +1,4 @@
-### 1. tar command example ?
-### 2. grep command example ?
-### 4. ssh command example ?
-### 5. sed command example ?
-### 6. awk command example ?
-### 7. vim command example ?
-### 8. ls command example ?
-### 9. pwd command example ?
-### 10. cd command example ?
-### 11. gzip command example ?
-### 12. unzip command example ?
-### 13. shutdown command example ?
-### 15. crontab command example ?
-### 16. service command example ?
+
 ### 17. ps command example ?
  ps =   user+ PID+  process starting Time + process
  
@@ -380,6 +367,30 @@ yum clean all
 yum repolist all
 
 yum install httpd
+
+### explain all record in dns ?
+#### MX record :- mail exchang records use to deterinig  the priorty of email server for domain.
+#### SOS record :- start of authority ( first record in DNS )
+#### NS Record :- Name server record
+#### A or AAAA record  :- link ip to host .
+           |_____use IP 6
+#### CNAME record :- use for sub domain .
+#### PTR Record  : also called reverseDNS record / reverse of a records.
+#### SRV Record :- service record toutilize some service SRV record canbe request in your domain/ Host and port uber ofservice for specified service .
+#### SPA record  :- sender policy framework .
+#### DKIM record :-DKIM provides an encryption key and digital signature that verifies that an email message . The properly implemented DKIM record will improve the security of your email deliverability significantly.
+#### TXT record  :- TXT records are a type of DNS record that contains text information for sources outside of your domain. Google uses them to verify domain ownership and to ensure email security.
+
+
+### create partition from the raw disk ?
+
+Ans: Using fdisk utility we can create partitions from the raw disk :
+
+fdisk  /dev/hd* (IDE) or /dev/sd* (SCSI)
+
+Type n to create a new partition
+
+After creating partition , type w command to write the changes to the partition table.
 
 ### Find Command --------------------------
  
