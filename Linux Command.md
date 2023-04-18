@@ -28,28 +28,7 @@ Ex :  netstat -nlp  | grep 8383
  
  Ex :   netstat -ap | grep http 
 
-### 18. free command example ?
-### 19. top command example ?
-### 20. df command example ?
-### 21. Kill command example ?
-### 22. rm command example ?
-### 23. cp command example ?
-### 24. cat command example ?
-### 25. mount command example ?
-### 26. chmod command example ?
-### 27. chown command example ?
-### 28. passwd command example ?
-### 29. ifconfig command example ?
-### 30. uname command example ?
-### 31. locket command example ?
-### 32. man command example ?
-### 33. tall command example ?
-### 34. less command example ?
-### 35. su command example ?
-### 36. mysql command example ?
-### 38. ping command example ?
-### 39. date command example ?
-### 40. wget command example ?
+
 ###  Boot process ---------------------------------
 
     BIOS -> MBR -> GRUB -> Kernal -> INIT -> Runlable
@@ -443,6 +422,46 @@ yum install httpd
  #find / -type f -size +100M -exec rm -f {} \;
  
  #find / -type f -name *.mp3 -size +10M -exec rm {} \;
+ 
+ ### Grep  :- 
+
+# ls -lrth | grep -i python
+
+# ls -lrth | grep -v "python"
+
+# ls -lrth | grep -vi "python"
+
+# ifconfig | grep -w "RUNNING"
+
+ UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+
+–A = after
+
+# ifconfig | grep -A 4 inet
+
+–B = before
+
+# ifconfig | grep -B 2 UP
+
+–n when debugging files during compile errors. It displays the line number in the file of the given search string:
+
+# grep -n "main" setup.py
+
+–r option to search recursively:
+
+# grep -r “function” *
+
+ Search a string in Gzipped File
+
+# zgrep -ic error /var/log/syslog.2.gz
+
+Differences Between grep, egrep and fgrep
+
+differences between ‘grep’, ‘egrep’ and ‘fgrep’ in the set of regular expressions used, and speed of execution
+
+instead of “egrep” or “fgrep”, “grep -E” or “grep -F” are recommended to be used.
+
+
 
 
 
