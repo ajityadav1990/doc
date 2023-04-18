@@ -423,37 +423,37 @@ yum install httpd
  
  #find / -type f -name *.mp3 -size +10M -exec rm {} \;
  
- ### Grep  :- 
+### Grep  :- 
 
-# ls -lrth | grep -i python
+#ls -lrth | grep -i python
 
-# ls -lrth | grep -v "python"
+#ls -lrth | grep -v "python"
 
-# ls -lrth | grep -vi "python"
+#ls -lrth | grep -vi "python"
 
-# ifconfig | grep -w "RUNNING"
+#ifconfig | grep -w "RUNNING"
 
  UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
 
 –A = after
 
-# ifconfig | grep -A 4 inet
+#ifconfig | grep -A 4 inet
 
 –B = before
 
-# ifconfig | grep -B 2 UP
+#ifconfig | grep -B 2 UP
 
 –n when debugging files during compile errors. It displays the line number in the file of the given search string:
 
-# grep -n "main" setup.py
+#grep -n "main" setup.py
 
 –r option to search recursively:
 
-# grep -r “function” *
+#grep -r “function” *
 
  Search a string in Gzipped File
 
-# zgrep -ic error /var/log/syslog.2.gz
+#zgrep -ic error /var/log/syslog.2.gz
 
 Differences Between grep, egrep and fgrep
 
