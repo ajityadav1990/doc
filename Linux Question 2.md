@@ -1,3 +1,19 @@
+
+###  tar command example ?
+###  grep command example ?
+###  ssh command example ?
+###  sed command example ?
+###  awk command example ?
+###  vim command example ?
+###  ls command example ?
+###  pwd command example ?
+###  cd command example ?
+###  ps command example ?
+###  gzip command example ?
+###  unzip command example ?
+###  shutdown command example ?
+###  crontab command example ?
+###  service command example ?
 ###  free command example ?
 ###  top command example ?
 ###  df command example ?
@@ -31,10 +47,6 @@
 ### 4. What is the difference bitween Telnet and SSH?
 ### Why we use LVM in Linux?
 ### Q : How to create partition from the raw disk ?
-Ans: Using fdisk utility we can create partitions from the raw disk :
-– fdisk  /dev/hd* (IDE) or /dev/sd* (SCSI)
-– Type n to create a new partition
-–  After creating partition , type w command to write the changes to the partition table.
 ### 6. What is mean by raid and what are all raids available even in software and hardware?
 #### Raid Sstands for Redundant Array of independent Disks it improve Performence and FaultTolerance.
 ### 5. Boot process ?
@@ -71,17 +83,6 @@ Ans: Using fdisk utility we can create partitions from the raw disk :
 ### 16. About DNS server configuration file ,packages etc.?
 ### 17. How many types of zone in DNS?
 ### Q . explain all record in dns ?
-#### MX record :- mail exchang records use to deterinig  the priorty of email server for domain.
-#### SOS record :- start of authority ( first record in DNS )
-#### NS Record :- Name server record
-#### A or AAAA record  :- link ip to host .
-           |_____use IP 6
-#### CNAME record :- use for sub domain .
-#### PTR Record  : also called reverseDNS record / reverse of a records.
-#### SRV Record :- service record toutilize some service SRV record canbe request in your domain/ Host and port uber ofservice for specified service .
-#### SPA record  :- sender policy framework .
-#### DKIM record :-DKIM provides an encryption key and digital signature that verifies that an email message . The properly implemented DKIM record will improve the security of your email deliverability significantly.
-#### TXT record  :- TXT records are a type of DNS record that contains text information for sources outside of your domain. Google uses them to verify domain ownership and to ensure email security.
 ### 18. How to call script through cron job?
 ### 19. about DHCP?
 ### 20. What is out put of top command?
