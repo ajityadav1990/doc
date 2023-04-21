@@ -434,6 +434,10 @@ After creating partition , type w command to write the changes to the partition 
  
  #find / -type f -name *.mp3 -size +10M -exec rm {} \;
  
+ Exampe : 
+ 
+ #find  /u2opia/apache-tomcat-7.0.41_TelecelZMB_Notification/logs -maxdepth 1 -name "localhost_access_log.*.txt*" -type f -mtime +15 | wc -l
+ 
 ### Grep  :- 
 
 #ls -lrth | grep -i python
