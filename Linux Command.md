@@ -436,7 +436,15 @@ After creating partition , type w command to write the changes to the partition 
  
  Exampe : 
  
- #find  /u2opia/apache-tomcat-7.0.41_TelecelZMB_Notification/logs -maxdepth 1 -name "localhost_access_log.*.txt*" -type f -mtime +15 | wc -l
+find . -maxdepth 1 -name "catalina*" -type f -mtime +120 -exec rm {} \;
+
+find . -maxdepth 1 -name "catalina*" -type f -mtime +120 | wc -l
+
+find  . -maxdepth 1 -name "*" -type f -mtime +60  -exec rm {} \;
+
+find  . -maxdepth 1 -name "*" -type f -mtime +60  | wc -l
+
+find  /u2opia/apache-tomcat-7.0.41_TelecelZMB_Notification/logs -maxdepth 1 -name "localhost_access_log.*.txt*" -type f -mtime +15 | wc -l
  
 ### Grep  :- 
 
