@@ -440,6 +440,7 @@ find . -maxdepth 1 -name "catalina*" -type f -mtime +120 -exec rm {} \;
 
 find . -maxdepth 1 -name "catalina*" -type f -mtime +120 | wc -l
 
+
 find  . -maxdepth 1 -name "*" -type f -mtime +60  -exec rm {} \;
 
 find  . -maxdepth 1 -name "*" -type f -mtime +60  | wc -l
