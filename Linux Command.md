@@ -1,12 +1,29 @@
 
-### 17. ps command example ?
+
+###  alias command example.
+
+#type aws
+
+#type cat
+
+#alias aws="/root/.local/lib/aws/bin/aws"
+
+#type aws
+
+#type python
+
+#alias py="/usr/local/bin/python3.10"
+
+#py -V
+ 
+###  ps command example ?
  ps =   user+ PID+  process starting Time + process
  
  ps -ef | grep -i tom 
  
  Ex :     UID        PID    PPID  C   STIME  TTY          TIME       CMD
           root     14473     1    5   May22  ?        03:03:51       /usr/java/jdk1.8.0_45/
-### 18. netstat command example ?
+###  netstat command example ?
 Listing of the LISTENING Ports (open or free)	   
 Ex :  netstat -nlp  | grep 8383  
       tcp        0      0 :::8383                     :::*                        LISTEN      4646/java 
