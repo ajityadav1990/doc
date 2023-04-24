@@ -15,6 +15,16 @@
 #alias py="/usr/local/bin/python3.10"
 
 #py -V
+
+creating a permanent alias
+
+#vi .bashrc
+
+alias aws="/root/.local/lib/aws/bin/aws"
+
+alias py="/usr/local/bin/python3.10"
+
+wq!
  
 ###  ps command example ?
  ps =   user+ PID+  process starting Time + process
