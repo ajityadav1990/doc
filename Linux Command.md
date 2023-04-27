@@ -529,7 +529,7 @@ the system time, and set the system time from the hardware clock. Traditionally,
 
 shutdown script.
 
-------------set system-clock &  Hardware-clock ------------------
+####------------set system-clock &  Hardware-clock ------------------
 
 #date
 
@@ -552,7 +552,7 @@ Wed 01 Jun 2022 02:03:51 PM CAT  -0.641803 seconds
 
 Wed Jun  1 14:03:58 CAT 2022
 
-vim command 
+### vim command 
 
 mode
 
@@ -613,7 +613,7 @@ w       [ to move cursor word by word in forward side ]
 
 copy some line and past new file again go back to old file and copy line and pest new file then save and exit EXAMPLE :-
 
-#vim passwd
+vim passwd
 
 5yy     {to copy any five line }
 
