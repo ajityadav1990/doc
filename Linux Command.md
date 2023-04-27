@@ -552,6 +552,121 @@ Wed 01 Jun 2022 02:03:51 PM CAT  -0.641803 seconds
 
 Wed Jun  1 14:03:58 CAT 2022
 
+vim command 
+
+mode
+
+
+Insert mode:     [ press i then input data ]
+
+Command Mode:    [ Shift + : ] example :- :wq!
+
+Esc  Mode:       [ toperform any types of operations ] 
+
+Example :- 
+
+yy	[ to copy any line ]
+
+p   [ to paste the content ]
+
+dd	[ to delete any line ]
+
+u   [ undo ]
+
+Ctrl+r [ redo ]
+
+cc 	   [ to cut copy any line ]
+
+yw	   [ to copy any word ]
+
+dw     [ to delete any word ]
+
+cw     [ to cut copy word ]
+
+p      [ to paste the content ]
+
+shift+d [to delete line from the cursor ]
+
+x       [to delete particular characters in forword side ]
+
+shift+x [to delete particulaar characters in forwod side ]
+
+shift+g [to go in bottom of file ]
+
+gg      [  to move cursor in top of the file ]
+
+zero    [ to move cursor in bebining of the line ]
+
+shift+$ [ to move cursor in end of the line ]
+
+b       [ to move cursor word by word in back side ]
+
+w       [ to move cursor word by word in forward side ]
+
+/       [ to search any pattern ] 
+
+         { press n to jump on next pattern }
+		 
+         { press shift+n to jump on back pattern }
+		 
+         [ :nohl ]  file again in yello to normal calar 	
+
+copy some line and past new file again go back to old file and copy line and pest new file then save and exit EXAMPLE :-
+
+#vim passwd
+
+5yy     {to copy any five line }
+
+:edit /new_file_path_&_name
+
+p
+
+:w
+
+:edit /old_file_path_&_name	
+	
+5yy     {to copy any five line }
+
+:edit /new_file_path_&_name
+
+p
+
+:wq          [ save and exit from both file ]  
+
+How to set permanent line number for all file 
+
+cd /home/user
+
+# vim .vimrc
+
+se nu
+
+:wq
+
+# vim passwd
+
+note : you will get automatically line number 
+
+:wq
+
+search and replace in vim
+
+:%s/root/network      { % :- every line , s :- substitute ( replace root to netwok in every line only fist sentence )}
+
+:%s/root/network/g   { g use for all sentence in file globally
+
+:1s/network/root/gi   { 1 = Line number 1 & i = ignore case }
+
+:1,20s/network/root/g  { 1,20 = line number 1 to 20 }
+
+:%s/nologing/bash/gic  ( c = confirmation ask before every chang press y for next / n : no / q quit / a for all
+
+:g/^baz/s/foo/bar/g	Change each 'foo' to 'bar' in each line starting with 'baz'.
+
+#vimtutor     ( for know more about vim )    
+
+
+
 
 
 
