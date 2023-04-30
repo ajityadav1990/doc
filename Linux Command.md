@@ -464,7 +464,6 @@ After creating partition , type w command to write the changes to the partition 
  Exampe : 
  
 find . -maxdepth 1 -name "catalina*" -type f -mtime +120 -exec rm {} \;
-
          |_______________________________________________________________________________define lable which you want { 1 current directory, 2 sub directory etc }
 
 find . -maxdepth 1 -name "catalina*" -type f -mtime +120 | wc -l
@@ -475,7 +474,16 @@ find  . -maxdepth 1 -name "*" -type f -mtime +60  -exec rm {} \;
 find  . -maxdepth 1 -name "*" -type f -mtime +60  | wc -l
 
 find  /u2opia/apache-tomcat-7.0.41_TelecelZMB_Notification/logs -maxdepth 1 -name "localhost_access_log.*.txt*" -type f -mtime +15 | wc -l
- 
+
+rm -rf `find /u2opia/ftpuser/pending/* -type f -mtime +7| xargs`
+
+### xargs Example
+
+find /new_Folder type -f mtime +1 | xargs rm
+
+echo 'dir1 dir2' | xargs mkdir
+
+rm -rf `find /u2opia/ftpuser/pending/* -type f -mtime +7| xargs`
 ### Grep  :- 
 
 #ls -lrth | grep -i python
