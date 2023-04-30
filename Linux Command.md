@@ -465,6 +465,8 @@ After creating partition , type w command to write the changes to the partition 
  
 find . -maxdepth 1 -name "catalina*" -type f -mtime +120 -exec rm {} \;
 
+         |_______________________________________________________________________________define lable which you want { 1 current directory, 2 sub directory etc }
+
 find . -maxdepth 1 -name "catalina*" -type f -mtime +120 | wc -l
 
 
