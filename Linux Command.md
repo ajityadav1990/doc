@@ -681,29 +681,29 @@ Tcpdump is a command line utility that allows you to capture and analyze network
 
 It is often used to help troubleshoot network issues, as well as a security tool.
 
-tcpdump -D                              [ Display all inter face like network interface / blututh interface / loop back interface etc ]
+tcpdump -D                          -------------     [ Display all inter face like network interface / blututh interface / loop back interface etc ]
  
-tcpdump -i eth0                         [ captcher spacial interface ]
+tcpdump -i eth0                     --------------            [ captcher spacial interface ]
  
-tcpdump -i eth0 -c10                    [ -c10  = number of packet we want captcher ]
+tcpdump -i eth0 -c10                --------------             [ -c10  = number of packet we want captcher ]
  
-tcpdump -i eth0 -nn -c10                [ -nn = display port number and IP ]
+tcpdump -i eth0 -nn -c10            ---------------             [ -nn = display port number and IP ]
  
-tcpdump -i eth0  port 46218             [  spacific port number for packet captcher ]
+tcpdump -i eth0  port 46218         ------------          [  spacific port number for packet captcher ]
 
 tcpdump -i eth0  udp  -c5 
 
-tcpdump -i eth0  tcp  -c5               [ udp or tcp = protocal for packet captcher ]
+tcpdump -i eth0  tcp  -c5            ------------           [ udp or tcp = protocal for packet captcher ]
 
 tcpdump -i etc0 -nn icmp  
 
-tcpdump -i etc0 icmp                    [ -nn = if not use nn display the host name ]
+tcpdump -i etc0 icmp                 --------------             [ -nn = if not use nn display the host name ]
   
-tcpdump -i eth0 port not 22 -c1         [ not = ignore port 22 ]
+tcpdump -i eth0 port not 22 -c1      ---------------      [ not = ignore port 22 ]
 
-tcpdump -w newfile.pcap -i eth0 -c1     [ newfile.pcap = save in a file ]
+tcpdump -w newfile.pcap -i eth0 -c1   -------------      [ newfile.pcap = save in a file ]
 
-tcpdump -r newfile.pcap                  [ -r = read file ]
+tcpdump -r newfile.pcap               -------------      [ -r = read file ]
 
 
 
